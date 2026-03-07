@@ -1,0 +1,439 @@
+/* ==========================================================================
+   Unusual Technologies - Faithful recreation of original WordPress/Astra site
+   ========================================================================== */
+
+/* --- Color Palette ---
+   --color-primary:    #79c4ad  (teal/green accent)
+   --color-primary-bright: #60DCB7
+   --color-dark:       #14261C  (dark green text)
+   --color-gray:       #4F5655  (secondary text)
+   --color-light:      #F3F6F3  (light bg)
+   --color-white:      #FFFFFF
+   --color-black:      #000000  (footer bg)
+   --color-dark-gray:  #4B4F58
+   --color-red:        #de253a  (accent)
+   --- */
+
+/* --- Reset & Base --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7em;
+  color: #14261C;
+  background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+h1 { font-size: 4rem; line-height: 1.4em; }
+h2 { font-size: 1.875rem; line-height: 1.3em; }
+h3 { font-size: 1.5rem; line-height: 1.3em; }
+h4 { font-size: 1.25rem; line-height: 1.2em; }
+
+a {
+  color: #79c4ad;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #60DCB7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Skip Link --- */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #79c4ad;
+  color: #fff;
+  padding: 0.5em 1em;
+  z-index: 10000;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  transition: background 0.3s ease;
+}
+
+/* Transparent header for homepage */
+.site-header.transparent {
+  background: transparent;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 35px;
+  min-height: 80px;
+}
+
+/* --- Logo --- */
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-logo {
+  width: 300px;
+  height: auto;
+  max-width: 300px;
+}
+
+/* --- Desktop Nav --- */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-menu .menu-item {
+  position: relative;
+}
+
+.nav-menu .menu-link {
+  display: block;
+  padding: 0 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 80px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Non-transparent header: dark text */
+.site-header:not(.transparent) .nav-menu .menu-link {
+  color: #14261C;
+}
+
+.nav-menu .menu-link:hover,
+.nav-menu .menu-link:focus {
+  color: #79c4ad;
+}
+
+.nav-menu .menu-item.current .menu-link {
+  color: #79c4ad;
+}
+
+/* Zoom hover effect matching original ast-menu-hover-style-zoom */
+.nav-menu .menu-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-menu .menu-link:hover {
+  transform: scale(1.1);
+}
+
+/* --- Mobile Menu Toggle --- */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #fff;
+}
+
+.site-header:not(.transparent) .menu-toggle {
+  color: #14261C;
+}
+
+.menu-toggle .icon-close {
+  display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .icon-menu {
+  display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
+/* ==========================================================================
+   Hero / Homepage Video
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background-color: #000;
+  padding: 45px 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 35px;
+  gap: 0;
+}
+
+/* --- Footer Copyright (left column) --- */
+
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright p {
+  color: #79c4ad;
+  font-size: 14pt;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-copyright a {
+  color: #79c4ad;
+  text-decoration: none;
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright p + p {
+  margin-top: 0.25em;
+}
+
+.footer-copyright p + p a {
+  text-decoration: underline;
+}
+
+/* --- Footer Social (center column) --- */
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.social-link svg {
+  flex-shrink: 0;
+}
+
+.social-linkedin {
+  color: #1B64F6;
+}
+
+.social-youtube {
+  color: #d77ea6;
+}
+
+.social-email {
+  color: #ea4335;
+}
+
+.social-phone {
+  color: #ea4335;
+}
+
+/* --- Footer Nav (right column) --- */
+
+.footer-nav {
+  text-align: center;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.footer-menu li {
+  margin: 0;
+}
+
+.footer-menu a {
+  display: block;
+  padding: 0 0.5em;
+  color: #79c4ad;
+  font-size: 1rem;
+  line-height: 2;
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  color: #60DCB7;
+}
+
+/* ==========================================================================
+   Responsive — Tablet (max-width: 921px, matching original Astra breakpoint)
+   ========================================================================== */
+
+@media (max-width: 921px) {
+  /* Header */
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #000;
+    padding: 10px 0;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-menu .menu-link {
+    line-height: 1;
+    padding: 10px 20px;
+    color: #fff;
+  }
+
+  .nav-menu .menu-link:hover {
+    transform: none;
+  }
+
+  /* Logo */
+  .site-logo {
+    width: 200px;
+    max-width: 200px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* ==========================================================================
+   Responsive — Mobile (max-width: 544px)
+   ========================================================================== */
+
+@media (max-width: 544px) {
+  .header-inner {
+    padding: 0 20px;
+    min-height: 60px;
+  }
+
+  .site-logo {
+    width: 160px;
+    max-width: 160px;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.5rem; }
+}

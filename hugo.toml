@@ -1,0 +1,54 @@
+baseURL = 'https://www.unusualtechnologies.com/'
+languageCode = 'en-gb'
+title = 'Unusual Technologies'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+  [[menus.main]]
+    name = 'Concept and Design'
+    url = '/concept-and-design/'
+    weight = 30
+  [[menus.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 40
+  [[menus.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 50
+
+  [[menus.footer]]
+    name = 'Home'
+    url = '/'
+    weight = 10
+  [[menus.footer]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+  [[menus.footer]]
+    name = 'About'
+    url = '/about/'
+    weight = 30
+  [[menus.footer]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 40
+  [[menus.footer]]
+    name = 'Careers'
+    url = '/careers/'
+    weight = 50
+
+[params]
+  description = 'Developing Digital Dreams'
+  email = 'hello@unusualtechnologies.com'
+  phone = '+44 79398 34948'
+  linkedinURL = 'https://www.linkedin.com/company/unusualtechnologies/'
+  youtubeURL = 'https://www.youtube.com/channel/UChprEpzElXHmo1iZc4EwaQg'
+  showreelVideo = 'https://www.unusualtechnologies.com/wp-content/uploads/2025/06/Unusual_Technologies_Showreel_NoAudio.webm'
