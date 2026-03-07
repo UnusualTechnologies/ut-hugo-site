@@ -9,6 +9,7 @@
   <section class="section projects-layout">
     <!-- Left pane: tag filter -->
     <div class="filter-pane" id="left_pane">
+      <p class="filter-heading">Select interests</p>
       <label class="filter-toggle" for="filter-checkbox">
         Select interests <span class="chevron">&#x203A;</span>
       </label>
@@ -66,7 +67,7 @@
           (dict "title" "Lost Horizon" "type" "Client" "tags" "art,gamification,immersive,music,unity,vr" "prominence" 16 "img" "/images/projects/lost-horizon.webp" "url" "/projects/lost-horizon/")
         }}
 
-        {{ range $projects }}
+        {{ range sort $projects "prominence" "desc" }}
         <div class="project-card-container" data-tags="{{ .tags }}" data-prominence="{{ .prominence }}">
           <a href="{{ .url }}" class="project-card">
             <div class="project-image" style="background-image: url('{{ .img }}')">

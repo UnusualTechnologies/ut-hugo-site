@@ -98,12 +98,6 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #fff;
-  transition: background 0.3s ease;
-}
-
-/* Transparent header for homepage */
-.site-header.transparent {
   background: transparent;
 }
 
@@ -125,9 +119,8 @@ ul {
 }
 
 .site-logo {
-  width: 300px;
-  height: auto;
-  max-width: 300px;
+  height: 110px;
+  width: auto;
 }
 
 /* --- Desktop Nav --- */
@@ -159,11 +152,6 @@ ul {
   transition: color 0.2s ease;
 }
 
-/* Non-transparent header: dark text */
-.site-header:not(.transparent) .nav-menu .menu-link {
-  color: #14261C;
-}
-
 .nav-menu .menu-link:hover,
 .nav-menu .menu-link:focus {
   color: #79c4ad;
@@ -186,15 +174,16 @@ ul {
 
 .menu-toggle {
   display: none;
-  background: none;
+  background: #60DCB7;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
-  padding: 8px;
-  color: #fff;
-}
-
-.site-header:not(.transparent) .menu-toggle {
+  width: 44px;
+  height: 44px;
+  padding: 0;
   color: #14261C;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle .icon-close {
@@ -362,7 +351,7 @@ ul {
    ========================================================================== */
 
 .page-gradient {
-  background: linear-gradient(180deg, #14261C 0%, #000 100%);
+  background: radial-gradient(ellipse at 80% 20%, #1a3a2a 0%, #14261C 40%, #000 100%);
   padding-top: 80px; /* account for fixed header */
   min-height: 100vh;
 }
@@ -569,9 +558,10 @@ ul {
 
 .flip-box {
   display: block;
-  width: 300px;
-  height: 200px;
-  margin: 32px auto;
+  width: 100%;
+  max-width: 500px;
+  height: 120px;
+  margin: 0;
   perspective: 1000px;
   text-decoration: none;
 }
@@ -644,6 +634,7 @@ ul {
 
 .contact-details h3 a {
   color: #fff;
+  text-decoration: underline;
 }
 
 .contact-details h3 a:hover {
@@ -753,7 +744,7 @@ ul {
 }
 
 .filter-toggle {
-  display: block;
+  display: none;
   color: #79c4ad;
   font-size: 1.1rem;
   font-weight: 600;
@@ -772,14 +763,20 @@ ul {
   transform: rotate(90deg);
 }
 
+.filter-heading {
+  color: #79c4ad;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
 .tag-list {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  max-height: none;
+  overflow: visible;
 }
 
 .tag-list.open {
-  max-height: 2000px;
+  max-height: none;
 }
 
 .tag-label {
@@ -885,7 +882,7 @@ ul {
 @media (max-width: 921px) {
   /* Header */
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .main-nav {
@@ -919,8 +916,7 @@ ul {
 
   /* Logo */
   .site-logo {
-    width: 200px;
-    max-width: 200px;
+    height: 50px;
   }
 
   /* Pages */
@@ -964,6 +960,24 @@ ul {
     position: static;
   }
 
+  .filter-heading {
+    display: none;
+  }
+
+  .filter-toggle {
+    display: block;
+  }
+
+  .tag-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .tag-list.open {
+    max-height: 2000px;
+  }
+
   /* Footer */
   .footer-inner {
     grid-template-columns: 1fr;
@@ -992,8 +1006,7 @@ ul {
   }
 
   .site-logo {
-    width: 160px;
-    max-width: 160px;
+    height: 40px;
   }
 
   h1 { font-size: 2.5rem; }
@@ -1016,8 +1029,8 @@ ul {
   }
 
   .flip-box {
-    width: 260px;
-    height: 180px;
+    max-width: 100%;
+    height: 110px;
   }
 
   .project-grid {
