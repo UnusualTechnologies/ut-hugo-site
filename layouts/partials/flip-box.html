@@ -1,0 +1,15 @@
+{{- $url := .url -}}
+{{- $title := .title -}}
+{{- $description := .description -}}
+{{- $icon := .icon -}}
+<a href="{{ $url }}" target="{{ if strings.HasPrefix $url "http" }}_blank{{ else }}_self{{ end }}" {{ if strings.HasPrefix $url "http" }}rel="noopener"{{ end }} class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      {{ with $icon }}{{ . | safeHTML }}{{ end }}
+      <h2>{{ $title }}</h2>
+    </div>
+    <div class="flip-box-back">
+      <p>{{ $description }}</p>
+    </div>
+  </div>
+</a>

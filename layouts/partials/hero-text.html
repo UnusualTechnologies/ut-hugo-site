@@ -1,0 +1,8 @@
+{{- $title := .title -}}
+{{- $subtitle := .subtitle -}}
+{{- $body := .body -}}
+<section class="section hero-text">
+  <h1>{{ $title }}</h1>
+  {{ with $subtitle }}<p class="subtitle"><em><strong>{{ . }}</strong></em></p>{{ end }}
+  {{ with $body }}{{ . | safeHTML }}{{ end }}
+</section>

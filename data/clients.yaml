@@ -1,0 +1,23 @@
+- name: NHS
+  logo: /images/clients/nhs.webp
+
+- name: Lost Horizon
+  logo: /images/clients/lost-horizon.webp
+
+- name: Hochschule fur Musik und Theater Hamburg
+  logo: /images/clients/hfmt.webp
+
+- name: Merlin Entertainments Group
+  logo: /images/clients/merlin.webp
+
+- name: Royal Air Force Museum
+  logo: /images/clients/raf-museum.webp
+
+- name: University of Sussex
+  logo: /images/clients/sussex.webp
+
+- name: Legoland Discovery Center
+  logo: /images/clients/lego.webp
+
+- name: East Sussex College
+  logo: /images/clients/escg.webp

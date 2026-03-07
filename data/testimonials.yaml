@@ -1,0 +1,35 @@
+- name: Adam
+  title: Director of Astrolabe Immersive
+  label: "Watch Adam&rsquo;s Testimonial"
+  image: /images/testimonials/adam.jpg
+  video: https://youtu.be/aG8tGJbxQ6k
+
+- name: Agnieszka & Bernard
+  title: Partners of Bosco Dental Studio
+  label: "Watch Agnieszka &amp; Bernard Dental Studio&rsquo;s Testimonial"
+  image: /images/testimonials/bosco.webp
+  video: https://youtu.be/KnDEyLdO9lk
+
+- name: Nyangi
+  title: Lead Alzheimers Researcher
+  label: "Watch Nyangis Testimonial"
+  image: /images/testimonials/nyangi.webp
+  video: https://youtu.be/iWjS4tdVC3Q
+
+- name: Robin
+  title: CEO of Lost Horizon
+  label: "Watch Robin&rsquo;s Testimonial"
+  image: /images/testimonials/robin.png
+  video: https://youtu.be/_Bux2vpznQM
+
+- name: Cate
+  title: Director of Friendly Fox Design
+  label: "Watch Cate&rsquo;s Testimonial"
+  image: /images/testimonials/cate.jpg
+  video: https://youtu.be/LSNciyz7gjE
+
+- name: John Avery
+  title: Founder of Oobikoo Games
+  label: "Watch John Avery&rsquo;s Testimonial"
+  image: /images/testimonials/john-avery.png
+  video: https://youtu.be/XRgHhMEdIDw

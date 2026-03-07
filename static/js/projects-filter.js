@@ -1,40 +1,39 @@
 // Project tag filtering
-document.addEventListener('DOMContentLoaded', function () {
-  var checkboxes = document.querySelectorAll('input[name="project-tag[]"]');
-  var cards = document.querySelectorAll('.project-card-container');
-  var heading = document.getElementById('matching-heading');
-  var grid = document.getElementById('project-grid');
+document.addEventListener('DOMContentLoaded', () => {
+  const checkboxes = document.querySelectorAll('input[name="project-tag[]"]');
+  const cards = document.querySelectorAll('.project-card-container');
+  const heading = document.getElementById('matching-heading');
 
-  checkboxes.forEach(function (cb) {
+  checkboxes.forEach((cb) => {
     cb.addEventListener('change', filterProjects);
   });
 
   function filterProjects() {
-    var selected = [];
-    checkboxes.forEach(function (cb) {
+    const selected = [];
+    checkboxes.forEach((cb) => {
       if (cb.checked) selected.push(cb.value);
     });
 
     if (selected.length === 0) {
       // Show all, reset order
-      cards.forEach(function (card) {
+      cards.forEach((card) => {
         card.style.display = '';
         card.style.order = '';
       });
-      heading.style.display = 'none';
+      heading.classList.add('hidden');
       return;
     }
 
-    heading.style.display = '';
+    heading.classList.remove('hidden');
 
     // Score and sort
-    var scored = [];
-    cards.forEach(function (card) {
-      var tags = card.dataset.tags.split(',');
-      var prominence = parseInt(card.dataset.prominence) || 0;
-      var matchCount = 0;
-      selected.forEach(function (sel) {
-        if (tags.indexOf(sel) !== -1) matchCount++;
+    const scored = [];
+    cards.forEach((card) => {
+      const tags = card.dataset.tags.split(',');
+      const prominence = parseInt(card.dataset.prominence) || 0;
+      let matchCount = 0;
+      selected.forEach((sel) => {
+        if (tags.includes(sel)) matchCount++;
       });
 
       if (matchCount > 0) {
@@ -46,17 +45,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Sort by score descending using CSS order
-    scored.sort(function (a, b) { return b.score - a.score; });
-    scored.forEach(function (item, i) {
+    scored.sort((a, b) => b.score - a.score);
+    scored.forEach((item, i) => {
       item.el.style.order = i;
     });
   }
 
   // Filter toggle for mobile
-  var toggle = document.querySelector('.filter-toggle');
-  var tagList = document.getElementById('toggleList');
+  const toggle = document.querySelector('.filter-toggle');
+  const tagList = document.getElementById('toggleList');
   if (toggle && tagList) {
-    toggle.addEventListener('click', function () {
+    toggle.addEventListener('click', () => {
       tagList.classList.toggle('open');
       toggle.classList.toggle('open');
     });

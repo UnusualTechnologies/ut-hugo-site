@@ -1,18 +1,21 @@
 /* ==========================================================================
-   Unusual Technologies - Faithful recreation of original WordPress/Astra site
+   Unusual Technologies
    ========================================================================== */
 
-/* --- Color Palette ---
-   --color-primary:    #79c4ad  (teal/green accent)
-   --color-primary-bright: #60DCB7
-   --color-dark:       #14261C  (dark green text)
-   --color-gray:       #4F5655  (secondary text)
-   --color-light:      #F3F6F3  (light bg)
-   --color-white:      #FFFFFF
-   --color-black:      #000000  (footer bg)
-   --color-dark-gray:  #4B4F58
-   --color-red:        #de253a  (accent)
-   --- */
+:root {
+  --color-primary: #79c4ad;
+  --color-primary-bright: #60DCB7;
+  --color-dark: #14261C;
+  --color-gray: #4F5655;
+  --color-light: #F3F6F3;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark-gray: #4B4F58;
+  --color-red: #de253a;
+  --color-linkedin: #1B64F6;
+  --color-youtube: #d77ea6;
+  --color-email: #ea4335;
+}
 
 /* --- Reset & Base --- */
 
@@ -34,8 +37,8 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7em;
-  color: #14261C;
-  background: #000;
+  color: var(--color-dark);
+  background: var(--color-black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,14 +55,14 @@ h3 { font-size: 1.5rem; line-height: 1.3em; }
 h4 { font-size: 1.25rem; line-height: 1.2em; }
 
 a {
-  color: #79c4ad;
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover,
 a:focus {
-  color: #60DCB7;
+  color: var(--color-primary-bright);
 }
 
 img {
@@ -71,14 +74,20 @@ ul {
   list-style: none;
 }
 
+/* --- Utilities --- */
+
+.hidden {
+  display: none;
+}
+
 /* --- Skip Link --- */
 
 .skip-link {
   position: absolute;
   top: -100%;
   left: 0;
-  background: #79c4ad;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-white);
   padding: 0.5em 1em;
   z-index: 10000;
   font-size: 0.875rem;
@@ -147,23 +156,18 @@ ul {
   font-size: 1rem;
   font-weight: 400;
   line-height: 80px;
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-menu .menu-link:hover,
 .nav-menu .menu-link:focus {
-  color: #79c4ad;
+  color: var(--color-primary);
 }
 
 .nav-menu .menu-item.current .menu-link {
-  color: #79c4ad;
-}
-
-/* Zoom hover effect matching original ast-menu-hover-style-zoom */
-.nav-menu .menu-link {
-  transition: color 0.2s ease, transform 0.2s ease;
+  color: var(--color-primary);
 }
 
 .nav-menu .menu-link:hover {
@@ -174,14 +178,14 @@ ul {
 
 .menu-toggle {
   display: none;
-  background: #60DCB7;
+  background: var(--color-primary-bright);
   border: none;
   border-radius: 50%;
   cursor: pointer;
   width: 44px;
   height: 44px;
   padding: 0;
-  color: #14261C;
+  color: var(--color-dark);
   align-items: center;
   justify-content: center;
 }
@@ -210,7 +214,7 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #000;
+  background: var(--color-black);
 }
 
 .hero video {
@@ -227,7 +231,7 @@ ul {
    ========================================================================== */
 
 .site-footer {
-  background-color: #000;
+  background-color: var(--color-black);
   padding: 45px 0;
 }
 
@@ -248,14 +252,14 @@ ul {
 }
 
 .footer-copyright p {
-  color: #79c4ad;
-  font-size: 14pt;
+  color: var(--color-primary);
+  font-size: 0.875rem;
   margin: 0;
   line-height: 1.6;
 }
 
 .footer-copyright a {
-  color: #79c4ad;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -299,20 +303,11 @@ ul {
   flex-shrink: 0;
 }
 
-.social-linkedin {
-  color: #1B64F6;
-}
-
-.social-youtube {
-  color: #d77ea6;
-}
-
-.social-email {
-  color: #ea4335;
-}
-
+.social-linkedin,
+.social-youtube,
+.social-email,
 .social-phone {
-  color: #ea4335;
+  color: var(--color-primary);
 }
 
 /* --- Footer Nav (right column) --- */
@@ -336,14 +331,14 @@ ul {
 .footer-menu a {
   display: block;
   padding: 0 0.5em;
-  color: #79c4ad;
+  color: var(--color-primary);
   font-size: 1rem;
   line-height: 2;
   text-decoration: none;
 }
 
 .footer-menu a:hover {
-  color: #60DCB7;
+  color: var(--color-primary-bright);
 }
 
 /* ==========================================================================
@@ -351,7 +346,7 @@ ul {
    ========================================================================== */
 
 .page-gradient {
-  background: radial-gradient(ellipse at 80% 20%, #1a3a2a 0%, #14261C 40%, #000 100%);
+  background: radial-gradient(ellipse at 80% 20%, #1a3a2a 0%, var(--color-dark) 40%, var(--color-black) 100%);
   padding-top: 80px; /* account for fixed header */
   min-height: 100vh;
 }
@@ -369,34 +364,53 @@ ul {
 }
 
 .hero-text h1 {
-  color: #fff;
+  color: var(--color-white);
   margin-bottom: 24px;
 }
 
 .hero-text h2 {
-  color: #fff;
+  color: var(--color-white);
   margin-bottom: 16px;
 }
 
 .body-large {
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--color-white);
   line-height: 1.7;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .section h1,
 .section h2 {
-  color: #fff;
+  color: var(--color-white);
   text-align: center;
 }
 
 .section p {
-  color: #fff;
+  color: var(--color-white);
+}
+
+/* --- Default Page/Container --- */
+
+.page {
+  padding-top: 100px;
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 35px;
+  color: var(--color-white);
+}
+
+.container h1 {
+  color: var(--color-white);
+  margin-bottom: 24px;
 }
 
 /* ==========================================================================
@@ -435,13 +449,13 @@ ul {
 }
 
 .team-card h3 {
-  color: #fff;
+  color: var(--color-white);
   font-family: 'Advent Pro', sans-serif;
   margin-bottom: 4px;
 }
 
 .team-card p {
-  color: #79c4ad;
+  color: var(--color-primary);
   font-size: 0.9rem;
 }
 
@@ -496,13 +510,13 @@ ul {
 
 .testimonial-caption strong {
   display: block;
-  color: #fff;
+  color: var(--color-white);
   font-size: 0.9rem;
   margin-bottom: 4px;
 }
 
 .testimonial-caption span {
-  color: #79c4ad;
+  color: var(--color-primary);
   font-size: 0.8rem;
 }
 
@@ -537,7 +551,8 @@ ul {
   margin-bottom: 32px;
 }
 
-.value h2 {
+.value h2,
+.value h3 {
   text-align: left;
   margin-bottom: 8px;
 }
@@ -594,25 +609,25 @@ ul {
 }
 
 .flip-box-front {
-  background: #79c4ad;
-  color: #14261C;
+  background: var(--color-primary);
+  color: var(--color-dark);
 }
 
 .flip-box-front svg {
   margin-bottom: 12px;
-  color: #14261C;
+  color: var(--color-dark);
 }
 
 .flip-box-front h2 {
-  color: #14261C;
+  color: var(--color-dark);
   font-size: 1.3rem;
 }
 
 .flip-box-back {
-  background: #14261C;
-  color: #fff;
+  background: var(--color-dark);
+  color: var(--color-white);
   transform: rotateX(180deg);
-  border: 1px solid #79c4ad;
+  border: 1px solid var(--color-primary);
 }
 
 .flip-box-back p {
@@ -633,12 +648,12 @@ ul {
 }
 
 .contact-details h3 a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: underline;
 }
 
 .contact-details h3 a:hover {
-  color: #79c4ad;
+  color: var(--color-primary);
 }
 
 .flip-boxes {
@@ -685,7 +700,7 @@ ul {
 .step-title {
   font-family: 'Advent Pro', sans-serif;
   font-size: 2.75rem;
-  color: #79c4ad;
+  color: var(--color-primary);
   position: relative;
   z-index: 1;
 }
@@ -709,8 +724,8 @@ ul {
 .btn {
   display: inline-block;
   padding: 12px 32px;
-  background: #79c4ad;
-  color: #14261C;
+  background: var(--color-primary);
+  color: var(--color-dark);
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -720,8 +735,8 @@ ul {
 }
 
 .btn:hover {
-  background: #60DCB7;
-  color: #14261C;
+  background: var(--color-primary-bright);
+  color: var(--color-dark);
 }
 
 /* ==========================================================================
@@ -745,7 +760,7 @@ ul {
 
 .filter-toggle {
   display: none;
-  color: #79c4ad;
+  color: var(--color-primary);
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -764,7 +779,7 @@ ul {
 }
 
 .filter-heading {
-  color: #79c4ad;
+  color: var(--color-primary);
   font-size: 1.1rem;
   font-weight: 600;
   padding: 8px 0;
@@ -784,13 +799,13 @@ ul {
   align-items: center;
   gap: 8px;
   padding: 4px 0;
-  color: #fff;
+  color: var(--color-white);
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .tag-label input[type="checkbox"] {
-  accent-color: #79c4ad;
+  accent-color: var(--color-primary);
 }
 
 /* --- Project Grid --- */
@@ -836,7 +851,7 @@ ul {
 }
 
 .project-name {
-  color: #fff;
+  color: var(--color-white);
   font-family: 'Advent Pro', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
@@ -844,7 +859,7 @@ ul {
 }
 
 .project-tags {
-  color: #79c4ad;
+  color: var(--color-primary);
   font-size: 0.75rem;
 }
 
@@ -866,7 +881,7 @@ ul {
 }
 
 .project-type-badge span {
-  color: #fff;
+  color: var(--color-white);
   font-size: 0.7rem;
   font-weight: 600;
 }
@@ -876,7 +891,7 @@ ul {
 }
 
 /* ==========================================================================
-   Responsive — Tablet (max-width: 921px, matching original Astra breakpoint)
+   Responsive — Tablet (max-width: 921px)
    ========================================================================== */
 
 @media (max-width: 921px) {
@@ -891,7 +906,7 @@ ul {
     top: 100%;
     left: 0;
     right: 0;
-    background: #000;
+    background: var(--color-black);
     padding: 10px 0;
   }
 
@@ -907,7 +922,7 @@ ul {
   .nav-menu .menu-link {
     line-height: 1;
     padding: 10px 20px;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .nav-menu .menu-link:hover {

@@ -1,0 +1,14 @@
+- name: James Alvarez
+  role: Senior Developer
+  photo: /images/team/james-alvarez.webp
+  url: /team/james-alvarez/
+
+- name: Douglas Kelly
+  role: Director
+  photo: /images/team/douglas-kelly.webp
+  url: /team/douglas-kelly/
+
+- name: Matt West
+  role: Technical Director
+  photo: /images/team/matt-west.webp
+  url: /team/matt-west/

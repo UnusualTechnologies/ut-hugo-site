@@ -1,10 +1,10 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  <section class="section hero-text">
-    <h1>Concept &amp; Design</h1>
-    <h2>Bring your ideas, we&rsquo;ll do the rest!</h2>
-  </section>
+  {{ partial "hero-text.html" (dict
+    "title" "Concept &amp; Design"
+    "subtitle" "Bring your ideas, we&rsquo;ll do the rest!"
+  ) }}
 
   <!-- Step 01 -->
   <section class="section step-section">
