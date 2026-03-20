@@ -1,0 +1,212 @@
+backend:
+  name: github
+  repo: UnusualTechnologies/ut-hugo-site
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  # ── Projects (page bundles) ──────────────────────────────────────────
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    path: "{{slug}}/index"
+    media_folder: /static/images/projects
+    public_folder: /images/projects
+    sortable_fields: [title, prominence]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: type, label: Type (Hugo), widget: hidden, default: projects }
+      - name: project_type
+        label: Project Type
+        widget: select
+        options: [Client, In-house, Prototype]
+      - name: tags
+        label: Tags
+        widget: select
+        multiple: true
+        options:
+          - { label: "360 Video", value: "360-video" }
+          - { label: "AAA Games", value: "aaa-games" }
+          - { label: "AI", value: "ai" }
+          - { label: "Android", value: "android" }
+          - { label: "AR", value: "ar" }
+          - { label: "Arduino", value: "arduino" }
+          - { label: "Art", value: "art" }
+          - { label: "AWS", value: "aws" }
+          - { label: "Biometrics", value: "biometrics" }
+          - { label: "Blockchain", value: "blockchain" }
+          - { label: "Bluetooth", value: "bluetooth" }
+          - { label: "CMS", value: "cms" }
+          - { label: "Computer Vision", value: "computer-vision" }
+          - { label: "Console", value: "console" }
+          - { label: "Construction", value: "construction" }
+          - { label: "Data Visualisation", value: "data-visualisation" }
+          - { label: "Eco", value: "eco" }
+          - { label: "Education", value: "education" }
+          - { label: "Game", value: "game" }
+          - { label: "Gamification", value: "gamification" }
+          - { label: "Health", value: "health" }
+          - { label: "Immersive", value: "immersive" }
+          - { label: "Installation", value: "installation" }
+          - { label: "iOS", value: "ios" }
+          - { label: "IoT", value: "iot" }
+          - { label: "LiDAR", value: "lidar" }
+          - { label: "Motion Sensor", value: "motion-sensor" }
+          - { label: "Music", value: "music" }
+          - { label: "NFTs", value: "nfts" }
+          - { label: "Port", value: "port" }
+          - { label: "Procedural Generation", value: "procedural-generation" }
+          - { label: "Productivity", value: "productivity" }
+          - { label: "Projection Mapping", value: "projection-mapping" }
+          - { label: "Publicity Stunt", value: "publicity-stunt" }
+          - { label: "Raspberry Pi", value: "raspberry-pi" }
+          - { label: "RFID", value: "rfid" }
+          - { label: "Science and Research", value: "science-and-research" }
+          - { label: "Steam", value: "steam" }
+          - { label: "Unity", value: "unity" }
+          - { label: "Unreal Engine", value: "unreal-engine" }
+          - { label: "VFX", value: "vfx" }
+          - { label: "VR", value: "vr" }
+          - { label: "Web", value: "web" }
+          - { label: "WebGL", value: "webgl" }
+          - { label: "Windows", value: "windows" }
+      - { name: prominence, label: Prominence, widget: number, default: 0, hint: "Higher = appears first on project list" }
+      - { name: featured_image, label: Featured Image, widget: image }
+      - { name: overview, label: Overview, widget: text, required: false }
+      - { name: overview_video_id, label: Overview Video ID, widget: string, required: false, hint: "YouTube video ID (e.g. dQw4w9WgXcQ)" }
+      - name: technologies
+        label: Technologies
+        widget: list
+        required: false
+        field: { name: tech, label: Technology, widget: string }
+      - name: try_it
+        label: Try It
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: text, label: Text, widget: string, required: false }
+          - name: links
+            label: Links
+            widget: list
+            required: false
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string }
+      - name: overview_image
+        label: Overview Image
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: src, label: Image, widget: image, required: false }
+          - { name: caption, label: Caption, widget: string, required: false }
+      - name: client
+        label: Client
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: name, label: Name, widget: string, required: false }
+          - { name: logo, label: Logo, widget: image, required: false }
+          - { name: website, label: Website, widget: string, required: false }
+      - name: testimonial
+        label: Testimonial
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: quote, label: Quote, widget: string, required: false }
+          - { name: full_text, label: Full Text, widget: text, required: false }
+          - { name: person_name, label: Person Name, widget: string, required: false }
+          - { name: person_title, label: Person Title, widget: string, required: false }
+          - { name: person_org, label: Person Organisation, widget: string, required: false }
+          - { name: video_id, label: Video ID, widget: string, required: false, hint: "YouTube video ID" }
+      - { name: body, label: Body, widget: markdown, required: false }
+
+  # ── Data files ───────────────────────────────────────────────────────
+  - name: data
+    label: Site Data
+    files:
+      - name: team
+        label: Team
+        file: data/team.yaml
+        fields:
+          - name: items
+            label: Team Members
+            label_singular: Member
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: Role, widget: string }
+              - { name: photo, label: Photo, widget: image }
+              - { name: url, label: URL, widget: string, required: false }
+
+      - name: clients
+        label: Clients
+        file: data/clients.yaml
+        fields:
+          - name: items
+            label: Clients
+            label_singular: Client
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: logo, label: Logo, widget: image }
+
+      - name: awards
+        label: Awards
+        file: data/awards.yaml
+        fields:
+          - name: items
+            label: Awards
+            label_singular: Award
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: image, label: Image, widget: image }
+
+      - name: testimonials
+        label: Testimonials
+        file: data/testimonials.yaml
+        fields:
+          - name: items
+            label: Testimonials
+            label_singular: Testimonial
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: label, label: Label, widget: string }
+              - { name: image, label: Image, widget: image }
+              - { name: video, label: Video URL, widget: string }
+
+      - name: values
+        label: Values
+        file: data/values.yaml
+        fields:
+          - name: items
+            label: Values
+            label_singular: Value
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+
+      - name: contact_ctas
+        label: Contact CTAs
+        file: data/contact_ctas.yaml
+        fields:
+          - name: items
+            label: CTAs
+            label_singular: CTA
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: url_param, label: URL Parameter, widget: string, required: false, hint: "Config key (e.g. questionnaireURL)" }
+              - { name: url, label: URL, widget: string, required: false, hint: "Direct URL (used if no url_param)" }
+              - { name: icon, label: Icon SVG, widget: text, required: false }

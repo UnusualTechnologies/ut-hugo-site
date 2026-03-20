@@ -3,7 +3,7 @@
 
   {{ partial "hero-text.html" (dict
     "title" "Projects"
-    "body" `<p class="body-large">Here are some projects we&rsquo;ve worked on. Select a tag to view relevant ones.</p>`
+    "body" `<p class="body-large">Here are some projects we've worked on. Select a tag to view relevant ones.</p>`
   ) }}
 
   <section class="section projects-layout">
@@ -33,17 +33,18 @@
       <h2 class="section-heading matching-heading hidden" id="matching-heading">Projects selected for your interests</h2>
       <div class="project-grid" id="project-grid">
 
-        {{ range sort .Site.Data.projects "prominence" "desc" }}
-        <div class="project-card-container" data-tags="{{ .tags }}" data-prominence="{{ .prominence }}">
-          <a href="{{ .url }}" class="project-card">
-            <div class="project-image" style="background-image: url('{{ .img }}')">
+        {{ range sort .Pages "Params.prominence" "desc" }}
+        {{ $tagsCsv := delimit .Params.tags "," }}
+        <div class="project-card-container" data-tags="{{ $tagsCsv }}" data-prominence="{{ .Params.prominence }}">
+          <a href="{{ .RelPermalink }}" class="project-card">
+            <div class="project-image" style="background-image: url('{{ .Params.featured_image }}')">
               <div class="project-info">
-                <div class="project-name">{{ .title }}</div>
-                <div class="project-tags">{{ replace .tags "," ", " | replaceRE "-" " " | title }}</div>
+                <div class="project-name">{{ .Title }}</div>
+                <div class="project-tags">{{ replace $tagsCsv "," ", " | replaceRE "-" " " | title }}</div>
               </div>
-              <div class="project-type-badge {{ .type | urlize }}">
-                <img src="/images/badges/{{ .type | urlize }}.png" alt="{{ .type }}">
-                <span>{{ .type }}</span>
+              <div class="project-type-badge {{ .Params.project_type | urlize }}">
+                <img src="/images/badges/{{ .Params.project_type | urlize }}.png" alt="{{ .Params.project_type }}">
+                <span>{{ .Params.project_type }}</span>
               </div>
             </div>
           </a>

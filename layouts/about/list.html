@@ -12,7 +12,7 @@
   <section class="section">
     <h2>Leadership Team</h2>
     <div class="team-cards">
-      {{ range .Site.Data.team }}
+      {{ range .Site.Data.team.items }}
       <a href="{{ .url }}" class="team-card">
         <img src="{{ .photo }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
@@ -27,13 +27,13 @@
     <h2>Client Testimonials</h2>
 
     <div class="client-logos">
-      {{ range .Site.Data.clients }}
+      {{ range .Site.Data.clients.items }}
       <img src="{{ .logo }}" alt="{{ .name }}">
       {{ end }}
     </div>
 
     <div class="testimonial-grid">
-      {{ range .Site.Data.testimonials }}
+      {{ range .Site.Data.testimonials.items }}
       <a href="{{ .video }}" target="_blank" rel="noopener" class="testimonial-card">
         <img src="{{ .image }}" alt="{{ .name }}'s Testimonial">
         <div class="testimonial-caption">
@@ -49,7 +49,7 @@
   <section class="section">
     <h2>Awards</h2>
     <div class="awards-grid">
-      {{ range .Site.Data.awards }}
+      {{ range .Site.Data.awards.items }}
       <img src="{{ .image }}" alt="{{ .name }}">
       {{ end }}
     </div>
@@ -61,7 +61,7 @@
     <p class="body-large values-intro">Unusual Technologies was founded in 2018 with a mission to work on tech projects that are a bit unusual.</p>
 
     <div class="values-list">
-      {{ range .Site.Data.values }}
+      {{ range .Site.Data.values.items }}
       <div class="value">
         <h3>{{ .title }}</h3>
         <p class="body-large">{{ .description }}</p>

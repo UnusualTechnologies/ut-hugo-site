@@ -1,8 +1,9 @@
-- name: Tarot Experience Award
-  image: /images/awards/tarot.webp
+items:
+  - name: Tarot Experience Award
+    image: /images/awards/tarot.webp
 
-- name: Award
-  image: /images/awards/award-banner.png
+  - name: Award
+    image: /images/awards/award-banner.png
 
-- name: Tech Award 2024
-  image: /images/awards/tech24.jpg
+  - name: Tech Award 2024
+    image: /images/awards/tech24.jpg

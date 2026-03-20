@@ -1,0 +1,6 @@
+<figure class="project-figure">
+  <img src="{{ .Destination }}" alt="{{ .Text }}" loading="lazy">
+  {{ with .Text }}
+  <figcaption>{{ . }}</figcaption>
+  {{ end }}
+</figure>

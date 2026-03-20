@@ -1,0 +1,141 @@
+{{ define "main" }}
+<div class="page-gradient">
+
+  <article class="project-single">
+
+    <!-- Hero Banner -->
+    <section class="project-hero{{ with .Params.banner_image }} has-banner{{ end }}"
+      {{ with .Params.banner_image }}style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('{{ . }}')"{{ end }}>
+      <a href="/projects/" class="back-link">&larr; All Projects</a>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.project_type }}
+      <span class="project-type-label {{ . | urlize }}">{{ . }}</span>
+      {{ end }}
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section project-overview{{ if and (not .Params.overview_image) (not .Params.overview_video_id) }} no-image{{ end }}">
+      <div class="project-overview-text">
+        <h2 class="overview-heading">Overview</h2>
+        {{ with .Params.overview }}
+        <p class="project-overview-desc">{{ . }}</p>
+        {{ end }}
+
+        <!-- Try It -->
+        {{ with .Params.try_it }}
+        <div class="project-try-it">
+          <h3>Try It Yourself</h3>
+          {{ with .links }}
+          <div class="project-try-it-links">
+            {{ range . }}
+            <a href="{{ .url }}" class="btn btn-sm" target="_blank" rel="noopener">{{ .label }}</a>
+            {{ end }}
+          </div>
+          {{ else }}
+          {{ with $.Params.try_it.text }}
+          <p>{{ . }}</p>
+          {{ end }}
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <h2 class="tech-heading">Technologies:</h2>
+        <!-- Technologies -->
+        {{ with .Params.technologies }}
+        <div class="project-tech-badges">
+          {{ range . }}
+          <span class="project-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- Client Info -->
+        {{ with .Params.client }}
+        <div class="project-client-info">
+          {{ with .logo }}
+          <img src="{{ . }}" alt="{{ $.Params.client.name }} logo" class="project-client-logo">
+          {{ end }}
+          {{ with .website }}
+          <a href="{{ . }}" class="project-client-link" target="_blank" rel="noopener">Visit The Client <span class="client-link-text">Website</span>:</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+
+      {{ if .Params.overview_video_id }}
+      <div class="project-overview-media">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/{{ .Params.overview_video_id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      {{ else }}
+      {{ with .Params.overview_image }}
+      <div class="project-overview-image">
+        <figure class="project-figure">
+          <img src="{{ .src }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
+          {{ with .caption }}
+          <figcaption>{{ . }}</figcaption>
+          {{ end }}
+        </figure>
+      </div>
+      {{ end }}
+      {{ end }}
+    </section>
+
+    <!-- Case Study -->
+    {{ if .Content }}
+    <section class="section project-content">
+      <h2 class="case-study-heading">Case Study</h2>
+      {{ .Content }}
+    </section>
+    {{ end }}
+
+    <!-- Testimonial -->
+    {{ with .Params.testimonial }}
+    <section class="section project-testimonial">
+      <h2>Testimonial</h2>
+
+      {{ with .quote }}
+      <blockquote class="testimonial-pull-quote">
+        <p>&ldquo;{{ . }}&rdquo;</p>
+      </blockquote>
+      {{ end }}
+
+      <div class="testimonial-body">
+        {{ with .video_id }}
+        <div class="testimonial-video">
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/{{ . }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        {{ else }}
+        {{ with .thumbnail }}
+        <div class="testimonial-thumbnail">
+          <img src="{{ . }}" alt="Testimonial" loading="lazy">
+        </div>
+        {{ end }}
+        {{ end }}
+
+        {{ with .full_text }}
+        <div class="testimonial-text">
+          {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+        <div class="testimonial-attribution">
+          {{ with .person_name }}<strong>{{ . }}</strong>{{ end }}
+          {{ with .person_title }}<span>{{ . }}</span>{{ end }}
+          {{ with .person_org }}<span>{{ . }}</span>{{ end }}
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+    <!-- Back to projects -->
+    <section class="section project-footer-nav">
+      <a href="/projects/" class="btn">&larr; Back to Projects</a>
+    </section>
+  </article>
+
+</div>
+{{ end }}
