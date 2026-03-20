@@ -1,8 +1,8 @@
 <header class="site-header transparent">
   <div class="header-inner">
     <div class="site-branding">
-      <a href="/" class="logo-link">
-        <img src="/images/logo.png" alt="{{ .Site.Title }}" class="site-logo">
+      <a href="{{ site.Home.RelPermalink }}" class="logo-link">
+        <img src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }}" class="site-logo">
       </a>
     </div>
 

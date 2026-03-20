@@ -5,8 +5,8 @@
 
     <!-- Hero Banner -->
     <section class="project-hero{{ with .Params.banner_image }} has-banner{{ end }}"
-      {{ with .Params.banner_image }}style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('{{ . }}')"{{ end }}>
-      <a href="/projects/" class="back-link">&larr; All Projects</a>
+      {{ with .Params.banner_image }}style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('{{ . | relURL }}')"{{ end }}>
+      <a href="{{ "projects/" | relURL }}" class="back-link">&larr; All Projects</a>
       <h1>{{ .Title }}</h1>
       {{ with .Params.project_type }}
       <span class="project-type-label {{ . | urlize }}">{{ . }}</span>
@@ -53,7 +53,7 @@
         {{ with .Params.client }}
         <div class="project-client-info">
           {{ with .logo }}
-          <img src="{{ . }}" alt="{{ $.Params.client.name }} logo" class="project-client-logo">
+          <img src="{{ . | relURL }}" alt="{{ $.Params.client.name }} logo" class="project-client-logo">
           {{ end }}
           {{ with .website }}
           <a href="{{ . }}" class="project-client-link" target="_blank" rel="noopener">Visit The Client <span class="client-link-text">Website</span>:</a>
@@ -72,7 +72,7 @@
       {{ with .Params.overview_image }}
       <div class="project-overview-image">
         <figure class="project-figure">
-          <img src="{{ .src }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
+          <img src="{{ .src | relURL }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
           {{ with .caption }}
           <figcaption>{{ . }}</figcaption>
           {{ end }}
@@ -133,7 +133,7 @@
 
     <!-- Back to projects -->
     <section class="section project-footer-nav">
-      <a href="/projects/" class="btn">&larr; Back to Projects</a>
+      <a href="{{ "projects/" | relURL }}" class="btn">&larr; Back to Projects</a>
     </section>
   </article>
 

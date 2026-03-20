@@ -1,8 +1,8 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-section footer-copyright">
-      <p>Copyright &copy; {{ now.Year }} <a href="/">unusualtechnologies.com</a></p>
-      <p><a href="/legal/">Legal Terms</a></p>
+      <p>Copyright &copy; {{ now.Year }} <a href="{{ site.Home.RelPermalink }}">unusualtechnologies.com</a></p>
+      <p><a href="{{ "legal/" | relURL }}">Legal Terms</a></p>
     </div>
 
     <div class="footer-section footer-social">
