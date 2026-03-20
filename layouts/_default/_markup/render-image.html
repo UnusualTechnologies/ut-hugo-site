@@ -1,5 +1,5 @@
 <figure class="project-figure">
-  <img src="{{ .Destination | relURL }}" alt="{{ .Text }}" loading="lazy">
+  <img src="{{ .Destination | strings.TrimPrefix "/" | relURL }}" alt="{{ .Text }}" loading="lazy">
   {{ with .Text }}
   <figcaption>{{ . }}</figcaption>
   {{ end }}

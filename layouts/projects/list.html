@@ -37,7 +37,7 @@
         {{ $tagsCsv := delimit .Params.tags "," }}
         <div class="project-card-container" data-tags="{{ $tagsCsv }}" data-prominence="{{ .Params.prominence }}">
           <a href="{{ .RelPermalink }}" class="project-card">
-            <div class="project-image" style="background-image: url('{{ .Params.featured_image | relURL }}')">
+            <div class="project-image" style="background-image: url('{{ .Params.featured_image | strings.TrimPrefix "/" | relURL }}')">
               <div class="project-info">
                 <div class="project-name">{{ .Title }}</div>
                 <div class="project-tags">{{ replace $tagsCsv "," ", " | replaceRE "-" " " | title }}</div>

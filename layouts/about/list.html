@@ -13,8 +13,8 @@
     <h2>Leadership Team</h2>
     <div class="team-cards">
       {{ range .Site.Data.team.items }}
-      <a href="{{ .url | relURL }}" class="team-card">
-        <img src="{{ .photo | relURL }}" alt="{{ .name }}" class="team-photo">
+      <a href="{{ .url | strings.TrimPrefix "/" | relURL }}" class="team-card">
+        <img src="{{ .photo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
         <p>{{ .role }}</p>
       </a>
@@ -28,14 +28,14 @@
 
     <div class="client-logos">
       {{ range .Site.Data.clients.items }}
-      <img src="{{ .logo | relURL }}" alt="{{ .name }}">
+      <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
 
     <div class="testimonial-grid">
       {{ range .Site.Data.testimonials.items }}
       <a href="{{ .video }}" target="_blank" rel="noopener" class="testimonial-card">
-        <img src="{{ .image | relURL }}" alt="{{ .name }}'s Testimonial">
+        <img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}'s Testimonial">
         <div class="testimonial-caption">
           <strong>{{ .label | safeHTML }}</strong>
           <span>{{ .title }}</span>
@@ -50,7 +50,7 @@
     <h2>Awards</h2>
     <div class="awards-grid">
       {{ range .Site.Data.awards.items }}
-      <img src="{{ .image | relURL }}" alt="{{ .name }}">
+      <img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
   </section>
