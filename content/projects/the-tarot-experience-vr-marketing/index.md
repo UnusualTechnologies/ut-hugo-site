@@ -44,3 +44,12 @@ Prior to our intervention, store pages on Steam and Meta Quest suffered from art
 - Visual Overhaul: Replaced surreal-only shots with gameplay-balanced captures. Highlighting the UI and 6DOF interaction increased click-through rates.
 - Language Pivot: Removed overly niche jargon in favor of clear, benefit-driven copy (e.g., "Experience true randomness" and "Relaxing 30-minute sessions").
 - Algorithm Alignment: Corrected Meta genres and Steam tags. The Tarot Experience is now the #1 result for the search term "Surreal Tarot Experience."
+
+Social Media Marketing:
+
+We executed a "Local to Global" outreach strategy to build authority.
+
+- Influencer Relations: Secured a dedicated stream with Zimtok5 (11k followers) for March 29.
+- Reddit & Viral Loops: Leveraged subreddit discussions with video prompts, resulting in thousands of organic views and active community threads.
+- B2B Partnerhisps: Contacted local Brighton institutions (The World's End Pub, VGolf) to pitch the game as a turnkey LBE for their customers.
+- Press Kit: Developed a centralised media kit to lower the friction for journalists at UploadVR, Road to VR, and The Guardian.
