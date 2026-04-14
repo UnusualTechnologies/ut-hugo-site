@@ -133,6 +133,52 @@ Examples of things you can ask:
 The AI will edit the relevant files and you can preview the changes with `hugo server`.
 
 
+## Requesting code changes via GitHub issues
+
+The site repository has Claude wired into GitHub Actions. The way to request a code change — a new feature, a layout tweak, a new field on project pages — is to write a GitHub issue and tag `@claude` in a comment. Claude reads the codebase, makes the change, and opens a pull request for a human to review.
+
+New issue URL: https://github.com/UnusualTechnologies/ut-hugo-site/issues/new
+
+### Step 1: Open a new issue
+
+Go to the repo, click **Issues**, then **New issue**. Give it a clear title and describe what you want in plain English. Be specific about behaviour — what's optional, what it looks like, where it appears.
+
+**Example:**
+
+Title: `Add optional video field to project pages`
+
+Description:
+> Project pages should optionally display a video. If a project's front matter includes a `video` URL, show a responsive embedded player beneath the description. If no URL is provided, nothing should render — no empty space or placeholder.
+
+### Step 2: Tag @claude in a comment
+
+Post a comment on the issue with `@claude` and your instruction. This is where you can be more directive about implementation if you want.
+
+> @claude please implement this. Add a `video` field to the project archetype and update the single layout template to conditionally render it. Use a responsive 16:9 wrapper. Support YouTube and Vimeo URLs.
+
+You don't need to know which files to edit — Claude will find them. Hints help it stay aligned with your intent.
+
+### Step 3: Wait for the pull request
+
+Claude will read the repo, make the changes, and open a PR linked back to the issue. This usually takes a minute or two. You'll get a GitHub notification when it's ready. Check the PR, look at the diff, and if there's a preview deployment, check it there too.
+
+### Step 4: Iterate or approve
+
+If something needs changing, leave a comment on the PR tagging `@claude` with the correction. It will amend the branch and update the PR.
+
+> @claude the wrapper div needs `max-width: 800px` and should be centred. Also add a caption field below the player if `video_caption` is set in front matter.
+
+When you're happy, a senior dev will merge it. Don't merge your own PRs.
+
+### Tips for writing good issues
+
+- Describe the behaviour you want, not the implementation — Claude knows the code better than you do at this stage.
+- Mention the edge case: "if no video is set, nothing should render" is the kind of detail that prevents a half-done PR.
+- One issue per change. Don't bundle unrelated tasks — it makes review harder and gives Claude less clarity.
+- Don't paste full code into issues unless you're fixing a specific snippet — it can confuse Claude about what's already been decided.
+- Don't approve or merge your own PRs, even if the diff looks right to you.
+
+
 ## Editing files by hand
 
 If you prefer to edit files directly, here's what you need to know.
@@ -318,3 +364,4 @@ The `baseURL` in `hugo.toml` is already set to `https://www.unusualtechnologies.
 | Add images | Put files in `static/images/` (they appear at `/images/`) |
 | Build the site | `hugo` (output goes to `public/`) |
 | Deploy | Push to `main` — the host rebuilds automatically |
+| Request a code change | Open a GitHub issue and tag `@claude` in a comment |
