@@ -1,35 +1,34 @@
 ---
-title: "Mere Mortals"
-type: "projects"
-project_type: "Client"
+title: Mere Mortals
+type: projects
+project_type: Client
 tags:
-  - "art"
-  - "game"
-  - "unity"
-  - "web"
-  - "webgl"
+  - art
+  - game
+  - unity
+  - web
+  - webgl
 prominence: 15
-featured_image: "/images/projects/mere-mortals.webp"
-
-overview: "We were hired by Oobikoo Games to create a game and engine for making games inspired by Vampire Survivors. This was a more traditional videogame for us to make, but really allowed us to highlight our capabilities in game development!"
-
+featured_image: /images/projects/mere-mortals.webp
+overview: We were hired by Oobikoo Games to create a game and engine for making games inspired by Vampire Survivors. This was a more traditional videogame for us to make, but really allowed us to highlight our capabilities in game development!
+overview_video_id: jFkRcovatls
+technologies:
+  - Video Game
+  - WebGL
+  - Unity
+  - 2D
 try_it:
   links:
-    - label: "Play It"
-      url: "https://unusualtechnologies.com/prototypes-and-demos/mere-mortals/"
-
-technologies: ["Video Game", "WebGL", "Unity", "2D"]
-
+    - label: Play It
+      url: https://unusualtechnologies.com/prototypes-and-demos/mere-mortals/
 overview_image:
-  src: "/images/projects/Character_1_Walk.gif"
-
+  src: /images/projects/Character_1_Walk.gif
 testimonial:
-  quote: "UT was instrumental to the entire process. They helped us define the features of the game, they built the game and delivered all of the art and sound assets."
-  full_text: |
-    Hi, I'm John from Oobikoo Games. We engaged UT to help us with the build of a bullet heaven game called Mere Mortals. UT was instrumental to the entire process. They helped us define the features of the game, they built the game and delivered all of the art and sound assets. Everything was delivered on time, to a very high level of quality, and the communication throughout the process was brilliant. We'd love to work with them again, and I highly recommend them to anyone considering getting a game built.
-  person_name: "John"
-  person_org: "Oobikoo Games"
-  video_id: "XRgHhMEdIDw"
+  quote: UT was instrumental to the entire process. They helped us define the features of the game, they built the game and delivered all of the art and sound assets.
+  full_text: Hi, I'm John from Oobikoo Games. We engaged UT to help us with the build of a bullet heaven game called Mere Mortals. UT was instrumental to the entire process. They helped us define the features of the game, they built the game and delivered all of the art and sound assets. Everything was delivered on time, to a very high level of quality, and the communication throughout the process was brilliant. We'd love to work with them again, and I highly recommend them to anyone considering getting a game built.
+  person_name: John
+  person_org: Oobikoo Games
+  video_id: XRgHhMEdIDw
 ---
 
 ## The Objective
