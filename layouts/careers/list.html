@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="page-gradient">
+
+  {{ partial "hero-text.html" (dict
+    "title" "Careers"
+    "subtitle" "Join us in building immersive, high-tech experiences."
+  ) }}
+
+  <!-- Open Positions -->
+  {{ with .Pages }}
+  <section class="section careers-positions">
+    <h2>Open Positions</h2>
+    <div class="careers-job-list">
+      {{ range . }}
+      <a href="{{ .Permalink }}" class="careers-job-link">{{ .Title }}</a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Internships -->
+  <section class="section careers-internships">
+    <h2>Unusual Technologies Internships</h2>
+
+    <div class="careers-internship-body">
+      {{ .Content }}
+
+      {{ with .Params.internship_fields }}
+      <ul class="careers-fields-list">
+        {{ range . }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      <a href="mailto:careers@unusualtechnologies.com" class="btn careers-apply-btn">Apply</a>
+    </div>
+  </section>
+
+  <!-- Internship Testimonials -->
+  {{ with .Params.internship_testimonials }}
+  <section class="section careers-testimonials">
+    <h2>Internship Testimonials</h2>
+    <p class="body-large">Hear from some of our previous interns.</p>
+    <div class="careers-video-grid">
+      {{ range . }}
+      <div class="careers-video-item">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/{{ .video_id }}" frameborder="0" allowfullscreen loading="lazy" title="{{ .name }}'s Testimonial"></iframe>
+        </div>
+        <p class="careers-video-label">{{ .name }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+{{ end }}

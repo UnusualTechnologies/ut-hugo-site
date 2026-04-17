@@ -127,6 +127,40 @@ collections:
           - { name: video_id, label: Video ID, widget: string, required: false, hint: "YouTube video ID" }
       - { name: body, label: Body, widget: markdown, required: false }
 
+  # ── Job Listings (page bundles) ──────────────────────────────────────
+  - name: job-listings
+    label: Job Listings
+    folder: content/careers
+    create: true
+    path: "{{slug}}/index"
+    filter: { field: "is_listing", value: true }
+    fields:
+      - { name: title, label: Job Title, widget: string }
+      - { name: is_listing, label: Is Listing, widget: hidden, default: true }
+      - { name: apply_url, label: Apply URL, widget: string, hint: "e.g. mailto:careers@unusualtechnologies.com or a link to a form" }
+      - { name: body, label: Job Description, widget: markdown }
+
+  # ── Careers Page ─────────────────────────────────────────────────────
+  - name: careers-page
+    label: Careers Page
+    files:
+      - name: careers
+        label: Careers Settings
+        file: content/careers/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - name: internship_fields
+            label: Internship Fields
+            widget: list
+            field: { name: field, label: Field, widget: string }
+          - name: internship_testimonials
+            label: Internship Testimonials
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: video_id, label: YouTube Video ID, widget: string }
+          - { name: body, label: Internship Intro Text, widget: markdown }
+
   # ── Team Members (page bundles) ──────────────────────────────────────
   - name: team-members
     label: Team Members

@@ -1,7 +1,22 @@
 ---
 title: Careers
+internship_fields:
+  - Programming
+  - Digital Art
+  - Marketing
+internship_testimonials:
+  - name: Ryan
+    video_id: JXG32bzD2eo
+  - name: Ramzi
+    video_id: b2m_bciQamU
+  - name: Oliver
+    video_id: gjlY_AHqIZk
+  - name: Sofia
+    video_id: ql8Vo6BZ2XU
 ---
 
-We're always on the lookout for talented, creative people to join our team. We don't have any open positions listed right now, but we'd still love to hear from you.
+Are you a student looking for an internship in a tech start-up? You have come to the right place!
 
-Send your CV and a brief note about what you do to [hello@unusualtechnologies.com](mailto:hello@unusualtechnologies.com).
+We provide short-term internships (3 to 6 months) to students in the following fields.
+
+Please email your CV and Cover Letter to [careers@unusualtechnologies.com](mailto:careers@unusualtechnologies.com)

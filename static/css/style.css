@@ -1517,6 +1517,127 @@ ul {
   color: var(--color-white);
 }
 
+/* --- Careers Page --- */
+
+.careers-positions {
+  text-align: center;
+}
+
+.careers-job-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.careers-job-link {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-black);
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 1.1rem;
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.careers-job-link:hover {
+  opacity: 0.85;
+}
+
+.careers-internships {
+  text-align: center;
+}
+
+.careers-internship-body {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.careers-internship-body p {
+  margin-bottom: 16px;
+}
+
+.careers-fields-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.careers-fields-list li {
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.careers-fields-list li::before {
+  content: "— ";
+  color: var(--color-primary);
+}
+
+.careers-apply-btn {
+  margin-top: 8px;
+}
+
+.careers-testimonials {
+  text-align: center;
+}
+
+.careers-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.careers-video-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.careers-video-label {
+  color: var(--color-primary);
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* --- Careers Job Listing Page --- */
+
+.careers-job-single {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.careers-job-content h2 {
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.careers-job-content ul {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.careers-job-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.careers-job-content p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .careers-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .team-profile-header {
     flex-direction: column;

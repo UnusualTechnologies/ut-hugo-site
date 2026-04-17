@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="page-gradient">
+
+  <section class="section careers-job-single">
+    <a href="{{ "careers/" | relURL }}" class="back-link">&larr; All Positions</a>
+
+    <h1>{{ .Title }}</h1>
+
+    <div class="careers-job-content">
+      {{ .Content }}
+    </div>
+
+    {{ with .Params.apply_url }}
+    <a href="{{ . }}" class="btn careers-apply-btn">Apply Now</a>
+    {{ end }}
+
+  </section>
+
+</div>
+{{ end }}
