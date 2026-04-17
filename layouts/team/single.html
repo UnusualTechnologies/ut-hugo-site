@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="page-gradient">
+
+  <section class="section team-profile">
+    <a href="{{ "about/" | relURL }}" class="back-link">&larr; About Us</a>
+
+    <div class="team-profile-header">
+      <img src="{{ .Params.photo | strings.TrimPrefix "/" | relURL }}" alt="{{ .Title }}" class="team-profile-photo">
+      <div class="team-profile-meta">
+        <h1>{{ .Title }}</h1>
+        <p class="team-profile-role">{{ .Params.role }}</p>
+        <div class="team-profile-links">
+          {{ with .Params.linkedin }}
+          <a href="{{ . }}" class="btn btn-sm" target="_blank" rel="noopener">LinkedIn</a>
+          {{ end }}
+          {{ with .Params.website }}
+          <a href="{{ . }}" class="btn btn-sm" target="_blank" rel="noopener">{{ $.Params.website_label | default . }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ with .Content }}
+    <div class="team-profile-bio">
+      {{ . }}
+    </div>
+    {{ end }}
+
+    {{ with .Params.expertise }}
+    <div class="team-profile-expertise">
+      <h2>Areas of Expertise</h2>
+      <ul class="team-expertise-list">
+        {{ range . }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ with .Params.games }}
+    <div class="team-profile-games">
+      <h2>Released Games</h2>
+      <ul class="team-expertise-list">
+        {{ range . }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+  </section>
+
+</div>
+{{ end }}

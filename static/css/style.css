@@ -1451,6 +1451,80 @@ ul {
   padding-bottom: 60px;
 }
 
+/* --- Team Profile Page --- */
+
+.team-profile {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 32px 0 40px;
+}
+
+.team-profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.team-profile-role {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.team-profile-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.team-profile-bio {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+.team-profile-bio p {
+  margin-bottom: 16px;
+}
+
+.team-profile-expertise,
+.team-profile-games {
+  margin-bottom: 40px;
+}
+
+.team-expertise-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.team-expertise-list li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  color: var(--color-white);
+}
+
+@media (max-width: 600px) {
+  .team-profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
 /* --- Project Page Responsive --- */
 
 @media (max-width: 921px) {

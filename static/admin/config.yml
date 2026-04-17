@@ -127,6 +127,33 @@ collections:
           - { name: video_id, label: Video ID, widget: string, required: false, hint: "YouTube video ID" }
       - { name: body, label: Body, widget: markdown, required: false }
 
+  # ── Team Members (page bundles) ──────────────────────────────────────
+  - name: team-members
+    label: Team Members
+    folder: content/team
+    create: true
+    path: "{{slug}}/index"
+    media_folder: /static/images/team
+    public_folder: /images/team
+    fields:
+      - { name: title, label: Name, widget: string }
+      - { name: role, label: Role, widget: string }
+      - { name: photo, label: Photo, widget: image }
+      - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
+      - { name: website, label: Personal Website URL, widget: string, required: false }
+      - { name: website_label, label: Website Label, widget: string, required: false, hint: "Display text for the website link" }
+      - name: expertise
+        label: Areas of Expertise
+        widget: list
+        required: false
+        field: { name: area, label: Area, widget: string }
+      - name: games
+        label: Released Games
+        widget: list
+        required: false
+        field: { name: game, label: Game, widget: string }
+      - { name: body, label: Bio, widget: markdown }
+
   # ── Data files ───────────────────────────────────────────────────────
   - name: data
     label: Site Data

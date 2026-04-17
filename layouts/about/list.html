@@ -13,11 +13,19 @@
     <h2>Leadership Team</h2>
     <div class="team-cards">
       {{ range .Site.Data.team.items }}
+      {{ if .url }}
       <a href="{{ .url | strings.TrimPrefix "/" | relURL }}" class="team-card">
         <img src="{{ .photo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
         <p>{{ .role }}</p>
       </a>
+      {{ else }}
+      <div class="team-card">
+        <img src="{{ .photo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="team-photo">
+        <h3>{{ .name }}</h3>
+        <p>{{ .role }}</p>
+      </div>
+      {{ end }}
       {{ end }}
     </div>
   </section>
