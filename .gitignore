@@ -5,3 +5,4 @@ resources/
 .playwright-mcp
 /*.png
 archive
+.idea

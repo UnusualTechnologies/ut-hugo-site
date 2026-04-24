@@ -627,7 +627,7 @@ ul {
 
 .flip-box-front h2 {
   color: var(--color-dark);
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 .flip-box-back {
@@ -1038,8 +1038,37 @@ ul {
     min-height: 60px;
   }
 
-  h1 { font-size: 2.5rem; }
+  h1 { font-size: clamp(2rem, 5vw + 1rem, 2.5rem); }
   h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  .body-large,
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .section,
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-text {
+    padding-top: 40px;
+  }
+
+  .case-study-heading,
+  .project-testimonial h2 {
+    font-size: 1.75rem;
+  }
+
+  .testimonial-caption span {
+    font-size: 0.875rem;
+  }
+
+  .project-type-label {
+    font-size: 0.875rem;
+  }
 
   .client-logos {
     grid-template-columns: repeat(2, 1fr);
