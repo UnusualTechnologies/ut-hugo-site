@@ -30,16 +30,19 @@
     </div>
   </section>
 
-  <!-- Client Testimonials -->
-  <section class="section" id="ClientTestimonials">
-    <h2>Client Testimonials</h2>
-
+  <!-- Client Logos -->
+  <section class="section">
+    <h2>Who We've Worked With</h2>
     <div class="client-logos">
       {{ range .Site.Data.clients.items }}
       <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
+  </section>
 
+  <!-- Client Testimonials -->
+  <section class="section" id="ClientTestimonials">
+    <h2>Client Testimonials</h2>
     <div class="testimonial-grid">
       {{ range .Site.Data.testimonials.items }}
       <a href="{{ .video }}" target="_blank" rel="noopener" class="testimonial-card">
