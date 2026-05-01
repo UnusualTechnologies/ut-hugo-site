@@ -13,6 +13,7 @@ tags:
   - "unity"
 prominence: 14
 featured_image: "/images/projects/friendly-fox.webp"
+banner_image: "/images/projects/banners/friendly-fox-adventures.webp"
 
 overview: "Friendly Fox Adventures is an outdoor experience that augments green spaces with inspiring characters, stories and objectives to encourage exploration and learning."
 

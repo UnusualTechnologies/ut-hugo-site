@@ -1,16 +1,15 @@
 {{ define "main" }}
+<div id="shader-bg"></div>
 <div class="page-gradient">
 
   <article class="project-single">
 
     <!-- Hero Banner -->
-    <section class="project-hero{{ with .Params.banner_image }} has-banner{{ end }}"
-      {{ with .Params.banner_image }}style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('{{ . | strings.TrimPrefix "/" | relURL }}')"{{ end }}>
+    {{ $bannerImg := .Params.banner_image | default .Params.featured_image }}
+    <section class="project-hero{{ with $bannerImg }} has-banner{{ end }}"
+      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ . | strings.TrimPrefix "/" | relURL }}')"{{ end }}>
       <a href="{{ "projects/" | relURL }}" class="back-link">&larr; All Projects</a>
       <h1>{{ .Title }}</h1>
-      {{ with .Params.project_type }}
-      <span class="project-type-label {{ . | urlize }}">{{ . }}</span>
-      {{ end }}
     </section>
 
     <!-- Overview Section -->
@@ -138,4 +137,6 @@
   </article>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="{{ "js/shader-bg.js" | relURL }}"></script>
 {{ end }}

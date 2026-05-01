@@ -10,6 +10,7 @@ tags:
   - "vr"
 prominence: 20
 featured_image: "/images/projects/tarot-vr.webp"
+banner_image: "/images/projects/banners/the-tarot-experience.webp"
 
 overview: "The Tarot Experience VR is an immersive story-telling experience for the Oculus Quest 2 and 3."
 

@@ -6,6 +6,7 @@ tags:
   - "blockchain"
 prominence: -25
 featured_image: "/images/projects/blockchain-lottery.png"
+banner_image: "/images/projects/banners/blockchain-lottery.jpg"
 
 overview: "A website using blockchain technology to create a simple cryptocurrency lottery."
 

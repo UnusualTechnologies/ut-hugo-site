@@ -7,6 +7,7 @@ tags:
   - "productivity"
 prominence: 15
 featured_image: "/images/projects/bosco-dental.webp"
+banner_image: "/images/projects/banners/bosco-dental-studio.webp"
 
 overview: "A bespoke Dental Triage Tool that simplifies the patient assessment process for receptionists. The tool quickly evaluates the patient's condition, assesses appointment duration requirements and provides an urgency level with accurate notes. This information is then integrated into existing management systems, ensuring consistent patient care across the practice."
 

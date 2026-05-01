@@ -10,6 +10,7 @@ tags:
   - webgl
 prominence: 15
 featured_image: /images/projects/mere-mortals.webp
+banner_image: "/images/projects/banners/mere-mortals.png"
 overview: We were hired by Oobikoo Games to create a game and engine for making games inspired by Vampire Survivors. This was a more traditional videogame for us to make, but really allowed us to highlight our capabilities in game development!
 overview_video_id: jFkRcovatls
 technologies:

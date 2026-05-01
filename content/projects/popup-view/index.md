@@ -10,6 +10,7 @@ tags:
   - "unity"
 prominence: 8
 featured_image: "/images/projects/popup-view.webp"
+banner_image: "/images/projects/banners/popup-view.webp"
 
 overview: "Visioning Lab sought to create a platform in which AR experiences could be uploaded by creators, and searched for by consumers, similar to YouTube."
 

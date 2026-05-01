@@ -7,6 +7,7 @@ tags:
   - "productivity"
 prominence: 10
 featured_image: "/images/projects/ai-tools.webp"
+banner_image: "/images/projects/banners/ai-tools.webp"
 
 overview: "These are some of our findings and thoughts on creatively using AI tools such as ChatGPT and DALL·E 3, after utilising them across several projects."
 

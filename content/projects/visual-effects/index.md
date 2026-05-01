@@ -9,6 +9,7 @@ tags:
   - "vfx"
 prominence: 55
 featured_image: "/images/projects/visual-effects.webp"
+banner_image: "/images/projects/banners/visual-effects.webp"
 
 overview: "Digital art needs VFX to give it a more realistic look or make it 'pop'. Here are some examples of what we can do."
 

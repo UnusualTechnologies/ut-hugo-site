@@ -8,6 +8,7 @@ tags:
   - "webgl"
 prominence: -3
 featured_image: "/images/projects/north-pole-escape.webp"
+banner_image: "/images/projects/banners/the-north-pole-escape.webp"
 
 overview: "An escape-style game for the family to play together at Christmas time using only one screen. The game follows a series of rooms in which the players must complete tasks that allow users to proceed to the next room."
 

@@ -8,6 +8,7 @@ tags:
   - "unity"
 prominence: 50
 featured_image: "/images/projects/oceanx.webp"
+banner_image: "/images/projects/banners/oceanx.webp"
 
 overview: "We collaborated with OceanX to produce a digital twin of the marine world, utilising advanced data visualisation techniques to provide an experience that enables scientists and researchers to explore data in an engaging and innovative way."
 

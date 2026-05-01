@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 400;
   text-transform: none;
+  letter-spacing: 2px;
 }
 
 h1 { font-size: 4rem; line-height: 1.4em; }
@@ -107,7 +108,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
+  background: var(--color-black);
 }
 
 .header-inner {
@@ -348,8 +349,25 @@ ul {
    Page Gradient Background (shared by About, Contact, Concept, Projects)
    ========================================================================== */
 
+#shader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+#shader-bg canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .page-gradient {
-  background: radial-gradient(ellipse at 80% 20%, #1a3a2a 0%, var(--color-dark) 40%, var(--color-black) 100%);
+  background: transparent;
+  position: relative;
   padding-top: 80px; /* account for fixed header */
   min-height: 100vh;
 }
@@ -1098,7 +1116,7 @@ ul {
    ========================================================================== */
 
 .project-single {
-  max-width: 900px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -1108,11 +1126,12 @@ ul {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 20px;
+  margin-top: 30px;
 }
 
 .project-hero.has-banner {
-  padding-top: 120px;
-  padding-bottom: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-size: cover;
   background-position: center;
   max-width: none;
@@ -1123,7 +1142,9 @@ ul {
 }
 
 .project-hero h1 {
-  color: var(--color-white);
+  color: var(--color-primary);
+  font-size: 5rem;
+  font-weight: 500;
   margin-bottom: 16px;
 }
 
@@ -1131,7 +1152,7 @@ ul {
   display: inline-block;
   color: var(--color-primary);
   font-size: 0.9rem;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -1159,26 +1180,29 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
 }
 
 .project-overview.no-image {
   grid-template-columns: 1fr;
 }
 
-.overview-heading,
-.tech-heading {
+.project-overview .overview-heading,
+.project-overview .tech-heading {
   color: var(--color-primary);
-  font-size: 1.3rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   text-align: center;
   margin-bottom: 12px;
 }
 
 .project-overview-desc {
   color: var(--color-white);
-  line-height: 1.8;
+  line-height: 1.4;
   margin-bottom: 24px;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 
@@ -1188,13 +1212,16 @@ ul {
 
 .project-try-it h3 {
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   margin-bottom: 8px;
   text-align: center;
 }
 
 .project-try-it p {
   color: rgba(255,255,255,0.7);
+  font-family: 'Advent Pro', sans-serif;
   font-style: italic;
 }
 
@@ -1268,7 +1295,7 @@ ul {
   color: var(--color-dark);
   font-size: 0.85rem;
   font-weight: 500;
-  padding: 6px 14px;
+  padding: 2px 12px;
   border-radius: 20px;
 }
 
@@ -1295,6 +1322,11 @@ ul {
 
 /* --- Overview Image --- */
 
+.project-overview-image {
+  display: flex;
+  align-items: center;
+}
+
 .project-overview-image .project-figure {
   margin-top: 0;
 }
@@ -1305,21 +1337,23 @@ ul {
   padding-top: 0;
 }
 
-.case-study-heading {
-  text-align: center;
-  color: var(--color-primary);
-  font-size: 2.5rem;
-  margin-bottom: 32px;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
 .project-content h2 {
   text-align: center;
   color: var(--color-primary);
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 16px;
-  font-size: 1.6rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.project-content h2.case-study-heading {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  padding-bottom: 0;
+  border-bottom: none;
+  letter-spacing: normal;
 }
 
 .project-content h3 {
@@ -1489,6 +1523,29 @@ ul {
 .project-footer-nav {
   text-align: center;
   padding-bottom: 60px;
+}
+
+/* --- Project Page Responsive --- */
+
+@media (max-width: 544px) {
+  .project-hero h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
+  }
+
+  .project-content h2.case-study-heading {
+    font-size: 2.5rem;
+  }
+
+  .project-overview .overview-heading,
+  .project-overview .tech-heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 921px) {
+  .project-overview {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- Team Profile Page --- */

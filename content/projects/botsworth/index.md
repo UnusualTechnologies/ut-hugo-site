@@ -8,6 +8,7 @@ tags:
   - "productivity"
 prominence: 0
 featured_image: "/images/projects/botsworth.webp"
+banner_image: "/images/projects/banners/botsworth.webp"
 
 overview: "An AI-augmented Discord chatbot and a digital assistant that we've created to help us manage our daily tasks at Unusual Technologies. We work with Botsworth to manage annual leave, task scheduling, our weekly company lunches and accounts on a variety of services."
 

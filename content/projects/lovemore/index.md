@@ -8,6 +8,7 @@ tags:
   - "web"
 prominence: 10
 featured_image: "/images/projects/lovemore.webp"
+banner_image: "/images/projects/banners/lovemore.webp"
 
 overview: "Lovemore is a single-player role-playing-game that focuses on building relationships. An indie game made by the creator of Simgirls, which was rated the best and most played dating sim game of all time."
 

@@ -9,6 +9,7 @@ tags:
   - "unity"
 prominence: 30
 featured_image: "/images/projects/raf-museum.webp"
+banner_image: "/images/projects/banners/raf-museum.webp"
 
 overview: "An interactive debate table made using multiple projectors, 8 touch table foils, Multiple PCs and a Data Server. The table allows for engaging interactive debates for school classes to learn about the pros and cons of different topics in an engaging way."
 

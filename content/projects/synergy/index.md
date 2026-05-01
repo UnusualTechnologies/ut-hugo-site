@@ -11,6 +11,7 @@ tags:
   - "webgl"
 prominence: -50
 featured_image: "/images/projects/synergy.webp"
+banner_image: "/images/projects/banners/synergy.png"
 
 overview: "Synergy is an environmental puzzle/platformer made for WebGL. The project is themed on striking a balance between making use and restoration of the environment so we can keep on using it in the future."
 

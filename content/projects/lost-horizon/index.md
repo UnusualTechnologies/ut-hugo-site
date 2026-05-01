@@ -11,6 +11,7 @@ tags:
   - "vr"
 prominence: 16
 featured_image: "/images/projects/lost-horizon.webp"
+banner_image: "/images/projects/banners/lost-horizon.webp"
 
 overview: "Lost Horizon looks to create a global virtual reality venue as a digital twin to a real life venue located in Bristol."
 

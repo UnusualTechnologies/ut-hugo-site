@@ -75,6 +75,7 @@ collections:
           - { label: "Windows", value: "windows" }
       - { name: prominence, label: Prominence, widget: number, default: 0, hint: "Higher = appears first on project list" }
       - { name: featured_image, label: Featured Image, widget: image }
+      - { name: banner_image, label: Banner Image, widget: image, required: false, hint: "Wide landscape image for the hero banner. Falls back to Featured Image if not set." }
       - { name: overview, label: Overview, widget: text, required: false }
       - { name: overview_video_id, label: Overview Video ID, widget: string, required: false, hint: "YouTube video ID (e.g. dQw4w9WgXcQ)" }
       - name: technologies

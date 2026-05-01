@@ -8,6 +8,7 @@ tags:
   - "immersive"
 prominence: 60
 featured_image: "/images/projects/characters-animation.webp"
+banner_image: "/images/projects/banners/characters-animation.png"
 
 overview: "We create characters and animations in a range of disciplines: from hyper-realistic to uniquely stylised, which can be detailed for videogames and immersive experiences, or optimised for VR and mobile."
 

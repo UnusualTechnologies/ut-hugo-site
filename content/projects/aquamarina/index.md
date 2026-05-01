@@ -8,6 +8,7 @@ tags:
   - "vfx"
 prominence: 12
 featured_image: "/images/projects/aquamarina.png"
+banner_image: "/images/projects/banners/aquamarina.png"
 
 overview: "Aquamarina was a demo project designed to explore the various applications of shaders in the development of realistic video games, by attempting to create realistic visual effects."
 

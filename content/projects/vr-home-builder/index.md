@@ -11,6 +11,7 @@ tags:
   - "vr"
 prominence: 11
 featured_image: "/images/projects/vr-home-builder.png"
+banner_image: "/images/projects/banners/vr-home-builder.webp"
 
 overview: "This project uses pass through to achieve AR on the Oculus which can be used to trace the outline of your environment and build a 3D model."
 

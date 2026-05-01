@@ -11,6 +11,7 @@ tags:
   - "unity"
 prominence: 20
 featured_image: "/images/projects/co-cog.png"
+banner_image: "/images/projects/banners/co-cog.png"
 
 overview: "We collaborated with researchers from the Universities of Kent, Surrey and Sussex (KSS), a research consortium, and medical professionals from the NHS to design and develop an app to monitor the state of individuals living with early-stage dementia. The app we developed serves as a tool to monitor the cognitive state and well-being of individuals, allowing the NHS to track changes and schedule appointments if needed."
 

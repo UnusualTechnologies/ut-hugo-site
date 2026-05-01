@@ -11,6 +11,7 @@ tags:
   - "vr"
 prominence: 15
 featured_image: "/images/projects/f-effect.webp"
+banner_image: "/images/projects/banners/f-effect.webp"
 
 overview: "F-Effect is a harmonisation and relaxation VR experience."
 

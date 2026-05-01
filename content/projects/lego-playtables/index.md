@@ -10,6 +10,7 @@ tags:
   - "unity"
 prominence: 17
 featured_image: "/images/projects/lego-playtables.webp"
+banner_image: "/images/projects/banners/lego-playtables.webp"
 
 overview: "An interactive LEGO play table made using multiple projectors, screens, Depth sensors, Specialist alignment software, Speakers, and over 70KG of LEGO! This was an R&D project that got installed on 5 LEGO Discovery Center sites across the world. The table was brought to life with projection-mapped scenes and animals. Users could interact with the table and receive audio/visual feedback."
 

@@ -10,6 +10,7 @@ tags:
   - "unity"
 prominence: 19
 featured_image: "/images/projects/co-play.jpg"
+banner_image: "/images/projects/banners/co-play.jpg"
 
 overview: "We collaborated with researchers from the University of Sussex to develop an exergame for people living with dementia. There was a focus on designing easy to understand, non-judgmental game mechanics which could adapt to different physical and cognitive ability levels – rewarding the player, no matter how well they did."
 

@@ -8,6 +8,7 @@ tags:
   - "windows"
 prominence: 40
 featured_image: "/images/projects/breez-dental.png"
+banner_image: "/images/projects/banners/breez-dental.webp"
 
 overview: "Bosco Dental Studio, an innovator in dental practice solutions, hired us to develop an AI-powered note-taking service. The objective was to significantly reduce the time dentists spend on admin tasks, allowing for a greater focus on patient care."
 

@@ -11,6 +11,7 @@ tags:
   - "webgl"
 prominence: 10
 featured_image: "/images/projects/seaweeds.png"
+banner_image: "/images/projects/banners/seeweeds-scrambled-spell.png"
 
 overview: "We worked with Business Creative to create a Halloween themed adventure trail for children. It features real-world posters you scan with your phone to play minigames and collect letters: clearing cobwebs, solving riddles, and squashing bugs."
 

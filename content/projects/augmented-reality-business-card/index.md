@@ -8,6 +8,7 @@ tags:
   - "web"
 prominence: 0
 featured_image: "/images/projects/ar-business-card.png"
+banner_image: "/images/projects/banners/augmented-reality-business-card.webp"
 
 overview: "Giving a paper business card feels a bit too low-tech for a company like ours. We wanted something memorable that quickly demonstrates what we do. By showcasing AR, we also get the opportunity to play a video highlighting all of our capabilities."
 

@@ -7,6 +7,7 @@ tags:
   - "web"
 prominence: 14
 featured_image: "/images/projects/tarot-web.png"
+banner_image: "/images/projects/banners/the-tarot-experience-web-reading.jpg"
 
 overview: "The Tarot Experience Free Reading is an artificial intelligence (AI) powered story-telling website."
 

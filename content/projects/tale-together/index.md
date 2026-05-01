@@ -9,6 +9,7 @@ tags:
   - "web"
 prominence: 10
 featured_image: "/images/projects/tale-together.webp"
+banner_image: "/images/projects/banners/tale-together.webp"
 
 overview: "University of Surrey tasked us with developing a platform to bridge the generational gap between children and elderly individuals in retirement homes. We created an online platform that encourages players from both groups to interact and play together."
 

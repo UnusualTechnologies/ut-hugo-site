@@ -10,6 +10,7 @@ tags:
   - "webgl"
 prominence: 7
 featured_image: "/images/projects/isles-of-generation.webp"
+banner_image: "/images/projects/banners/isles-of-generation.webp"
 
 overview: "Isles of Generation was a prototype project designed to explore techniques for procedural generation in open-world video games such as Minecraft, Terraria, or Dwarf Fortress."
 

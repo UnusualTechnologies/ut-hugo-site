@@ -10,6 +10,7 @@ tags:
   - "vr"
 prominence: 16
 featured_image: "/images/projects/abstract-painters.webp"
+banner_image: "/images/projects/banners/abstract-painters.webp"
 
 overview: "University of Hamburg Music and Theater, under the leadership of Dr. Konstantina Orlandatou, were looking to explore the idea of painting with sound."
 

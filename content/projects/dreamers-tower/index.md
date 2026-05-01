@@ -7,6 +7,7 @@ tags:
   - "unity"
 prominence: 0
 featured_image: "/images/projects/dreamers-tower.webp"
+banner_image: "/images/projects/banners/dreamers-tower.webp"
 
 overview: "This was a submission to the 2021 Boss Rush Game Jam which ran for over a month. This was made over a week due to time constraints."
 

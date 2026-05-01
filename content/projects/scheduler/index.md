@@ -5,6 +5,7 @@ project_type: "In-house"
 tags: ["web", "ai", "real-time", "multi-tenant"]
 prominence: -5
 featured_image: "/images/projects/scheduler.jpg"
+banner_image: "/images/projects/banners/scheduler.jpg"
 
 overview: "We run our agency on software we built. Scheduler is a four-panel production platform covering staff task management, multi-tenant client portals, AI-assisted design workflows, and guest access — all from a single codebase. Every project, every tracked hour, every client feedback ticket flows through it daily."
 
