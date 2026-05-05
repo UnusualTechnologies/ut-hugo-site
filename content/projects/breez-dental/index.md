@@ -34,50 +34,40 @@ testimonial:
   video_id: "KnDEyLdO9lk"
 ---
 
+{{% carousel %}}
 ![Breez is a subscription-based SaaS](/images/projects/Screenshot-2025-05-28-143229.png)
-
 ![](/images/projects/Screenshot-2025-11-12-145319-768x793.png)
-
 ![Dental notes and recordings are stored securely](/images/projects/Screenshot-2025-11-12-152814-768x546.png)
-
 ![](/images/projects/Screenshot-2025-11-12-145448-768x789.png)
-
 ![Navigation widget](/images/projects/Screenshot-2025-11-12-150322.png)
+{{% /carousel %}}
 
-## Write-Up & Learnings
+## Secure & Compliant Medical Apps
 
-Building Secure & Compliant Medical Apps: Our Expertise in HealthTech
+Developing applications for healthcare requires more than technical skill. It demands a deep understanding of data security and regulatory compliance. Handling sensitive patient data is a core responsibility, and we architect our platforms with security as the first priority.
 
-Developing applications for the medical and healthcare space requires more than just technical skill; it demands a deep understanding of data security and regulatory compliance. Handling sensitive patient data is a core responsibility, and we architect our platforms with security as the first priority.
+Our work on the Bosco Dental Studio AI platform is a prime example. We developed an innovative SaaS solution to automate clinical note-taking for dentists, processing highly sensitive patient information.
 
-Our work on the Bosco Dental Studio AI platform serves as a prime example. We developed an innovative SaaS solution to automate clinical note-taking for dentists, a role that processes highly sensitive patient information.
+The system was engineered for high-level security from the ground up, ensuring all patient notes and audio recordings are safely processed and stored. Our development process strictly adheres to all relevant data protection guidelines, including GDC and GDPR. We deliver the cross-platform application as a fully EV-signed and secure MSI installer, suitable for clinical environments.
 
-From the ground up, the system was engineered for high-level security to ensure all patient notes and audio recordings are safely processed and stored. Our development process strictly adheres to all relevant data protection guidelines, including GDC and GDPR. We even manage secure deployment, delivering the cross-platform application as a fully EV-signed and secure MSI installer, which ensures a professional and trustworthy deployment suitable for clinical environments.
+## Smart AI Integration
 
-This project demonstrates our proven capability to develop complex, AI-integrated applications for specialised, regulated industries.
+The AI landscape is evolving rapidly. Relying on a single AI provider for a core business function is a significant risk, so we design our AI products to be future-proof with a modular, flexible architecture.
 
-### Smart AI Integration: Building Robust Platforms with Multi-Model Fallbacks
+The server architecture was specifically designed to readily integrate, evaluate, and switch between different AI transcription and NLP services. This multi-model strategy is essential for both performance and cost-effectiveness:
 
-The AI landscape is evolving rapidly. Relying on a single AI provider for a core business function is a significant risk. We design our AI products to be "future-proof" by building a modular, flexible architecture.
-
-In our R&D project for Bosco Dental Studio, we specifically designed the server architecture to be modular. This design is crucial because it allows the platform to readily integrate, evaluate, and switch between different AI transcription and NLP services.
-
-This multi-model strategy is essential for both performance and cost-effectiveness. For a complex, dual-function service like Bosco's, this architecture allows us to:
-
-- For Speech-to-Text: Integrate and benchmark multiple services like FalAI (Wizper), AssemblyAI, and Deepgram to find the optimal balance of speed, accuracy, and cost for a clinical environment.
-- For Note Generation: Test and deploy various large language models like OpenAI, Claude, or Gemini (while navigating potential use-case restrictions, such as those related to medical use).
+- We integrate and benchmark multiple speech-to-text services (FalAI, AssemblyAI, Deepgram) to find the optimal balance of speed, accuracy, and cost for a clinical environment.
+- We test and deploy various large language models for note generation (OpenAI, Claude, Gemini) while navigating use-case restrictions related to medical use.
 
 This approach ensures our clients can consistently leverage the best-performing and most cost-effective technologies without re-engineering the core product.
 
-### From Uncertainty to Innovation: Our R&D Process for Custom AI Solutions
+## From Uncertainty to Innovation
 
-Many groundbreaking projects begin with significant technological uncertainties. Our team excels at navigating these challenges through a systematic R&D process, turning uncertain concepts into market-leading products.
+Many groundbreaking projects begin with significant technological uncertainties. The initial challenge here was clear: generic, off-the-shelf transcription tools were unsuitable for a noisy clinical setting with multiple speakers.
 
-Our project to create an AI-powered note-taking platform for Bosco Dental Studio highlights this process. The initial challenge was clear: generic, off-the-shelf transcription tools were technologically unsuitable for a noisy clinical setting with multiple speakers.
+We identified two core uncertainties and resolved them systematically:
 
-We identified two core technological uncertainties and resolved them systematically:
+- It was uncertain if a dual-microphone system could reliably differentiate a dentist's voice from a patient's in a live clinic. We conducted a controlled trial with 3 practitioners and approximately 50 patients. By analysing this real-world data, we proved our dual-channel approach was viable and provided a significant improvement.
+- It was uncertain if we could process audio in real-time using a custom algorithm without losing clinical accuracy. We used an iterative development process, testing algorithm iterations in the lab before deploying the best options in a two-week field test.
 
-- The Speaker Challenge: It was uncertain if a dual-microphone system could reliably differentiate a dentist's voice from a patient's in a live clinic. Our Process: We conducted a controlled trial with 3 practitioners and ~50 patients. By systematically analysing this real-world data, we proved our dual-channel approach was technologically viable and provided a significant improvement.
-- The Speed Challenge: It was uncertain if we could process audio in real-time using a new custom algorithm without losing the accuracy needed for clinical notes. Our Process: We used an iterative development process, testing algorithm iterations in the lab before deploying the best options in a two-week field test to find the optimal balance for real-world performance.
-
-This R&D methodology successfully resolved fundamental technological uncertainties and created a secure, high-performance service that exceeded the initial MVP, leading to further client funding and platform expansion.
+This R&D process resolved fundamental uncertainties and created a secure, high-performance service that exceeded the initial MVP, leading to further client funding and platform expansion.

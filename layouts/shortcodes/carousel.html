@@ -1,0 +1,8 @@
+<div class="carousel">
+  <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+  <div class="carousel-track">
+    {{ .Inner }}
+  </div>
+  <button class="carousel-next" aria-label="Next">&#8250;</button>
+  {{ with .Get "title" }}<p class="carousel-title">{{ . }}</p>{{ end }}
+</div>

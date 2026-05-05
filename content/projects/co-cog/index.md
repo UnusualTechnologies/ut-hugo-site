@@ -59,11 +59,11 @@ Given the target demographic, accessibility was at the forefront of the design. 
 
 We also explored ways to gamify the app – creating a more engaging user experience by providing a reward for completion. This was aimed at encouraging users to complete the questionnaire and return to it regularly.
 
+{{% carousel %}}
 ![](/images/projects/question-1-147x300-1.png)
-
 ![](/images/projects/prompt-1-147x300-1.png)
-
 ![](/images/projects/example-1-148x300-1.png)
+{{% /carousel %}}
 
 ## Co-Design
 
@@ -83,13 +83,12 @@ During the early stages of development, our team worked closely with researchers
 
 We implemented a custom screen reader, and banner images to go alongside the researchers questions to help illustrate to the user what the question is asking and help users understand the content on the screen.
 
+{{% carousel %}}
 ![](/images/projects/visual-147x300.png)
-
 ![](/images/projects/verbal-146x300.png)
-
 ![](/images/projects/sequence-147x300.png)
-
 ![](/images/projects/garden-148x300.png)
+{{% /carousel %}}
 
 ## Illustrations
 
@@ -101,19 +100,15 @@ To design the banner images, we worked alongside a talented illustrator. Initial
 
 ## Late Development
 
+{{% carousel %}}
 ![](/images/projects/plwd_1.png)
-
 ![](/images/projects/plwd_2-300x246.png)
-
 ![](/images/projects/plwd_3.png)
-
 ![](/images/projects/plwd_4-300x246.png)
-
 ![](/images/projects/plwd_5.png)
-
 ![](/images/projects/plwd_6-300x240.png)
-
 ![](/images/projects/plwd_7-300x250.png)
+{{% /carousel %}}
 
 During the second half of the project, our team focused on capturing and utilising the data that the app collected. This included a backend that collects user responses. This then generates a rating, providing an easy way to determine whether or not a user has deteriorated since the last time they filled out the questionnaire.
 

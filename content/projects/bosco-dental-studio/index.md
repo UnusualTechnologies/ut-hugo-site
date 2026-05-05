@@ -18,6 +18,9 @@ client:
   website: "https://www.boscodental.com/"
 
 overview_video_id: "KnDEyLdO9lk"
+
+testimonial:
+  video_id: "KnDEyLdO9lk"
 ---
 
 ## The Task
@@ -28,9 +31,13 @@ Previously, the staff relied on a well-established flow chart to guide their con
 
 We delivered the final product within just 8 days.
 
+<div class="gallery gallery-2col">
+
 ![](/images/projects/bosco_flowchart-1.png)
 
 ![](/images/projects/bosco_ui-1024x575.png)
+
+</div>
 
 ![Generated summary](/images/projects/bosco_summary-1024x575.png)
 
@@ -42,9 +49,13 @@ Following this, we solidified the application's flow by constructing comprehensi
 
 Upon finalising the design, we developed the application using Unity and C#, a decision driven by time constraints. This approach facilitated rapid development, enabling us to adhere to our tight schedule.
 
+<div class="gallery gallery-2col">
+
 ![](/images/projects/Designs.png)
 
 ![](/images/projects/Bosco_ReceptionFlow.drawio-e1707221152557-1-899x1024.png)
+
+</div>
 
 The development stage was very short, only spanning a week or so, in which we worked quickly to build up working prototypes for the client to review. This gave us time to thoroughly test the extensive branching content.
 

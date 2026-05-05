@@ -25,9 +25,13 @@ Our tool of choice, DALL · E3, produced visually appealing outputs, but they of
 
 You can see some outputs below:
 
+<div class="gallery gallery-2col">
+
 ![](/images/projects/AI_Tools_SlippingOver.webp)
 
 ![](/images/projects/AI_Tools_Satified.webp)
+
+</div>
 
 One of the main issues we found is that although the output might look graphically pleasing, it was not complimenting the question well enough.
 
@@ -43,15 +47,27 @@ The AI image creation tool showcased potential for generating ideas and quick co
 
 Here are some other outputs that we tried for depicting AI.
 
+<div class="gallery gallery-2col">
+
 ![](/images/projects/AI_Image_2.webp)
 
 ![](/images/projects/AI_Image_3.webp)
+
+</div>
 
 ## AI Voice Overs
 
 One of the great applications of AI that we have discovered is voice generation. This technology has been around for a long time, allowing your PC to read out text. You might recall playing with Microsoft Sam on Windows XP. However, as you can hear from the voice clip below, things have improved significantly since then.
 
+{{< audio src="/audio/projects/MicrosoftSamTTS.mp3" >}}
+
+{{< audio src="/audio/projects/AI_Tools_TTSSection.mp3" >}}
+
 We have found that the best online TTS service at the moment is [elevenlabs](https://elevenlabs.io/), which uses AI and Deep Learning to create very realistic speech synthesis. It offers a wide range of voice types, including an option to train one's own voice model using a recording of yourself.
+
+{{< audio src="/audio/projects/Victoria.mp3" >}}
+
+{{< audio src="/audio/projects/Oswald.mp3" >}}
 
 We used this during the early development of our CoCog app. We wanted questions to be read out for better accessibility, and as the questions were constantly changing during development, it was very convenient to rely on AI to assist us. They even tricked our testers who did not realise they were generated.
 

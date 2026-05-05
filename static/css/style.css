@@ -1385,7 +1385,7 @@ ul {
 }
 
 .project-content h3 {
-  text-align: left;
+  text-align: center;
   color: var(--color-white);
   margin-top: 24px;
   margin-bottom: 12px;
@@ -1393,25 +1393,35 @@ ul {
 
 .project-content p {
   color: var(--color-white);
-  line-height: 1.8;
-  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
   text-align: center;
 }
 
 .project-content img {
   display: block;
-  max-width: 100%;
+  max-width: 768px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 24px 0;
+  margin: 24px auto;
 }
 
 .project-content video {
   display: block;
-  max-width: 100%;
+  max-width: 768px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 24px 0;
+  margin: 24px auto;
+}
+
+.project-content audio {
+  display: block;
+  max-width: 768px;
+  width: 100%;
+  margin: 16px auto;
 }
 
 .project-content .gallery {
@@ -1446,6 +1456,82 @@ ul {
   }
 }
 
+/* Carousel */
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-content .carousel .project-figure {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.project-content .carousel .project-figure img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.carousel-prev { left: 8px; }
+.carousel-next { right: 8px; }
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-title {
+  color: var(--color-white);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .carousel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Bento grid layouts */
 .project-content .bento-grid {
   display: grid;
@@ -1462,6 +1548,7 @@ ul {
 
 .project-content .bento-grid img,
 .project-content .bento-grid video {
+  max-width: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1604,8 +1691,9 @@ ul {
 
 .project-content li {
   color: var(--color-white);
+  font-size: 20px;
   margin-bottom: 8px;
-  line-height: 1.7;
+  line-height: 24px;
 }
 
 .project-content blockquote {
@@ -1691,7 +1779,8 @@ ul {
 /* --- Testimonial Video / Thumbnail --- */
 
 .testimonial-video {
-  margin-bottom: 24px;
+  max-width: 768px;
+  margin: 0 auto 24px;
 }
 
 .video-embed {

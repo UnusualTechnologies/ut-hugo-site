@@ -1,0 +1,34 @@
+# Project Verification Checklist
+
+- [x] abstract-painters
+- [x] ai-tools
+- [x] aquamarina
+- [x] augmented-reality-business-card
+- [x] blockchain-lottery
+- [x] bosco-dental-studio
+- [x] botsworth
+- [x] breez-dental
+- [x] characters-animation
+- [ ] co-cog
+- [ ] co-play
+- [ ] dreamers-tower
+- [ ] f-effect
+- [ ] friendly-fox-adventures
+- [ ] isles-of-generation
+- [ ] lego-playtables
+- [ ] lost-horizon
+- [ ] lovemore
+- [ ] mere-mortals
+- [ ] oceanx
+- [ ] popup-view
+- [ ] raf-museum
+- [ ] scheduler
+- [ ] seeweeds-scrambled-spell
+- [ ] synergy
+- [ ] tale-together
+- [ ] the-north-pole-escape
+- [ ] the-tarot-experience
+- [ ] the-tarot-experience-vr-marketing
+- [ ] the-tarot-experience-web-reading
+- [ ] visual-effects
+- [ ] vr-home-builder
