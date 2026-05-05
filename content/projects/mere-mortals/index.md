@@ -40,19 +40,15 @@ In the end, we wouldn't be responsible for publishing, but would instead provide
 
 For the prototype, we had a focus on a pixel art style, developing; sprites, animations, UI and tilemaps needed to demonstrate the functionality. This involved a much more iterative approach of mocking up sprites, getting client feedback and iterating until they were happy.
 
+{{% carousel %}}
 ![](/images/projects/Crazies.gif)
-
 ![](/images/projects/Demon-Dog.gif)
-
 ![](/images/projects/Demon.gif)
-
 ![](/images/projects/Mortal-1-1.gif)
-
 ![](/images/projects/Evil-Priest-1.gif)
-
 ![](/images/projects/Bulffalo_2.gif)
-
 ![](/images/projects/Woshipper.gif)
+{{% /carousel %}}
 
 ## Development
 
@@ -60,11 +56,11 @@ This was done over the span of two cycles (about two months) and some bonus work
 
 The first cycle focused on the engine – this involved the core functionality for a working prototype with a game loop; and the second cycle focused on adding content such as new enemies, weapons, a level and items such as chests which provide you with upgrades to collected items.
 
+{{% carousel %}}
 ![](/images/projects/Screenshot-2025-02-10-143422-1-768x432.png)
-
 ![](/images/projects/Screenshot-2025-02-10-143125-768x432.png)
-
 ![](/images/projects/Screenshot-2025-02-10-143209-768x432.png)
+{{% /carousel %}}
 
 With the possibility for large numbers of entities on screen (from enemies, to EXP pickups, to damage counters) there was a big focus on optimised code and logic, ensuring the game's performance always remained high, even with the limitation of WebGL.
 
@@ -77,5 +73,3 @@ Whilst we spent some time balancing weapons and enemies in order to make an enjo
 We also made custom functionality as easy to add as possible: so even though weapons may require custom locomotive or damaging logic, the component-based design makes them easy to add and swap out.
 
 ![](/images/projects/Screenshot-2025-02-10-161225-1024x520.png)
-
-![](/images/projects/Screenshot-2025-02-10-161210.png)

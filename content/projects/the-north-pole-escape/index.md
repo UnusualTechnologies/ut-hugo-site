@@ -32,9 +32,13 @@ The game will start outside the log cabin, where players have to gain access to 
 
 This is an art-heavy game so we sketched out our designs early on to get an idea of what each room would do. The game was heavily inspired by a series of old Flash Escape room games which are sadly no longer accessible due to the depreciation of Flash. However, there is a video of the gameplay [here](https://www.youtube.com/watch?v=f9aL8elugoM).
 
+<div class="gallery gallery-2col">
+
 ![Kitchen](/images/projects/kitchen-768x356.png)
 
 ![Workshop](/images/projects/Workshop-768x322.png)
+
+</div>
 
 ## Preparing For Take-Off
 

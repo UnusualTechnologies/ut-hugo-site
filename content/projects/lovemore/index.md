@@ -19,6 +19,8 @@ try_it:
 
 technologies: ["Adobe Flash", "Adobe Air", "Simulation", "Game porting"]
 
+overview_video_id: "GgRT3KiTTsE"
+
 client:
   name: "Simgirls"
   website: "https://www.the-tarot-experience-vr.com/"

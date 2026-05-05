@@ -36,9 +36,13 @@ Using the latest AI technology, the app procedurally generates a reading tailore
 
 Since release, our client's site experienced an exceptional surge in activity, with a remarkable 2,500 questions asked. This uptick aligns with an impressive increase in engagement metrics, including over 3,000 site sessions on our Free Reading page alone. Moreover, our client's platform boasts a robust retention rate, with 800 to 900 returning users actively revisiting our site. These figures underscore our success in driving user engagement, highlighting the effectiveness of our strategies in achieving key performance indicators.
 
+<div class="gallery gallery-2col">
+
 ![](/images/projects/Screenshot-2024-03-20-122648.png)
 
 ![](/images/projects/Screenshot-2024-03-20-122826.png)
+
+</div>
 
 ## Using GPT-4
 

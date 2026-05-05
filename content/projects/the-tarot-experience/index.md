@@ -77,14 +77,11 @@ Our objective involved not only the incorporation of fresh features but also the
 
 ![A question from the feedback form](/images/projects/Screenshot-2023-06-30-123510-768x376.png)
 
+{{% carousel %}}
 ![](/images/projects/Tarot_editor_2.png)
-
 ![](/images/projects/Tarot_editor_7.png)
-
 ![](/images/projects/Tarot_editor_9.png)
-
 ![](/images/projects/Tarot_editor_33.png)
-
 ![](/images/projects/Tarot_editor_45.png)
-
 ![](/images/projects/Tarot_editor_38.png)
+{{% /carousel %}}

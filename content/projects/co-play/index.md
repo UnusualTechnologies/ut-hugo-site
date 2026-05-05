@@ -23,12 +23,10 @@ client:
 overview_video_id: "R7f10FDJzoY"
 ---
 
+{{% carousel %}}
 ![](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-0m4s-1024x640.jpg)
-
 ![Pose detection & segmentation](/images/projects/mask-1024x577.png)
-
 ![](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-0m25s-1024x640.jpg)
-
 ![](/images/projects/Screen-Recording-2025-11-11-151156-frame-at-0m2s-1024x640.jpg)
-
 ![](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-1m3s-1024x640.jpg)
+{{% /carousel %}}

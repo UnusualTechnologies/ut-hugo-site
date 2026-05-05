@@ -64,13 +64,12 @@ Players need to complete a series of tasks that immerse them in nature, learning
 
 When designing the app we kept in mind that we were targeting children. Therefore, we focussed on both keeping it educational and interactive, we also explored environmental factors. We made sure to have lots of colour and interactive objectives for the kids to work through. We gave everything a 'cartoony' and playful appearance to keep kids engaged and keen to try out more trails in the future.
 
+{{% carousel %}}
 ![](/images/projects/Screenshot_20230707-102503_FriendlyFoxAdventures-e1688728950239.jpg)
-
 ![](/images/projects/Screenshot_20230524-131716_FriendlyFoxAdventureswith-background-e1688728974285.png)
-
 ![](/images/projects/out-1024x823.webp)
-
 ![](/images/projects/FriendlyFoxAdventures_ConceptArt_v2-724x1024.webp)
+{{% /carousel %}}
 
 ## Friendly Fox Adventures Objectives
 
@@ -88,31 +87,21 @@ Current Objective types:
 - Listening
 - Helping the environment
 
+{{% carousel %}}
 ![Fox Marker](/images/projects/Fox_Marker-scaled-1-1024x1024.webp)
-
 ![Hawk Marker](/images/projects/Hawk_Marker-scaled-1-1024x1024.webp)
-
 ![Squirrel Marker](/images/projects/Squirrel_Marker-scaled-1-1024x1024.webp)
-
 ![Hedgehog Marker](/images/projects/Hedgehog_Marker-scaled-1-1024x1024.webp)
-
 ![Mouse Marker](/images/projects/Mouse_Marker-scaled-1-1024x1024.webp)
-
 ![Badger Marker](/images/projects/Badger_Marker-scaled-1-1024x1024.webp)
-
 ![Deer Marker](/images/projects/Deer_Marker-scaled-1-1024x1024.webp)
-
 ![Magpie Marker](/images/projects/Magpie_Marker-scaled-1.webp)
-
 ![Snail Marker](/images/projects/Snail_Marker-1024x1024.webp)
-
 ![Robin Marker](/images/projects/Robin_Marker-1024x1024.webp)
-
 ![Snake Marker](/images/projects/Snake_Marker-scaled-1-1024x1024.webp)
-
 ![Cauldron Marker](/images/projects/Cauldron_Marker-scaled-1-1024x1024.webp)
-
 ![Wizard Marker](/images/projects/Wizard_Marker-scaled-1-1024x1024.webp)
+{{% /carousel %}}
 
 ## Expandability
 

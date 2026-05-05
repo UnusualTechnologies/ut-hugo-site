@@ -22,9 +22,13 @@ overview_video_id: "7NLbW35ZHxM"
 
 The VR Home Builder is designed to be an application that integrates the immersive experience of virtual reality with the potential of augmented reality. With this innovative platform, users can not only envision their architectural plans in a more realistic manner, but also interact with them in a physical context.
 
+<div class="gallery gallery-2col">
+
 ![](/images/projects/Screenshot-2022-12-20-at-12.13.47.png)
 
 ![](/images/projects/Screenshot-2022-12-20-at-14.54.13.png)
+
+</div>
 
 ## The Tech
 

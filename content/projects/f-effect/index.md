@@ -15,9 +15,6 @@ banner_image: "/images/projects/banners/f-effect.webp"
 
 overview: "F-Effect is a harmonisation and relaxation VR experience."
 
-try_it:
-  text: "Coming soon"
-
 technologies: ["Wellbeing", "360 Video", "Music", "VR"]
 
 client:

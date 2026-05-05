@@ -35,15 +35,13 @@ The goal was to provide a thought-provoking game that encouraged the player to r
 
 We explored many different art styles. We found a representation of the player to be the hardest challenge. The early idea of a virus (as seen in the below pictures) seemed too aggressive, but we did not want a humanoid as players find it easy to detach humans from nature.
 
+{{% carousel %}}
 ![](/images/projects/IJM-3Levels.jpg)
-
 ![](/images/projects/IJM-Charcater-ideas-03.jpg)
-
 ![](/images/projects/IJM-Style-idea.jpg)
-
 ![](/images/projects/IJM-Character-ideas-02.jpg)
-
 ![](/images/projects/IJM-Character-Ideas-01.jpg)
+{{% /carousel %}}
 
 ## Early video concept
 

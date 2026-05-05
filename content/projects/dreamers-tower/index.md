@@ -23,7 +23,7 @@ overview_video_id: "pAb_nt4TYrE"
 
 ## Objectives
 
-The topic of the game jam was to make a "Boss Rush" kind of game or game mode, that requires beating a series of bosses in a row, often with a perma-death setting. I ended up going for a 2D platformer with similar game mechanics to games like Cuphead.
+The topic of the [game jam](https://itch.io/jam/boss-rush-jam-2021) was to make a "Boss Rush" kind of game or game mode, that requires beating a series of bosses in a row, often with a perma-death setting. I ended up going for a 2D platformer with similar game mechanics to games like Cuphead.
 
 The game was made in Game Maker Studio, using their custom GameMaker language.
 
@@ -37,14 +37,12 @@ In the end I made five bosses, each with custom movement, attacks, and soundtrac
 
 The feedback I got most was that they should have health bars and that they were too "tanky" – which is to say they had too much health. So if I was to improve it I would likely readjust this balance to make each boss slightly quicker – however it would have also been interesting to see others play the game in order to get an idea of what else might have been an issue.
 
+{{% carousel %}}
 ![](/images/projects/Screenshot-2023-07-10-103700-150x150.png)
-
 ![](/images/projects/Screenshot-2023-07-10-103811-150x150.png)
-
 ![](/images/projects/Screenshot-2023-07-10-103920-150x150.png)
-
 ![](/images/projects/Screenshot-2023-07-10-101704-150x150.png)
-
 ![](/images/projects/Screenshot-2023-07-10-101923-150x150.png)
+{{% /carousel %}}
 
 In the end, it turned out well. It came 3rd for graphics and gameplay and 6th overall. I was happy with what I was able to achieve in the limited time and even though there are a few bugs and unpolished bits, the [ratings](https://itch.io/jam/boss-rush-jam-2021/rate/1144966) were very positive and constructive.

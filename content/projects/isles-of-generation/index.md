@@ -46,16 +46,12 @@ Moreover, even the distribution of trees employed an approach known as Poisson d
 
 Here are some examples of worlds generated using this program:
 
+{{% carousel %}}
 ![Generation Example](/images/projects/Screenshot-2023-06-30-154448.png)
-
 ![A village in the forest](/images/projects/Screenshot-2023-06-30-152201.png)
-
 ![A river joining the ocean](/images/projects/Screenshot-2023-06-30-152126.png)
-
 ![Biome variety](/images/projects/Screenshot-2023-06-30-152540.png)
-
 ![A Large world](/images/projects/Screenshot-2023-06-30-160452.png)
-
 ![A seaside village](/images/projects/Screenshot-2023-06-30-152331.png)
-
 ![A path through a forest](/images/projects/Screenshot-2023-06-30-152427.png)
+{{% /carousel %}}

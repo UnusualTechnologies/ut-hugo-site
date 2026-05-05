@@ -18,21 +18,23 @@ technologies: ["VFX", "Lighting", "Shaders", "Particles"]
 
 ## Lightning & Photorealism
 
+{{% carousel %}}
 ![](/images/projects/interior-3-1024x448.webp)
-
 ![](/images/projects/interior-1-1024x488.webp)
-
 ![](/images/projects/interior-5-1024x533.webp)
-
 ![](/images/projects/interior-4-1024x609.webp)
-
 ![](/images/projects/interior-2-1024x531.webp)
+{{% /carousel %}}
 
 ## Surreal environments
+
+<div class="gallery gallery-2col">
 
 ![](/images/projects/surreal-vr-architecture-2-1024x551.webp)
 
 ![](/images/projects/surreal-vr-architecture-1024x646.webp)
+
+</div>
 
 ## Particles & Mystical Effects
 

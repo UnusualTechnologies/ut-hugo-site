@@ -45,18 +45,17 @@ Once ready, players take turns contributing to the story. As they narrate, the g
 
 At the end of the game, this transcription is then processed by AI, which generates a custom book cover and formats the text into a polished story. The final result is displayed in-game and can also be downloaded as a PDF, serving as a keepsake of the shared storytelling experience.
 
+{{% carousel %}}
 ![](/images/projects/menu-1-1024x640.webp)
-
 ![](/images/projects/client-turn-1024x640.webp)
-
 ![](/images/projects/time-up-1024x640.webp)
+{{% /carousel %}}
 
 ## Example Stories
 
-![](/images/projects/jurassic-cheese-festival-story-212x300.webp)
-
-![](/images/projects/lunas-cosmic-adventure-story-212x300.webp)
-
-![](/images/projects/the-pigs-the-wolf-story-212x300.webp)
-
-![](/images/projects/dr-bears-brilliant-invention-story-1-212x300.webp)
+{{% carousel %}}
+![](/images/projects/jurassic-cheese-festival-story.webp)
+![](/images/projects/lunas-cosmic-adventure-story.webp)
+![](/images/projects/the-pigs-the-wolf-story.webp)
+![](/images/projects/dr-bears-brilliant-invention-story.webp)
+{{% /carousel %}}

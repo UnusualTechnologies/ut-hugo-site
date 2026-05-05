@@ -27,15 +27,13 @@ technologies: ["AR", "WebGL", "Mobile", "Microphone", "Unity"]
 overview_video_id: "uYKctmvKTFE"
 ---
 
+{{% carousel %}}
 ![](/images/projects/Movie_006-frame-at-0m25s.jpg)
-
 ![](/images/projects/Movie_003-frame-at-0m2s.jpg)
-
 ![](/images/projects/Movie_005-frame-at-0m6s.jpg)
-
 ![](/images/projects/Movie_006-frame-at-0m8s.jpg)
-
 ![](/images/projects/Movie_006-frame-at-0m16s.jpg)
+{{% /carousel %}}
 
 ## Write-Ups & Learnings
 
@@ -92,6 +90,6 @@ A Web AR experience lives or dies on its loading time. Users on mobile data conn
 - A File Size Diet: Within the Unity editor, we meticulously adjusted compression settings to find the sweet spot between file size and visual quality. We also made critical asset choices, such as using efficient MP4 video files instead of larger sprite sheets, to shave precious megabytes off the final build.
 - The Transparency Problem: A common graphical need is transparent video overlays. We discovered that this is not natively supported in WebGL. To achieve this effect, our video assets had to be encoded with very specific codecs—either WebM with a VP8 codec or Apple's ProRes 4444. This required adding an extra, specialized step to our asset creation pipeline.
 
-### Conclusion: A Solvable Challenge
+## Conclusion: A Solvable Challenge
 
 Developing for Web AR is an exercise in creative problem-solving. While the platform presents unique and sometimes frustrating challenges that have long been solved in the native app world, each one is surmountable. Through a combination of clever workarounds, careful optimization, and a deep understanding of the browser environment, it is entirely possible to deliver the frictionless, magical experiences that Web AR promises. We believe that sharing these technical learnings is crucial for helping the platform mature and empowering more creators to build for the open web.

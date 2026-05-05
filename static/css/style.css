@@ -1335,17 +1335,16 @@ ul {
 
 .project-figure img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
 .project-figure figcaption {
   color: rgba(255,255,255,0.6);
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 8px;
-  font-style: italic;
 }
 
 /* --- Overview Image --- */
@@ -1402,7 +1401,6 @@ ul {
 .project-content img {
   display: block;
   max-width: 768px;
-  width: 100%;
   height: auto;
   border-radius: 8px;
   margin: 24px auto;
@@ -1434,6 +1432,8 @@ ul {
 .project-content .gallery-2col {
   grid-template-columns: 1fr 1fr;
 }
+
+
 
 .project-content .gallery p {
   display: contents;
@@ -1528,6 +1528,43 @@ ul {
 
 @media (max-width: 768px) {
   .carousel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Three column layout (image / text / images) */
+
+.project-content .three-col-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+  align-items: center;
+}
+
+.project-content .three-col-layout p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.project-content .three-col-layout .project-figure {
+  margin: 0;
+}
+
+.project-content .three-col-layout .project-figure img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  max-width: none;
+}
+
+.project-content .three-col-right .project-figure + .project-figure,
+.project-content .three-col-right p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .project-content .three-col-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -1781,6 +1818,11 @@ ul {
 .testimonial-video {
   max-width: 768px;
   margin: 0 auto 24px;
+}
+
+.project-content .video-embed {
+  max-width: 768px;
+  margin: 24px auto;
 }
 
 .video-embed {

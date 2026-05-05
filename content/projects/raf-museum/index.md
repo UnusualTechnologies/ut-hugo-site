@@ -39,15 +39,15 @@ testimonial:
   video_id: "LR_pFowzsKE"
 ---
 
+{{% carousel %}}
 ![Interactive view](/images/projects/RAF_Table-1-768x361.webp)
-
 ![Projector setup](/images/projects/RAF_Projectors-768x576.webp)
-
 ![Voting results](/images/projects/RAF_Table-2-768x446.webp)
+{{% /carousel %}}
 
 ## Write-Up & Learnings
 
-The Unseen Challenge of Taming the Touchscreen
+### The Unseen Challenge of Taming the Touchscreen
 
 When visitors interact with the Royal Air Force Museum's large-scale interactive table, they experience a seamless and responsive display. What they don't see is the significant technical battle fought and won to make that experience possible. The project, which aimed to support over 120 simultaneous touch inputs across eight separate displays, pushed standard technology to its breaking point, forcing a deep and complex re-engineering of its core software.
 
