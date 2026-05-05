@@ -42,10 +42,6 @@
                 <div class="project-name">{{ .Title }}</div>
                 <div class="project-tags">{{ replace $tagsCsv "," ", " | replaceRE "-" " " | title }}</div>
               </div>
-              <div class="project-type-badge {{ .Params.project_type | urlize }}">
-                <img src="{{ printf "images/badges/%s.png" (.Params.project_type | urlize) | relURL }}" alt="{{ .Params.project_type }}">
-                <span>{{ .Params.project_type }}</span>
-              </div>
             </div>
           </a>
         </div>

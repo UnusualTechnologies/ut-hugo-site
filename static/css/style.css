@@ -895,7 +895,7 @@ ul {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 32px;
 }
 
 .project-card-container {
@@ -928,8 +928,8 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  padding: 10px 16px;
+  background: linear-gradient(rgba(0,0,0,0.49), rgba(0,0,0,0.92));
 }
 
 .project-name {
@@ -937,7 +937,7 @@ ul {
   font-family: 'Advent Pro', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin: 0;
 }
 
 .project-tags {
@@ -945,28 +945,6 @@ ul {
   font-size: var(--text-xxs);
 }
 
-.project-type-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 4px;
-  padding: 4px 8px;
-}
-
-.project-type-badge img {
-  width: 16px;
-  height: 16px;
-}
-
-.project-type-badge span {
-  color: var(--color-white);
-  font-size: 0.7rem;
-  font-weight: 600;
-}
 
 .matching-heading {
   grid-column: 1 / -1;
@@ -1194,6 +1172,10 @@ ul {
   margin-right: calc(-50vw + 50%);
   padding-left: 35px;
   padding-right: 35px;
+  min-height: calc(var(--text-display) + 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-hero.banner-contain {
