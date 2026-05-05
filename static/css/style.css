@@ -588,7 +588,6 @@ ul {
 
 .map-image {
   display: block;
-  max-width: 512px;
   margin: 24px auto;
 }
 
@@ -2088,14 +2087,14 @@ ul {
   }
 
   .project-hero.has-banner {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 }
 
 @media (max-width: 544px) {
   .project-hero.has-banner {
-    padding-top: 80px;
+    padding-top: 30px;
     padding-bottom: 30px;
   }
 
