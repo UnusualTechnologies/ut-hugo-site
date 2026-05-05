@@ -9,10 +9,10 @@ expertise:
   - Immersive visitor attractions and experiences
   - Hardware-software integration
 games:
-  - Need For Speed: Unbound
+  - "Need For Speed: Unbound"
   - Hotwheels iD
   - Guitar Hero Live
-  - Risk: Urban Assault
+  - "Risk: Urban Assault"
   - Risk
   - Zumba World Party
   - Zumba Kids

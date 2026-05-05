@@ -6,19 +6,13 @@
   var camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   var renderer = new THREE.WebGLRenderer({ alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  var parallaxFactor = 0.35;
 
-  function shaderHeight() {
-    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    return Math.round(window.innerHeight + maxScroll * parallaxFactor);
-  }
-
-  renderer.setSize(window.innerWidth, shaderHeight());
+  renderer.setSize(window.innerWidth, window.innerHeight);
   container.appendChild(renderer.domElement);
 
   var uniforms = {
     iTime: { value: 0.0 },
-    iResolution: { value: new THREE.Vector2(window.innerWidth, shaderHeight()) }
+    iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
   };
 
   var vertexShader = [
@@ -33,7 +27,7 @@
     'uniform vec2 iResolution;',
     '',
     'vec4 colormap(float x) {',
-    '  vec3 dark = vec3(20.0/255.0, 38.0/255.0, 28.0/255.0);',
+    '  vec3 dark = vec3(3.0/255.0, 8.0/255.0, 5.0/255.0);',
     '  vec3 mid = vec3(121.0/255.0, 196.0/255.0, 173.0/255.0);',
     '  vec3 bright = vec3(200.0/255.0, 240.0/255.0, 220.0/255.0);',
     '  vec3 col = x < 0.5 ? mix(dark, mid, x * 2.0) : mix(mid, bright, (x - 0.5) * 2.0);',
@@ -74,8 +68,8 @@
     'void main() {',
     '  vec2 uv = gl_FragCoord.xy / iResolution.x * 0.3;',
     '  float shade = pattern(uv);',
-    '  shade = pow(shade, 2.0);',
-    '  shade = clamp(shade, 0.15, 1.0);',
+    '  shade = pow(shade, 3.0);',
+    '  shade = clamp(shade, 0.0, 1.0);',
     '  gl_FragColor = vec4(colormap(shade).rgb, 1.0);',
     '}'
   ].join('\n');
@@ -90,17 +84,11 @@
 
   function onResize() {
     var w = window.innerWidth;
-    var h = shaderHeight();
+    var h = window.innerHeight;
     renderer.setSize(w, h);
     uniforms.iResolution.value.set(w, h);
   }
   window.addEventListener('resize', onResize);
-
-  // Parallax: shift the shader-bg slower than the page scroll
-  window.addEventListener('scroll', function () {
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    container.style.transform = 'translateY(' + (scrollY * -parallaxFactor) + 'px)';
-  }, { passive: true });
 
   var startTime = Date.now();
   function animate() {

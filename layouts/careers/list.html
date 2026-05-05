@@ -33,6 +33,8 @@
       </ul>
       {{ end }}
 
+      <p>Please email your CV and Cover Letter to <a href="mailto:careers@unusualtechnologies.com">careers@unusualtechnologies.com</a></p>
+
       <a href="mailto:careers@unusualtechnologies.com" class="btn careers-apply-btn">Apply</a>
     </div>
   </section>
@@ -42,13 +44,16 @@
   <section class="section careers-testimonials">
     <h2>Internship Testimonials</h2>
     <p class="body-large">Hear from some of our previous interns.</p>
-    <div class="careers-video-grid">
+    <div class="testimonial-grid">
       {{ range . }}
-      <div class="careers-video-item">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/{{ .video_id }}" frameborder="0" allowfullscreen loading="lazy" title="{{ .name }}'s Testimonial"></iframe>
+      <div class="testimonial-card" data-video-id="{{ .video_id }}">
+        <div class="testimonial-card-thumb">
+          <img src="https://img.youtube.com/vi/{{ .video_id }}/maxresdefault.jpg" alt="{{ .name }}'s Testimonial">
+          <div class="testimonial-play-btn">&#9654;</div>
         </div>
-        <p class="careers-video-label">{{ .name }}</p>
+        <div class="testimonial-caption">
+          <strong>Watch {{ .name }}'s Testimonial</strong>
+        </div>
       </div>
       {{ end }}
     </div>

@@ -18,5 +18,3 @@ internship_testimonials:
 Are you a student looking for an internship in a tech start-up? You have come to the right place!
 
 We provide short-term internships (3 to 6 months) to students in the following fields.
-
-Please email your CV and Cover Letter to [careers@unusualtechnologies.com](mailto:careers@unusualtechnologies.com)
