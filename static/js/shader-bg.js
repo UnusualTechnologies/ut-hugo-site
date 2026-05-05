@@ -6,12 +6,19 @@
   var camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   var renderer = new THREE.WebGLRenderer({ alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  var parallaxFactor = 0.35;
+
+  function shaderHeight() {
+    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    return Math.round(window.innerHeight + maxScroll * parallaxFactor);
+  }
+
+  renderer.setSize(window.innerWidth, shaderHeight());
   container.appendChild(renderer.domElement);
 
   var uniforms = {
     iTime: { value: 0.0 },
-    iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
+    iResolution: { value: new THREE.Vector2(window.innerWidth, shaderHeight()) }
   };
 
   var vertexShader = [
@@ -67,8 +74,9 @@
     'void main() {',
     '  vec2 uv = gl_FragCoord.xy / iResolution.x * 0.3;',
     '  float shade = pattern(uv);',
-    '  shade = pow(shade, 3.0);',
-    '  gl_FragColor = vec4(colormap(shade).rgb, shade);',
+    '  shade = pow(shade, 2.0);',
+    '  shade = clamp(shade, 0.15, 1.0);',
+    '  gl_FragColor = vec4(colormap(shade).rgb, 1.0);',
     '}'
   ].join('\n');
 
@@ -82,11 +90,17 @@
 
   function onResize() {
     var w = window.innerWidth;
-    var h = window.innerHeight;
+    var h = shaderHeight();
     renderer.setSize(w, h);
     uniforms.iResolution.value.set(w, h);
   }
   window.addEventListener('resize', onResize);
+
+  // Parallax: shift the shader-bg slower than the page scroll
+  window.addEventListener('scroll', function () {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    container.style.transform = 'translateY(' + (scrollY * -parallaxFactor) + 'px)';
+  }, { passive: true });
 
   var startTime = Date.now();
   function animate() {

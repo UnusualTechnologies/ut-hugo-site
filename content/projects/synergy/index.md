@@ -12,6 +12,7 @@ tags:
 prominence: -50
 featured_image: "/images/projects/synergy.webp"
 banner_image: "/images/projects/banners/synergy.png"
+banner_contain: true
 
 overview: "Synergy is an environmental puzzle/platformer made for WebGL. The project is themed on striking a balance between making use and restoration of the environment so we can keep on using it in the future."
 
@@ -24,8 +25,6 @@ try_it:
 
 overview_video_id: "BStg2utYbx0"
 
-testimonial:
-  video_id: "85EgjjXGu3Q"
 ---
 
 ## The Goal
@@ -48,11 +47,26 @@ We explored many different art styles. We found a representation of the player t
 
 ## Early video concept
 
+<div class="video-embed">
+<iframe src="https://www.youtube.com/embed/BStg2utYbx0" frameborder="0" allowfullscreen loading="lazy"></iframe>
+</div>
+
 ## Design Philosophy
 
 The game was heavily inspired by Jonathan Blows' masterpiece, Braid. We took care to make sure each puzzle could be seen in full at any one time. This meant fitting all the elements onto one screen which ended up being somewhat of a challenge! The end result meant one could theoretically solve each level just by looking at a screenshot. Can you work out how to solve the below?
 
+<div class="gallery gallery-2col">
+<div>
+
 ![](/images/projects/Level22.png)
+
+</div>
+<div class="video-cell">
+<div class="video-embed">
+<iframe src="https://www.youtube.com/embed/85EgjjXGu3Q" frameborder="0" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+</div>
 
 ## Collaboration
 

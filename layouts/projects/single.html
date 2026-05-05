@@ -6,10 +6,9 @@
 
     <!-- Hero Banner -->
     {{ $bannerImg := .Params.banner_image | default .Params.featured_image }}
-    <section class="project-hero{{ with $bannerImg }} has-banner{{ end }}"
-      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ . | strings.TrimPrefix "/" | relURL }}')"{{ end }}>
-      <a href="{{ "projects/" | relURL }}" class="back-link">&larr; All Projects</a>
-      <h1>{{ .Title }}</h1>
+    <section class="project-hero{{ with $bannerImg }} has-banner{{ end }}{{ if .Params.banner_contain }} banner-contain{{ end }}"
+      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ . | strings.TrimPrefix "/" | relURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
+      <h1{{ if gt (len .Title) 25 }} class="long-title"{{ end }}>{{ .Title }}</h1>
     </section>
 
     <!-- Overview Section -->
@@ -38,7 +37,7 @@
         </div>
         {{ end }}
 
-        <h2 class="tech-heading">Technologies:</h2>
+        <h2 class="tech-heading">Technologies</h2>
         <!-- Technologies -->
         {{ with .Params.technologies }}
         <div class="project-tech-badges">
@@ -51,11 +50,17 @@
         <!-- Client Info -->
         {{ with .Params.client }}
         <div class="project-client-info">
-          {{ with .logo }}
-          <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $.Params.client.name }} logo" class="project-client-logo">
-          {{ end }}
+          <h2 class="client-heading">Client</h2>
+          <div class="project-client-details">
+            {{ with .logo }}
+            <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $.Params.client.name }} logo" class="project-client-logo">
+            {{ end }}
+            {{ with .name }}
+            <span class="project-client-name">{{ . }}</span>
+            {{ end }}
+          </div>
           {{ with .website }}
-          <a href="{{ . }}" class="project-client-link" target="_blank" rel="noopener">Visit The Client <span class="client-link-text">Website</span>:</a>
+          <a href="{{ . }}" class="project-client-link" target="_blank" rel="noopener">Visit Client Website</a>
           {{ end }}
         </div>
         {{ end }}

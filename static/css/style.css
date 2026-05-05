@@ -356,7 +356,8 @@ ul {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.25;
+  opacity: 0.35;
+  will-change: transform;
 }
 
 #shader-bg canvas {
@@ -1141,11 +1142,22 @@ ul {
   padding-right: 35px;
 }
 
+.project-hero.banner-contain {
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
 .project-hero h1 {
   color: var(--color-primary);
   font-size: 5rem;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 0;
+  text-shadow: rgb(0, 0, 0) 1.5px 1.5px 0px;
+}
+
+.project-hero h1.long-title {
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
 }
 
 .back-link {
@@ -1188,7 +1200,8 @@ ul {
 }
 
 .project-overview .overview-heading,
-.project-overview .tech-heading {
+.project-overview .tech-heading,
+.project-overview .client-heading {
   color: var(--color-primary);
   font-size: 1.875rem;
   font-weight: 500;
@@ -1243,9 +1256,24 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  margin-top: 24px;
   margin-bottom: 24px;
   text-align: center;
+}
+
+.client-heading {
+  margin: 0;
+}
+
+.project-client-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-client-name {
+  color: var(--color-white);
+  font-size: 1.25rem;
 }
 
 .project-client-logo {
@@ -1376,6 +1404,179 @@ ul {
   height: auto;
   border-radius: 8px;
   margin: 24px 0;
+}
+
+.project-content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+.project-content .gallery {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+  align-items: center;
+}
+
+.project-content .gallery-2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-content .gallery p {
+  display: contents;
+}
+
+.project-content .gallery .project-figure {
+  margin: 0;
+}
+
+.project-content .gallery img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 544px) {
+  .project-content .gallery-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bento grid layouts */
+.project-content .bento-grid {
+  display: grid;
+  gap: 8px;
+  margin: 32px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-content .bento-grid p,
+.project-content .bento-grid .project-figure {
+  display: contents;
+}
+
+.project-content .bento-grid img,
+.project-content .bento-grid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.project-content .bento-grid figcaption {
+  display: none;
+}
+
+/* 1 large left + 4 small right (2x2) */
+.project-content .bento-1large-4small {
+  grid-template-columns: 55% 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-content .bento-1large-4small .bento-large {
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+
+.project-content .bento-1large-4small .bento-small:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-content .bento-1large-4small .bento-small:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.project-content .bento-1large-4small .bento-small:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.project-content .bento-1large-4small .bento-small:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* Video large left + 3 small right (2 top, 1 bottom) */
+.project-content .bento-video-3small {
+  grid-template-columns: 60% 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-content .bento-video-3small .bento-large {
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+
+.project-content .bento-video-3small .bento-small:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-content .bento-video-3small .bento-small:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.project-content .bento-video-3small .bento-small:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* 3 small left + video large right */
+.project-content .bento-3small-video {
+  grid-template-columns: 1fr 1fr 55%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-content .bento-3small-video .bento-small:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.project-content .bento-3small-video .bento-small:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-content .bento-3small-video .bento-small:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.project-content .bento-3small-video .bento-large {
+  grid-row: 1 / 3;
+  grid-column: 3;
+}
+
+@media (max-width: 640px) {
+  .project-content .bento-1large-4small,
+  .project-content .bento-video-3small,
+  .project-content .bento-3small-video {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-content .bento-1large-4small .bento-large,
+  .project-content .bento-video-3small .bento-large,
+  .project-content .bento-3small-video .bento-large {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .project-content .bento-1large-4small .bento-small,
+  .project-content .bento-video-3small .bento-small,
+  .project-content .bento-3small-video .bento-small {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 .project-content a {
@@ -1532,12 +1733,17 @@ ul {
     font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
   }
 
+  .project-hero h1.long-title {
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
+  }
+
   .project-content h2.case-study-heading {
     font-size: 2.5rem;
   }
 
   .project-overview .overview-heading,
-  .project-overview .tech-heading {
+  .project-overview .tech-heading,
+  .project-overview .client-heading {
     font-size: 1.3rem;
   }
 }
