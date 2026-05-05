@@ -13,7 +13,7 @@ overview: "The Tarot Experience Free Reading is an artificial intelligence (AI) 
 
 try_it:
   links:
-    - label: "Try It"
+    - label: "Try it now"
       url: "https://www.the-tarot-experience-vr.com/free-reading"
 
 technologies: ["WiX", "AI (GPT-4)", "Procedural Generation"]

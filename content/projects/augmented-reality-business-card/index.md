@@ -14,7 +14,7 @@ overview: "Giving a paper business card feels a bit too low-tech for a company l
 
 try_it:
   links:
-    - label: "Try It"
+    - label: "Try it now"
       url: "https://unusualtechnologies.com/ar-business-card"
 
 technologies: ["AR", "Lens Studio", "HTML", "JS", "CSS"]

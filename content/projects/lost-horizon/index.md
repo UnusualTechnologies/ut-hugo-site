@@ -19,7 +19,7 @@ technologies: ["Unity", "VR", "Digital Twin", "Music", "WebGL"]
 
 try_it:
   links:
-    - label: "Play"
+    - label: "Play it now"
       url: "https://unusualtechnologies.com/prototypes-and-demos/lost-horizon/"
 
 client:

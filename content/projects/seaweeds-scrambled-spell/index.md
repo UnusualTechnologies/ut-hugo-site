@@ -17,9 +17,9 @@ overview: "We worked with Business Creative to create a Halloween themed adventu
 
 try_it:
   links:
-    - label: "Play"
+    - label: "Play it now"
       url: "https://unusualtechnologies.com/haven-halloween/"
-    - label: "AR Markers"
+    - label: "Download the AR markers"
       url: "https://www.unusualtechnologies.com/wp-content/uploads/2026/01/Seawweds-AR-Markers.pdf"
 
 technologies: ["AR", "WebGL", "Mobile", "Microphone", "Unity"]

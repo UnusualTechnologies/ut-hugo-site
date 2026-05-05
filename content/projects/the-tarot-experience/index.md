@@ -24,9 +24,9 @@ overview_video_id: "7uFcGGuciCQ"
 
 try_it:
   links:
-    - label: "Steam"
+    - label: "Get it on Steam"
       url: "https://store.steampowered.com/app/2397490/The_Tarot_Experience_VR/"
-    - label: "Meta Quest"
+    - label: "Get it on Meta Quest"
       url: "https://www.oculus.com/experiences/quest/5709279645847124/"
 
 testimonial:

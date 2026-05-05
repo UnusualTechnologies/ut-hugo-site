@@ -13,7 +13,7 @@ overview: "This was a submission to the 2021 Boss Rush Game Jam which ran for ov
 
 try_it:
   links:
-    - label: "Play on itch.io"
+    - label: "Play it on itch.io"
       url: "https://nullreference.itch.io/dreamers-tower"
 
 technologies: ["Game Jam", "Game Maker Studio", "Platformer"]

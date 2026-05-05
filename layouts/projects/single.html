@@ -7,7 +7,7 @@
     <!-- Hero Banner -->
     {{ $bannerImg := .Params.banner_image | default .Params.featured_image }}
     <section class="project-hero{{ with $bannerImg }} has-banner{{ end }}{{ if .Params.banner_contain }} banner-contain{{ end }}"
-      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)), url('{{ . | strings.TrimPrefix "/" | relURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
+      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('{{ . | strings.TrimPrefix "/" | relURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
       <h1{{ if gt (len .Title) 25 }} class="long-title"{{ end }}>{{ .Title }}</h1>
     </section>
 
@@ -19,14 +19,35 @@
         <p class="project-overview-desc">{{ . }}</p>
         {{ end }}
 
+        <!-- Client Info -->
+        {{ with .Params.client }}
+        <div class="project-client-info">
+          <h2 class="client-heading">Client</h2>
+          {{ if .website }}
+          <a href="{{ .website }}" class="project-client-name" target="_blank" rel="noopener">{{ .name }}</a>
+          {{ else }}
+          <span class="project-client-name">{{ .name }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- Technologies -->
+        <h2 class="tech-heading">Technologies</h2>
+        {{ with .Params.technologies }}
+        <div class="project-tech-badges">
+          {{ range . }}
+          <span class="project-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+
         <!-- Try It -->
         {{ with .Params.try_it }}
         <div class="project-try-it">
-          <h3>Try It Yourself</h3>
           {{ with .links }}
           <div class="project-try-it-links">
             {{ range . }}
-            <a href="{{ .url }}" class="btn btn-sm" target="_blank" rel="noopener">{{ .label }}</a>
+            <a href="{{ .url }}" class="try-it-link" target="_blank" rel="noopener">{{ .label }} →</a>
             {{ end }}
           </div>
           {{ else }}
@@ -36,40 +57,12 @@
           {{ end }}
         </div>
         {{ end }}
-
-        <h2 class="tech-heading">Technologies</h2>
-        <!-- Technologies -->
-        {{ with .Params.technologies }}
-        <div class="project-tech-badges">
-          {{ range . }}
-          <span class="project-tag">{{ . }}</span>
-          {{ end }}
-        </div>
-        {{ end }}
-
-        <!-- Client Info -->
-        {{ with .Params.client }}
-        <div class="project-client-info">
-          <h2 class="client-heading">Client</h2>
-          <div class="project-client-details">
-            {{ with .logo }}
-            <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $.Params.client.name }} logo" class="project-client-logo">
-            {{ end }}
-            {{ with .name }}
-            <span class="project-client-name">{{ . }}</span>
-            {{ end }}
-          </div>
-          {{ with .website }}
-          <a href="{{ . }}" class="project-client-link" target="_blank" rel="noopener">Visit Client Website</a>
-          {{ end }}
-        </div>
-        {{ end }}
       </div>
 
       {{ if .Params.overview_video_id }}
       <div class="project-overview-media">
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/{{ .Params.overview_video_id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/{{ .Params.overview_video_id }}?rel=0&modestbranding=1&controls=0&showinfo=0" frameborder="0" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
       {{ else }}
@@ -89,7 +82,6 @@
     <!-- Case Study -->
     {{ if .Content }}
     <section class="section project-content">
-      <h2 class="case-study-heading">Case Study</h2>
       {{ .Content }}
     </section>
     {{ end }}
@@ -137,7 +129,7 @@
 
     <!-- Back to projects -->
     <section class="section project-footer-nav">
-      <a href="{{ "projects/" | relURL }}" class="btn">&larr; Back to Projects</a>
+      <a href="{{ "projects/" | relURL }}" class="back-link">← Back to Projects</a>
     </section>
   </article>
 

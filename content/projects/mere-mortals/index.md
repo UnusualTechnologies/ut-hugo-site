@@ -20,7 +20,7 @@ technologies:
   - 2D
 try_it:
   links:
-    - label: Play It
+    - label: Play it now
       url: https://unusualtechnologies.com/prototypes-and-demos/mere-mortals/
 overview_image:
   src: /images/projects/Character_1_Walk.gif

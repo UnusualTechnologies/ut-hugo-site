@@ -19,9 +19,9 @@ overview: "Friendly Fox Adventures is an outdoor experience that augments green 
 
 try_it:
   links:
-    - label: "Android"
+    - label: "Get it on Android"
       url: "https://play.google.com/store/apps/details?id=com.unusualtechnologies.friendlyfoxadventures"
-    - label: "Apple"
+    - label: "Get it on Apple"
       url: "https://apps.apple.com/gb/app/friendly-fox-adventures/id6456941528"
 
 technologies: ["Outdoors", "Unity", "AR", "Education", "iOS", "Android"]

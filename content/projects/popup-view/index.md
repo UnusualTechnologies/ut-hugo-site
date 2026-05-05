@@ -16,9 +16,9 @@ overview: "Visioning Lab sought to create a platform in which AR experiences cou
 
 try_it:
   links:
-    - label: "Android"
+    - label: "Get it on Android"
       url: "https://play.google.com/store/apps/details?id=com.visioninglab.popupview"
-    - label: "Apple"
+    - label: "Get it on Apple"
       url: "https://apps.apple.com/us/app/popupview/id1571958118"
 
 technologies: ["Unity", "AR", "3D", "AWS", "Animation"]

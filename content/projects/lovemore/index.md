@@ -14,7 +14,7 @@ overview: "Lovemore is a single-player role-playing-game that focuses on buildin
 
 try_it:
   links:
-    - label: "Play on itch.io"
+    - label: "Play it on itch.io"
       url: "https://simgirls.itch.io/lovemore"
 
 technologies: ["Adobe Flash", "Adobe Air", "Simulation", "Game porting"]

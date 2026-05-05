@@ -20,7 +20,7 @@ technologies: ["Environment", "WebGL", "2D", "Puzzle-Platformer"]
 
 try_it:
   links:
-    - label: "Play"
+    - label: "Play it now"
       url: "https://unusualtechnologies.com/our-games/Synergy/"
 
 overview_video_id: "BStg2utYbx0"

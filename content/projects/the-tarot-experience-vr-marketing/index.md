@@ -13,9 +13,9 @@ technologies:
 try_it:
   text: The Tarot Experience VR Game Links
   links:
-    - label: Steam
+    - label: Get it on Steam
       url: https://store.steampowered.com/app/2397490/The_Tarot_Experience_VR/
-    - label: Meta Store
+    - label: Get it on Meta Store
       url: https://www.meta.com/en-gb/experiences/the-tarot-experience-vr/5709279645847124/?srsltid=AfmBOooKzttl0fgvhFGgBqHK4l_uIFvBAzoIU42RyMmsN6uoNKCvwBje
 overview_image: null
 client:
