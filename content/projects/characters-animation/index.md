@@ -51,8 +51,8 @@ technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
 
 <div class="bento-grid bento-video-3small">
 <div class="bento-large">
-<video autoplay loop muted playsinline>
-  <source src="https://unusualtechnologies.com/wp-content/uploads/2025/04/Female01_UE5.2.mp4" type="video/mp4">
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/character-female-ue5.webm" type="video/webm">
 </video>
 </div>
 <div class="bento-small">
@@ -89,32 +89,32 @@ technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
 
 </div>
 <div class="bento-large">
-<video autoplay loop muted playsinline>
-  <source src="https://unusualtechnologies.com/wp-content/uploads/2025/04/Lechar_v06.mp4" type="video/mp4">
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/character-lechar.webm" type="video/webm">
 </video>
 </div>
 </div>
 
 ## Animation
 
-<video autoplay loop muted playsinline>
-  <source src="https://unusualtechnologies.com/wp-content/uploads/2025/04/Genie_360.mp4" type="video/mp4">
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/animation-genie.webm" type="video/webm">
 </video>
 
 ### Stylised Animation
 
-<video autoplay loop muted playsinline>
-  <source src="https://unusualtechnologies.com/wp-content/uploads/2025/04/00-GLKFlowers_Shot_01_WaterColour_BG.mp4" type="video/mp4">
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/animation-flowers.webm" type="video/webm">
 </video>
 
 ### Face Rigging
 
-<video autoplay loop muted playsinline>
-  <source src="https://unusualtechnologies.com/wp-content/uploads/2025/04/Desktop-2021.07.02-17.34.06.01.mp4" type="video/mp4">
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/animation-face-rig.webm" type="video/webm">
 </video>
 
 ### Procedural Animation
 
-<video autoplay loop muted playsinline>
-  <source src="https://unusualtechnologies.com/wp-content/uploads/2025/04/Tree-More-Leaves_Loop.mp4" type="video/mp4">
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/animation-tree-leaves.webm" type="video/webm">
 </video>

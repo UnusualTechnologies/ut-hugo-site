@@ -42,7 +42,18 @@ technologies: ["VFX", "Lighting", "Shaders", "Particles"]
 
 ## Videos
 
-- [Video: SSdt0OM.mp4](https://www.shadowood.uk/imgur/SSdt0OM.mp4)
-- [Video: j7dpJ4j.mp4](https://www.shadowood.uk/imgur/j7dpJ4j.mp4)
-- [Video: NuMOi9O.mp4](https://www.shadowood.uk/imgur/NuMOi9O.mp4)
-- [Video: NlWCmZG.mp4](https://www.shadowood.uk/imgur/NlWCmZG.mp4)
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/vfx-particles-1.webm" type="video/webm">
+</video>
+
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/vfx-particles-2.webm" type="video/webm">
+</video>
+
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/vfx-particles-3.webm" type="video/webm">
+</video>
+
+<video autoplay loop muted playsinline preload="none">
+  <source data-src="/videos/vfx-particles-4.webm" type="video/webm">
+</video>

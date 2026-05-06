@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
-<body class="{{ with .Params.bodyClass }}{{ . }}{{ end }}{{ if .IsHome }} home{{ end }}">
+<body class="{{ with .Params.bodyClass }}{{ . }}{{ end }}{{ if .IsHome }} home{{ end }}" data-base-path="{{ "" | relURL }}">
   <a class="skip-link" href="#content">Skip to content</a>
 
   {{ partial "header.html" . }}
@@ -21,7 +21,10 @@
 
   {{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
 
+  <div id="shader-bg"></div>
   <script src="{{ "js/main.js" | relURL }}"></script>
   <script src="{{ "js/carousel.js" | relURL }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="{{ "js/shader-bg.js" | relURL }}"></script>
 </body>
 </html>
