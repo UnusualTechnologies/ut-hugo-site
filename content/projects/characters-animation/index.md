@@ -21,77 +21,56 @@ technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
 
 ## Characters
 
-<div class="bento-grid bento-1large-4small">
-<div class="bento-large">
+<div class="bento-split">
+<div class="bento-col-large">
 
 ![Front render](/images/projects/Front-Render_01.webp)
 
 </div>
-<div class="bento-small">
+<div class="bento-col-small grid-2x2">
 
 ![Side render](/images/projects/Side-Render-01-768x799.webp)
 
-</div>
-<div class="bento-small">
-
 ![Bottom side render](/images/projects/Bottom-Side-Render-01-768x799.webp)
 
-</div>
-<div class="bento-small">
-
 ![Half lambert half render](/images/projects/Half-Lambert-Half-Render-768x799.jpg)
-
-</div>
-<div class="bento-small">
 
 ![Lambert render](/images/projects/Lambert-Render-01-768x799.webp)
 
 </div>
 </div>
 
-<div class="bento-grid bento-video-3small">
-<div class="bento-large">
+<div class="bento-split">
+<div class="bento-col-large">
 <video autoplay loop muted playsinline preload="none">
   <source data-src="/videos/character-female-ue5.webm" type="video/webm">
 </video>
 </div>
-<div class="bento-small">
+<div class="bento-col-small grid-2x2">
 
 ![Jumper test](/images/projects/Jumper-Test_v04-300x300.webp)
 
-</div>
-<div class="bento-small">
-
 ![Side view](/images/projects/Side-300x300.webp)
-
-</div>
-<div class="bento-small">
 
 ![Back view](/images/projects/Back-300x300.webp)
 
 </div>
 </div>
 
-<div class="bento-grid bento-3small-video">
-<div class="bento-small">
-
-![Lechar view 1](/images/projects/Lechar_v06_30-300x300.webp)
-
-</div>
-<div class="bento-small">
-
-![Lechar view 2](/images/projects/Lechar_v06_07-300x300.webp)
-
-</div>
-<div class="bento-small">
-
-![Lechar view 3](/images/projects/Lechar_v06.0016-300x300.webp)
-
-</div>
-<div class="bento-large">
+<div class="bento-split reverse">
+<div class="bento-col-large">
 <video autoplay loop muted playsinline preload="none">
   <source data-src="/videos/character-lechar.webm" type="video/webm">
 </video>
+</div>
+<div class="bento-col-small grid-2x2">
+
+![Lechar view 1](/images/projects/Lechar_v06_30-300x300.webp)
+
+![Lechar view 2](/images/projects/Lechar_v06_07-300x300.webp)
+
+![Lechar view 3](/images/projects/Lechar_v06.0016-300x300.webp)
+
 </div>
 </div>
 
