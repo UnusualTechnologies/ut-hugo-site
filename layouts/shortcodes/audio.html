@@ -1,1 +1,1 @@
-<audio controls><source src="{{ .Get "src" | strings.TrimPrefix "/" | relURL }}" type="audio/mpeg"></audio>
+<audio controls><source src="{{ .Get "src" | relURL }}" type="audio/mpeg"></audio>

@@ -14,7 +14,7 @@ No test runner, linter, or package manager. This is a pure Hugo static site with
 
 ## Architecture
 
-Hugo static site for [Unusual Technologies](https://unusualtechnologies.github.io/ut-hugo-site/). No server-side code, no database.
+Hugo static site for [Unusual Technologies](https://unusualtechnologies.com/). No server-side code, no database.
 
 **Content flows from three sources into HTML:**
 
@@ -32,19 +32,7 @@ Hugo static site for [Unusual Technologies](https://unusualtechnologies.github.i
 
 **CMS:** Sveltia CMS (`static/admin/`). Config in `static/admin/config.yml` defines the editable collections and maps them to content/data files. On the live site the CMS authenticates via GitHub and commits directly to `main`.
 
-**Deployment:** GitHub Actions (`.github/workflows/deploy.yml`) builds on every push to `main` and deploys to GitHub Pages. The site currently serves from the `/ut-hugo-site/` subpath at `https://unusualtechnologies.github.io/ut-hugo-site/`.
-
-## Image path workaround
-
-Hugo's `relURL` doesn't prepend the base subpath when the input starts with `/`. Any template that outputs an image path from front matter or data files (where values start with `/`) must strip the leading slash first:
-
-```
-{{ .Params.featured_image | strings.TrimPrefix "/" | relURL }}
-```
-
-This workaround is present in `about/list.html`, `projects/list.html`, and `projects/single.html`. Hardcoded template strings like `"images/logo.png"` (no leading slash) work correctly with plain `relURL` and don't need TrimPrefix.
-
-**Remove all TrimPrefix workarounds if/when the site is moved to a custom domain** (served from `/` rather than a subpath).
+**Deployment:** Cloudflare Pages, connected to the GitHub repo. Builds automatically on every push to `main` using `hugo --minify` with output directory `public`. The site serves from `https://unusualtechnologies.com/`.
 
 ## Project front matter fields
 

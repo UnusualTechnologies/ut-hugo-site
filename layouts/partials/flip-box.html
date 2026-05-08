@@ -1,6 +1,6 @@
 {{- $url := .url -}}
 {{- if not (strings.HasPrefix $url "http") -}}
-  {{- $url = ($url | strings.TrimPrefix "/" | relURL) -}}
+  {{- $url = ($url | relURL) -}}
 {{- end -}}
 {{- $title := .title -}}
 {{- $description := .description -}}

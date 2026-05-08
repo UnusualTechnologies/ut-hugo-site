@@ -6,7 +6,7 @@
     <!-- Hero Banner -->
     {{ $bannerImg := .Params.banner_image | default .Params.featured_image }}
     <section class="project-hero{{ with $bannerImg }} has-banner{{ end }}{{ if .Params.banner_contain }} banner-contain{{ end }}"
-      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('{{ . | strings.TrimPrefix "/" | relURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
+      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('{{ . | relURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
       <h1{{ if gt (len .Title) 25 }} class="long-title"{{ end }}>{{ .Title }}</h1>
     </section>
 
@@ -68,7 +68,7 @@
       {{ with .Params.overview_image }}
       <div class="project-overview-image">
         <figure class="project-figure">
-          <img src="{{ .src | strings.TrimPrefix "/" | relURL }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
+          <img src="{{ .src | relURL }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
           {{ with .caption }}
           <figcaption>{{ . }}</figcaption>
           {{ end }}
@@ -106,7 +106,7 @@
         {{ else }}
         {{ with .thumbnail }}
         <div class="testimonial-thumbnail">
-          <img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="Testimonial" loading="lazy">
+          <img src="{{ . | relURL }}" alt="Testimonial" loading="lazy">
         </div>
         {{ end }}
         {{ end }}

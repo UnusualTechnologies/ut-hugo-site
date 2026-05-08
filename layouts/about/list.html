@@ -14,14 +14,14 @@
     <div class="team-cards">
       {{ range .Site.Data.team.items }}
       {{ if .url }}
-      <a href="{{ .url | strings.TrimPrefix "/" | relURL }}" class="team-card">
-        <img src="{{ .photo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="team-photo">
+      <a href="{{ .url | relURL }}" class="team-card">
+        <img src="{{ .photo | relURL }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
         <p>{{ .role }}</p>
       </a>
       {{ else }}
       <div class="team-card">
-        <img src="{{ .photo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}" class="team-photo">
+        <img src="{{ .photo | relURL }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
         <p>{{ .role }}</p>
       </div>
@@ -35,7 +35,7 @@
     <h2>Who We've Worked With</h2>
     <div class="client-logos">
       {{ range .Site.Data.clients.items }}
-      <img src="{{ .logo | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}">
+      <img src="{{ .logo | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
   </section>
@@ -48,7 +48,7 @@
       {{ $videoID := replaceRE `.*youtu\.be/` "" .video }}
       <div class="testimonial-card" data-video-id="{{ $videoID }}">
         <div class="testimonial-card-thumb">
-          <img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}'s Testimonial">
+          <img src="{{ .image | relURL }}" alt="{{ .name }}'s Testimonial">
           <div class="testimonial-play-btn">&#9654;</div>
         </div>
         <div class="testimonial-caption">
@@ -65,7 +65,7 @@
     <h2>Awards</h2>
     <div class="awards-grid">
       {{ range .Site.Data.awards.items }}
-      <img src="{{ .image | strings.TrimPrefix "/" | relURL }}" alt="{{ .name }}">
+      <img src="{{ .image | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
   </section>
