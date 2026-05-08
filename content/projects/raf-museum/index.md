@@ -19,7 +19,7 @@ client:
   name: "RAF Museum"
   logo: "/images/projects/Royal_Air_Force_Museum_logo-300x300.webp"
 
-overview_video_id: "zNL6NsXiEAQ"
+overview_video_id: "BPdT9jE_Ssg"
 
 testimonial:
   quote: "They just know their stuff and I was really impressed. We will definitely work with Unusual Technologies again."
@@ -44,6 +44,10 @@ testimonial:
 ![Projector setup](/images/projects/RAF_Projectors-768x576.webp)
 ![Voting results](/images/projects/RAF_Table-2-768x446.webp)
 {{% /carousel %}}
+
+## Project Demo
+
+{{< youtube zNL6NsXiEAQ >}}
 
 ## Write-Up & Learnings
 
