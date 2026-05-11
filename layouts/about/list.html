@@ -1,29 +1,34 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  {{ partial "hero-text.html" (dict
-    "title" "About Us"
-    "subtitle" "Creatives and programmers who develop and code your innovation from design to delivery."
-    "body" (printf `<p class="body-large">We specialise in bringing creative, immersive and high-tech solutions to every industry, including the academic, entertainment, arts and commercial sectors.</p>
-<p class="body-large">If in doubt, <a href="%s">get in touch</a> to speak to a friendly human.</p>` ("contact/" | relURL))
-  ) }}
+  <!-- Intro -->
+  <section class="section about-intro">
+    <p class="about-eyebrow">About Us</p>
+    <h1 class="about-headline">Creatives and programmers who develop and code <span class="hl">your innovation</span> from design to delivery.</h1>
+    <p class="about-body">We specialise in bringing creative, immersive and high-tech solutions to every industry, including the academic, entertainment, arts and commercial sectors.</p>
+    <p class="about-body">If in doubt, <a href="{{ "contact/" | relURL }}">get in touch</a> to speak to a friendly human.</p>
+  </section>
 
   <!-- Leadership Team -->
-  <section class="section">
-    <h2>Leadership Team</h2>
-    <div class="team-cards">
+  <section class="section about-section">
+    <h2 class="section-heading">Leadership Team</h2>
+    <div class="team-grid">
       {{ range .Site.Data.team.items }}
       {{ if .url }}
-      <a href="{{ .url | strings.TrimLeft "/" | relURL }}" class="team-card">
-        <img src="{{ .photo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}" class="team-photo">
-        <h3>{{ .name }}</h3>
-        <p>{{ .role }}</p>
+      <a href="{{ .url | strings.TrimLeft "/" | relURL }}" class="team-member">
+        <div class="team-member-photo">
+          <img src="{{ .photo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
+        </div>
+        <h3 class="team-member-name">{{ .name }}</h3>
+        <p class="team-member-role">{{ .role }}</p>
       </a>
       {{ else }}
-      <div class="team-card">
-        <img src="{{ .photo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}" class="team-photo">
-        <h3>{{ .name }}</h3>
-        <p>{{ .role }}</p>
+      <div class="team-member">
+        <div class="team-member-photo">
+          <img src="{{ .photo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
+        </div>
+        <h3 class="team-member-name">{{ .name }}</h3>
+        <p class="team-member-role">{{ .role }}</p>
       </div>
       {{ end }}
       {{ end }}
@@ -31,8 +36,8 @@
   </section>
 
   <!-- Client Logos -->
-  <section class="section">
-    <h2>Who We've Worked With</h2>
+  <section class="section about-section">
+    <h2 class="section-heading">Who We've Worked With</h2>
     <div class="client-logos">
       {{ range .Site.Data.clients.items }}
       <img src="{{ .logo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
@@ -41,8 +46,8 @@
   </section>
 
   <!-- Client Testimonials -->
-  <section class="section" id="ClientTestimonials">
-    <h2>Client Testimonials</h2>
+  <section class="section about-section" id="ClientTestimonials">
+    <h2 class="section-heading">Client Testimonials</h2>
     <div class="testimonial-grid">
       {{ range .Site.Data.testimonials.items }}
       {{ $videoID := replaceRE `.*youtu\.be/` "" .video }}
@@ -61,8 +66,8 @@
   </section>
 
   <!-- Awards -->
-  <section class="section">
-    <h2>Awards</h2>
+  <section class="section about-section">
+    <h2 class="section-heading">Awards</h2>
     <div class="awards-grid">
       {{ range .Site.Data.awards.items }}
       <img src="{{ .image | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
@@ -71,30 +76,32 @@
   </section>
 
   <!-- Our Values -->
-  <section class="section">
-    <h2>Our Values</h2>
-    <p class="body-large values-intro">Unusual Technologies was founded in 2018 with a mission to work on tech projects that are a bit unusual.</p>
+  <section class="section about-section">
+    <h2 class="section-heading">Our Values</h2>
+    <p class="about-body values-lead">Unusual Technologies was founded in 2018 with a mission to work on tech projects that are a bit unusual.</p>
 
-    <div class="values-list">
+    <div class="values-grid">
       {{ range .Site.Data.values.items }}
-      <div class="value">
+      <div class="value-card">
         <h3>{{ .title }}</h3>
-        <p class="body-large">{{ .description }}</p>
+        <p>{{ .description }}</p>
       </div>
       {{ end }}
     </div>
   </section>
 
   <!-- Location + CTA -->
-  <section class="section">
-    <h2>Based in Brighton, United Kingdom</h2>
-    <img src="{{ "images/brighton-map.png" | strings.TrimLeft "/" | relURL }}" alt="Brighton, United Kingdom" class="map-image">
-
-    {{ partial "flip-box.html" (dict
-      "url" .Site.Params.questionnaireURL
-      "title" "Tell us about your idea"
-      "description" "Fill out this questionnaire so we can get a better understanding of your project"
-    ) }}
+  <section class="section about-section about-location">
+    <div class="location-row">
+      <div class="location-text">
+        <h2 class="section-heading">Based in Brighton, United Kingdom</h2>
+        <p class="about-body">Ready to start your next project? Fill out our questionnaire so we can get a better understanding of your idea.</p>
+        <a href="{{ .Site.Params.questionnaireURL }}" target="_blank" rel="noopener" class="btn">Tell us about your idea</a>
+      </div>
+      <div class="location-map">
+        <img src="{{ "images/brighton-map.png" | strings.TrimLeft "/" | relURL }}" alt="Brighton, United Kingdom">
+      </div>
+    </div>
   </section>
 
 </div>

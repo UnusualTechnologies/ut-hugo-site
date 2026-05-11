@@ -1,15 +1,25 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  <section class="section hero-text">
-    <p class="body-large">We thrive on collaboration, creativity, and connecting with like-minded individuals and businesses who share our passion. Click on one of the buttons below to tell us about your project, book a meeting, or discover exciting career prospects.</p>
+  <section class="section contact-layout">
+    <div class="contact-intro">
+      <p class="about-eyebrow">Contact</p>
+      <h1 class="about-headline">Let's talk about <span class="hl">your project</span>.</h1>
+      <p class="about-body">We thrive on collaboration, creativity, and connecting with like-minded individuals and businesses who share our passion.</p>
 
-    <div class="contact-details">
-      <h3><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></h3>
-      <h3><a href="mailto:{{ .Site.Params.email }}" target="_blank">Email: {{ .Site.Params.email }}</a></h3>
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <span class="contact-info-label">Phone</span>
+          <a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}">{{ .Site.Params.phone }}</a>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-label">Email</span>
+          <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        </div>
+      </div>
     </div>
 
-    <div class="flip-boxes">
+    <div class="contact-actions">
       {{ range .Site.Data.contact_ctas.items }}
         {{ $url := .url }}
         {{ if .url_param }}

@@ -1,16 +1,28 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  <!-- Filter pills -->
+  <!-- Intro -->
+  <section class="section about-intro">
+    <p class="about-eyebrow">Work</p>
+    <h1 class="about-headline">Crafting <span class="hl">unusual digital experiences</span> across every platform.</h1>
+  </section>
+
+  <!-- Filter pills (only tags that have projects) -->
+  {{- $usedTags := slice -}}
+  {{- range .Pages -}}
+    {{- range .Params.tags -}}
+      {{- $usedTags = $usedTags | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $usedTags = $usedTags | uniq | sort -}}
   <div class="section filter-bar" id="left_pane">
     <ul class="tag-list" id="toggleList">
-      {{ $tags := slice "Android" "Education" "Game" "iOS" "VR" "AR" "Installation" "360 video" "AAA Games" "Construction" "Health" "Motion sensor" "Music" "Web" "AI" "Arduino" "Art" "AWS" "Biometrics" "Blockchain" "Bluetooth" "CMS" "Computer Vision" "Console" "Data Visualisation" "Eco" "Gamification" "Immersive" "IoT" "LiDAR" "NFT's" "Port" "Procedural Generation" "Productivity" "Projection mapping" "Publicity Stunt" "Raspberry Pi" "RFID" "Science and Research" "Steam" "Unity" "Unreal Engine" "VFX" "WebGL" "Windows" }}
-      {{ range $tags }}
+      {{ range $usedTags }}
       {{ $slug := . | urlize }}
       <li>
         <label class="tag-label">
           <input type="checkbox" name="project-tag[]" value="{{ $slug }}">
-          {{ . }}
+          {{ . | replaceRE "-" " " | title }}
         </label>
       </li>
       {{ end }}

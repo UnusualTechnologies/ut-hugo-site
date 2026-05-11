@@ -1,11 +1,13 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  <section class="section careers-job-single">
+  <section class="section about-intro" style="padding-bottom: 0;">
     <a href="{{ "careers/" | relURL }}" class="back-link">&larr; All Positions</a>
+    <p class="about-eyebrow" style="margin-top: 24px;">Open Position</p>
+    <h1 class="about-headline">{{ .Title }}</h1>
+  </section>
 
-    <h1>{{ .Title }}</h1>
-
+  <section class="section careers-job-single">
     <div class="careers-job-content">
       {{ .Content }}
     </div>
@@ -13,7 +15,6 @@
     {{ with .Params.apply_url }}
     <a href="{{ . }}" class="btn careers-apply-btn">Apply Now</a>
     {{ end }}
-
   </section>
 
 </div>

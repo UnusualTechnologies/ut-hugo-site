@@ -1,15 +1,16 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  {{ partial "hero-text.html" (dict
-    "title" "Careers"
-    "subtitle" "Join us in building immersive, high-tech experiences."
-  ) }}
+  <!-- Intro -->
+  <section class="section about-intro">
+    <p class="about-eyebrow">Careers</p>
+    <h1 class="about-headline">Join us in building <span class="hl">immersive, high-tech experiences</span>.</h1>
+  </section>
 
   <!-- Open Positions -->
   {{ with .Pages }}
-  <section class="section careers-positions">
-    <h2>Open Positions</h2>
+  <section class="section about-section careers-positions">
+    <h2 class="section-heading">Open Positions</h2>
     <div class="careers-job-list">
       {{ range . }}
       <a href="{{ .Permalink }}" class="careers-job-link">{{ .Title }}</a>
@@ -19,8 +20,8 @@
   {{ end }}
 
   <!-- Internships -->
-  <section class="section careers-internships">
-    <h2>Unusual Technologies Internships</h2>
+  <section class="section about-section careers-internships">
+    <h2 class="section-heading">Unusual Technologies Internships</h2>
 
     <div class="careers-internship-body">
       {{ .Content }}
@@ -41,9 +42,9 @@
 
   <!-- Internship Testimonials -->
   {{ with .Params.internship_testimonials }}
-  <section class="section careers-testimonials">
-    <h2>Internship Testimonials</h2>
-    <p class="body-large">Hear from some of our previous interns.</p>
+  <section class="section about-section careers-testimonials">
+    <h2 class="section-heading">Internship Testimonials</h2>
+    <p class="about-body">Hear from some of our previous interns.</p>
     <div class="testimonial-grid">
       {{ range . }}
       <div class="testimonial-card" data-video-id="{{ .video_id }}">
