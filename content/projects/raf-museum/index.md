@@ -7,7 +7,7 @@ tags:
   - "installation"
   - "projection-mapping"
   - "unity"
-prominence: 30
+prominence: 90
 featured_image: "/images/projects/raf-museum.webp"
 banner_image: "/images/projects/banners/raf-museum.webp"
 

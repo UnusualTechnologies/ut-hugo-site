@@ -8,7 +8,7 @@ tags:
   - "motion-sensor"
   - "projection-mapping"
   - "unity"
-prominence: 17
+prominence: 100
 featured_image: "/images/projects/lego-playtables.webp"
 banner_image: "/images/projects/banners/lego-playtables.webp"
 

@@ -4,11 +4,7 @@ title = 'Unusual Technologies'
 
 [menus]
   [[menus.main]]
-    name = 'Home'
-    url = '/'
-    weight = 10
-  [[menus.main]]
-    name = 'Projects'
+    name = 'Work'
     url = '/projects/'
     weight = 20
   [[menus.main]]
@@ -25,11 +21,7 @@ title = 'Unusual Technologies'
     weight = 50
 
   [[menus.footer]]
-    name = 'Home'
-    url = '/'
-    weight = 10
-  [[menus.footer]]
-    name = 'Projects'
+    name = 'Work'
     url = '/projects/'
     weight = 20
   [[menus.footer]]

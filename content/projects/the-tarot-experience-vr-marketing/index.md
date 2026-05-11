@@ -4,7 +4,7 @@ type: projects
 project_type: Client
 tags:
   - game
-prominence: 40
+prominence: 48
 featured_image: /images/projects/META_landscape-v4.jpg
 overview: The Tarot Experience VR faced plateauing sales due to a niche marketing focus. By shifting the target audience from tarot enthusiasts to people who are interested in VR and optimising store presence, Unusual Technologies increased search discoverability and social engagement, positioning the title as a leading wellness experience.
 overview_video_id: ''

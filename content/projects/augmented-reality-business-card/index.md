@@ -6,7 +6,7 @@ tags:
   - "ar"
   - "publicity-stunt"
   - "web"
-prominence: 0
+prominence: 12
 featured_image: "/images/projects/ar-business-card.png"
 banner_image: "/images/projects/banners/augmented-reality-business-card.webp"
 

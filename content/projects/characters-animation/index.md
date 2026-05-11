@@ -6,7 +6,7 @@ tags:
   - "aaa-games"
   - "art"
   - "immersive"
-prominence: 60
+prominence: 85
 featured_image: "/images/projects/characters-animation.webp"
 banner_image: "/images/projects/banners/characters-animation.webp"
 

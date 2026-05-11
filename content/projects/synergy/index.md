@@ -9,7 +9,7 @@ tags:
   - "gamification"
   - "unity"
   - "webgl"
-prominence: -50
+prominence: 1
 featured_image: "/images/projects/synergy.webp"
 banner_image: "/images/projects/banners/synergy.png"
 banner_contain: true

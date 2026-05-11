@@ -7,7 +7,7 @@ tags:
   - "art"
   - "immersive"
   - "vfx"
-prominence: 55
+prominence: 75
 featured_image: "/images/projects/visual-effects.webp"
 banner_image: "/images/projects/banners/visual-effects.webp"
 

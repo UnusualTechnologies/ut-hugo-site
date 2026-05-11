@@ -11,7 +11,7 @@ tags:
   - "gamification"
   - "ios"
   - "unity"
-prominence: 14
+prominence: 55
 featured_image: "/images/projects/friendly-fox.webp"
 banner_image: "/images/projects/banners/friendly-fox-adventures.webp"
 

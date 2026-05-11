@@ -8,7 +8,7 @@ tags:
   - "art"
   - "ios"
   - "unity"
-prominence: 8
+prominence: 30
 featured_image: "/images/projects/popup-view.webp"
 banner_image: "/images/projects/banners/popup-view.webp"
 

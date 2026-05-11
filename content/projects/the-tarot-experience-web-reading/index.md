@@ -5,7 +5,7 @@ project_type: "Client"
 tags:
   - "ai"
   - "web"
-prominence: 14
+prominence: 40
 featured_image: "/images/projects/tarot-web.png"
 banner_image: "/images/projects/banners/the-tarot-experience-web-reading.jpg"
 

@@ -1,54 +1,43 @@
 {{ define "main" }}
 <div class="page-gradient">
 
-  {{ partial "hero-text.html" (dict
-    "title" "Projects"
-    "body" `<p class="body-large">Here are some projects we've worked on. Select a tag to view relevant ones.</p>`
-  ) }}
+  <!-- Filter pills -->
+  <div class="section filter-bar" id="left_pane">
+    <ul class="tag-list" id="toggleList">
+      {{ $tags := slice "Android" "Education" "Game" "iOS" "VR" "AR" "Installation" "360 video" "AAA Games" "Construction" "Health" "Motion sensor" "Music" "Web" "AI" "Arduino" "Art" "AWS" "Biometrics" "Blockchain" "Bluetooth" "CMS" "Computer Vision" "Console" "Data Visualisation" "Eco" "Gamification" "Immersive" "IoT" "LiDAR" "NFT's" "Port" "Procedural Generation" "Productivity" "Projection mapping" "Publicity Stunt" "Raspberry Pi" "RFID" "Science and Research" "Steam" "Unity" "Unreal Engine" "VFX" "WebGL" "Windows" }}
+      {{ range $tags }}
+      {{ $slug := . | urlize }}
+      <li>
+        <label class="tag-label">
+          <input type="checkbox" name="project-tag[]" value="{{ $slug }}">
+          {{ . }}
+        </label>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 
-  <section class="section projects-layout">
-    <!-- Left pane: tag filter -->
-    <div class="filter-pane" id="left_pane">
-      <p class="filter-heading">Select interests</p>
-      <label class="filter-toggle" for="filter-checkbox">
-        Select interests <span class="chevron">&#x203A;</span>
-      </label>
-      <input type="checkbox" id="filter-checkbox" class="filter-checkbox-toggle" hidden>
-      <ul class="tag-list" id="toggleList">
-        {{ $tags := slice "Android" "Education" "Game" "iOS" "VR" "AR" "Installation" "360 video" "AAA Games" "Construction" "Health" "Motion sensor" "Music" "Web" "AI" "Arduino" "Art" "AWS" "Biometrics" "Blockchain" "Bluetooth" "CMS" "Computer Vision" "Console" "Data Visualisation" "Eco" "Gamification" "Immersive" "IoT" "LiDAR" "NFT's" "Port" "Procedural Generation" "Productivity" "Projection mapping" "Publicity Stunt" "Raspberry Pi" "RFID" "Science and Research" "Steam" "Unity" "Unreal Engine" "VFX" "WebGL" "Windows" }}
-        {{ range $tags }}
-        {{ $slug := . | urlize }}
-        <li>
-          <label class="tag-label">
-            <input type="checkbox" name="project-tag[]" value="{{ $slug }}">
-            {{ . }}
-          </label>
-        </li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <!-- Right pane: project cards -->
-    <div class="projects-pane" id="right_pane">
-      <h2 class="section-heading matching-heading hidden" id="matching-heading">Projects selected for your interests</h2>
-      <div class="project-grid" id="project-grid">
+  <section class="section">
+    <h2 class="section-heading matching-heading hidden" id="matching-heading">Work matching your interests</h2>
+    <div class="project-grid" id="project-grid">
 
         {{ range sort .Pages "Params.prominence" "desc" }}
         {{ $tagsCsv := delimit .Params.tags "," }}
         <div class="project-card-container" data-tags="{{ $tagsCsv }}" data-prominence="{{ .Params.prominence }}">
           <a href="{{ .RelPermalink }}" class="project-card">
-            <div class="project-image" style="background-image: url('{{ .Params.featured_image | relURL }}')">
-              <div class="project-info">
-                <div class="project-name">{{ .Title }}</div>
-                <div class="project-tags">{{ replace $tagsCsv "," ", " | replaceRE "-" " " | title }}</div>
-              </div>
+            <div class="project-cover">
+              <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" class="project-cover-img" loading="lazy">
+              {{ with .Params.tags }}
+                <span class="project-label">{{ index . 0 | replaceRE "-" " " | title }}</span>
+              {{ end }}
             </div>
+            <h3 class="project-name">{{ .Title }}</h3>
+            <p class="project-description">{{ .Description | default .Params.summary | default "" }}</p>
           </a>
         </div>
         {{ end }}
 
       </div>
-    </div>
   </section>
 
 </div>

@@ -9,7 +9,7 @@ tags:
   - "nfts"
   - "unity"
   - "vr"
-prominence: 11
+prominence: 28
 featured_image: "/images/projects/vr-home-builder.png"
 banner_image: "/images/projects/banners/vr-home-builder.webp"
 

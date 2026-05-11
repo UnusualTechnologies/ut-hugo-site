@@ -8,7 +8,7 @@ tags:
   - "science-and-research"
   - "unreal-engine"
   - "vr"
-prominence: 16
+prominence: 52
 featured_image: "/images/projects/abstract-painters.webp"
 banner_image: "/images/projects/banners/abstract-painters.webp"
 

@@ -8,7 +8,7 @@ tags:
   - "health"
   - "science-and-research"
   - "unity"
-prominence: 19
+prominence: 62
 featured_image: "/images/projects/co-play.jpg"
 banner_image: "/images/projects/banners/co-play.jpg"
 

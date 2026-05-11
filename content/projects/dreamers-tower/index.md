@@ -5,7 +5,7 @@ project_type: "Prototype"
 tags:
   - "game"
   - "unity"
-prominence: 0
+prominence: 8
 featured_image: "/images/projects/dreamers-tower.webp"
 banner_image: "/images/projects/banners/dreamers-tower.webp"
 
