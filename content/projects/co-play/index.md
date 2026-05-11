@@ -22,6 +22,10 @@ client:
   logo: "/images/projects/University_of_Sussex_Logo-300x300.webp"
 
 overview_video_id: "R7f10FDJzoY"
+related_projects:
+  - co-cog
+  - friendly-fox-adventures
+  - lego-playtables
 ---
 
 {{% carousel %}}

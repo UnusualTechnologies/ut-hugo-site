@@ -45,6 +45,10 @@ testimonial:
   person_title: "Founder"
   person_org: "Friendly Fox Design"
   video_id: "LSNciyz7gjE"
+related_projects:
+  - seaweeds-scrambled-spell
+  - co-play
+  - synergy
 ---
 
 ## Objective

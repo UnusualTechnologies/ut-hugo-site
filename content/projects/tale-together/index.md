@@ -20,6 +20,10 @@ client:
   name: "University of Surrey"
 
 overview_video_id: "BrPFQKEeSKM"
+related_projects:
+  - co-cog
+  - friendly-fox-adventures
+  - co-play
 ---
 
 ## The Objective

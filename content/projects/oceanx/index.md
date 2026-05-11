@@ -20,6 +20,10 @@ client:
   website: "https://oceanx.org/"
 
 overview_video_id: "ipCscTs8UiA"
+related_projects:
+  - co-cog
+  - abstract-painters
+  - raf-museum
 ---
 
 Emulating a deep-sea dive in the OceanXplorer submersible, the project allows the user to discover the biodiversity of the ocean in correlation with data collected across OceanX' missions. Using realtime 3D techniques (rendered in Unity), the ROV follows an animated trail, visualising the collection of data across time and space in an exploration-based virtual environment.

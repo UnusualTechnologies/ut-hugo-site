@@ -13,6 +13,10 @@ overview: "An in-house software for internally managing tasks and tracking proje
 technologies: ["Laravel", "AWS", "Databases", "Web", "Vue.js/React.js", "Google APIs"]
 
 overview_video_id: "v_J1XmMdTEg"
+related_projects:
+  - botsworth
+  - bosco-dental-studio
+  - ai-tools
 ---
 
 ## The Objective

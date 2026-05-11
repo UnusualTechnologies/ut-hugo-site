@@ -29,6 +29,10 @@ client:
   website: "https://www.popupview.com/"
 
 overview_video_id: "raK9p4TQvlY"
+related_projects:
+  - augmented-reality-business-card
+  - seaweeds-scrambled-spell
+  - friendly-fox-adventures
 ---
 
 Unusual Technologies was asked to create an editor expansion for Unity, that would allow AR content creators to easily upload their own work, via Unity Addressables to an AWS server. A variety of different AR triggers such as sound, geolocation and images could be used to trigger the AR experience. This could take the form of music, films, 2D and 3D animations, or anything else the content creator could imagine. Additionally, we also put together a prototype app to trial the content.

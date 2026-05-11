@@ -15,6 +15,10 @@ technologies: ["Blockchain", "Unity", "Cryptocurrency"]
 
 overview_image:
   src: "/images/projects/blockchain_lottery-1024x638.png"
+related_projects:
+  - vr-home-builder
+  - isles-of-generation
+  - botsworth
 ---
 
 ## The Goal

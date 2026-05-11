@@ -44,6 +44,10 @@ testimonial:
   person_title: "Founder & Producer"
   person_org: "Lost Horizon / Shangri-La"
   video_id: "_Bux2vpznQM"
+related_projects:
+  - f-effect
+  - the-tarot-experience
+  - abstract-painters
 ---
 
 ## A Virtual Reality Clubbing Experience

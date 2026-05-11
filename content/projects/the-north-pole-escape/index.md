@@ -21,6 +21,10 @@ technologies: ["Unity", "Escape Room", "WebGL", "Family", "Cooperative Game"]
 overview_image:
   src: "/images/projects/TheNorthPoleEscape_Art-1024x571.webp"
   caption: "Outside the log cabin"
+related_projects:
+  - dreamers-tower
+  - seaweeds-scrambled-spell
+  - mere-mortals
 ---
 
 ## An Interactive Escape Room Game

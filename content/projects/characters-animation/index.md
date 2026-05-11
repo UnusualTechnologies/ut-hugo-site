@@ -18,6 +18,10 @@ overview_image:
   caption: ""
 
 technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
+related_projects:
+  - visual-effects
+  - abstract-painters
+  - f-effect
 ---
 
 ## Characters

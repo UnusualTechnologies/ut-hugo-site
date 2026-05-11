@@ -25,6 +25,10 @@ overview_video_id: "GgRT3KiTTsE"
 client:
   name: "Simgirls"
   website: "https://www.the-tarot-experience-vr.com/"
+related_projects:
+  - mere-mortals
+  - the-north-pole-escape
+  - dreamers-tower
 ---
 
 ## Objective

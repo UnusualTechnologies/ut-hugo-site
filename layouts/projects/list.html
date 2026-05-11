@@ -7,30 +7,107 @@
     <h1 class="about-headline">Crafting <span class="hl">unusual digital experiences</span> across every platform.</h1>
   </section>
 
-  <!-- Filter pills (only tags that have projects) -->
+  <!-- Collect all used tags -->
   {{- $usedTags := slice -}}
   {{- range .Pages -}}
     {{- range .Params.tags -}}
       {{- $usedTags = $usedTags | append . -}}
     {{- end -}}
   {{- end -}}
-  {{- $usedTags = $usedTags | uniq | sort -}}
+  {{- $usedTags = $usedTags | uniq -}}
+
+  <!-- Category definitions (ordered) -->
+  {{- $sectorOptions := slice
+    (dict "slug" "aaa-games" "label" "AAA Games")
+    (dict "slug" "art" "label" "Art & Culture")
+    (dict "slug" "construction" "label" "Construction")
+    (dict "slug" "eco" "label" "Environment")
+    (dict "slug" "education" "label" "Education")
+    (dict "slug" "game" "label" "Gaming")
+    (dict "slug" "health" "label" "Health")
+    (dict "slug" "music" "label" "Music")
+    (dict "slug" "productivity" "label" "Productivity")
+    (dict "slug" "science-and-research" "label" "Science & Research")
+  -}}
+
+  {{- $platformOptions := slice
+    (dict "slug" "android" "label" "Android")
+    (dict "slug" "aws" "label" "AWS")
+    (dict "slug" "ios" "label" "iOS")
+    (dict "slug" "steam" "label" "Steam")
+    (dict "slug" "unity" "label" "Unity")
+    (dict "slug" "unreal-engine" "label" "Unreal Engine")
+    (dict "slug" "vr" "label" "VR")
+    (dict "slug" "web" "label" "Web")
+    (dict "slug" "webgl" "label" "WebGL")
+    (dict "slug" "windows" "label" "Windows")
+  -}}
+
+  {{- $capabilityOptions := slice
+    (dict "slug" "360-video" "label" "360 Video")
+    (dict "slug" "ai" "label" "AI")
+    (dict "slug" "ar" "label" "AR")
+    (dict "slug" "blockchain" "label" "Blockchain")
+    (dict "slug" "cms" "label" "CMS")
+    (dict "slug" "computer-vision" "label" "Computer Vision")
+    (dict "slug" "data-visualisation" "label" "Data Visualisation")
+    (dict "slug" "gamification" "label" "Gamification")
+    (dict "slug" "immersive" "label" "Immersive")
+    (dict "slug" "installation" "label" "Installation")
+    (dict "slug" "motion-sensor" "label" "Motion Sensor")
+    (dict "slug" "nfts" "label" "NFTs")
+    (dict "slug" "procedural-generation" "label" "Procedural Generation")
+    (dict "slug" "projection-mapping" "label" "Projection Mapping")
+    (dict "slug" "real-time" "label" "Real-time")
+    (dict "slug" "vfx" "label" "VFX")
+  -}}
+
+  {{- $categories := slice
+    (dict "name" "Sector" "options" $sectorOptions)
+    (dict "name" "Platform" "options" $platformOptions)
+    (dict "name" "Capability" "options" $capabilityOptions)
+  -}}
+
+  <!-- Filter controls -->
   <div class="section filter-bar" id="left_pane">
-    <ul class="tag-list" id="toggleList">
-      {{ range $usedTags }}
-      {{ $slug := . | urlize }}
-      <li>
-        <label class="tag-label">
-          <input type="checkbox" name="project-tag[]" value="{{ $slug }}">
-          {{ . | replaceRE "-" " " | title }}
-        </label>
-      </li>
-      {{ end }}
-    </ul>
+    <div class="filter-controls">
+      <div class="filter-header">
+        <span class="filter-label">
+          <svg class="filter-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+          Filter
+        </span>
+        <span class="filter-results" id="filter-results"></span>
+        <button class="filter-clear hidden" id="filter-clear" type="button">Clear all</button>
+      </div>
+
+      <div class="filter-dropdowns">
+        {{ range $categories }}
+        <div class="filter-dropdown">
+          <button class="filter-dropdown-btn" type="button" aria-expanded="false">
+            <span class="filter-dropdown-text">{{ .name }}</span>
+            <span class="filter-dropdown-count"></span>
+            <svg class="filter-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="filter-dropdown-menu">
+            {{- range .options -}}
+              {{- if in $usedTags .slug }}
+              <label class="filter-option">
+                <input type="checkbox" name="project-tag[]" value="{{ .slug }}">
+                <span class="filter-check"></span>
+                {{ .label }}
+              </label>
+              {{- end -}}
+            {{- end -}}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="filter-active-tags" id="filter-active-tags"></div>
+    </div>
   </div>
 
   <section class="section">
-    <h2 class="section-heading matching-heading hidden" id="matching-heading">Work matching your interests</h2>
     <div class="project-grid" id="project-grid">
 
         {{ range sort .Pages "Params.prominence" "desc" }}

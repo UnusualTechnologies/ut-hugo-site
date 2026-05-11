@@ -22,6 +22,10 @@ overview_video_id: "KnDEyLdO9lk"
 
 testimonial:
   video_id: "KnDEyLdO9lk"
+related_projects:
+  - breez-dental
+  - co-cog
+  - scheduler
 ---
 
 ## The Task

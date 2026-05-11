@@ -25,6 +25,10 @@ overview_video_id: "y_7zK5KtHg0"
 
 testimonial:
   video_id: "f0WeDa1nXAY"
+related_projects:
+  - f-effect
+  - lost-horizon
+  - the-tarot-experience
 ---
 
 ## The Abstract Painters

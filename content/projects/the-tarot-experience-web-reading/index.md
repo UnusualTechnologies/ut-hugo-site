@@ -25,6 +25,10 @@ client:
 
 overview_image:
   src: "/images/projects/tarot-experience-logo-BIG_tall-v2-irridescent-light-text-r4ry4t3f4110gapnro0cil9nvdixjpgv2mbdjwn8x4.png"
+related_projects:
+  - the-tarot-experience
+  - the-tarot-experience-vr-marketing
+  - ai-tools
 ---
 
 ## The Task

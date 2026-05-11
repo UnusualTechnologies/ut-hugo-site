@@ -31,6 +31,10 @@ testimonial:
   person_name: John
   person_org: Oobikoo Games
   video_id: XRgHhMEdIDw
+related_projects:
+  - dreamers-tower
+  - synergy
+  - lovemore
 ---
 
 ## The Objective

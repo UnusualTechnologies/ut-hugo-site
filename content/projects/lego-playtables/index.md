@@ -22,6 +22,10 @@ client:
   logo: "/images/projects/LegoDiscoveryCenter_Logo-300x300.webp"
 
 overview_video_id: "LUEJi22K6Co"
+related_projects:
+  - raf-museum
+  - co-play
+  - friendly-fox-adventures
 ---
 
 ## Objectives

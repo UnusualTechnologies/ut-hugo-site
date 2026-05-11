@@ -26,6 +26,10 @@ try_it:
 
 overview_video_id: "BStg2utYbx0"
 
+related_projects:
+  - friendly-fox-adventures
+  - mere-mortals
+  - isles-of-generation
 ---
 
 ## The Goal

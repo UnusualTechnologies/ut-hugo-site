@@ -16,6 +16,10 @@ technologies: ["AI", "ChatGPT", "DALL·E3"]
 
 overview_image:
   src: "/images/projects/AI_ProjectCard.webp"
+related_projects:
+  - breez-dental
+  - botsworth
+  - the-tarot-experience-web-reading
 ---
 
 ## Image Generation with DALL·E 3

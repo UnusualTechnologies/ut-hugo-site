@@ -38,6 +38,10 @@ testimonial:
   person_title: "Digital Interpretation Manager"
   person_org: "RAF Museum"
   video_id: "LR_pFowzsKE"
+related_projects:
+  - lego-playtables
+  - oceanx
+  - tale-together
 ---
 
 {{% carousel %}}

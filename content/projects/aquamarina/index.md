@@ -16,6 +16,10 @@ overview: "Aquamarina was a demo project designed to explore the various applica
 technologies: ["Procedural generation", "WebGL", "2D"]
 
 overview_video_id: "XiHDn12H3GY"
+related_projects:
+  - visual-effects
+  - mere-mortals
+  - isles-of-generation
 ---
 
 ## The Goal

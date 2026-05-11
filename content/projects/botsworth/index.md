@@ -17,6 +17,10 @@ technologies: ["AI", "Python", "Node.js", "Discord", "Productivity"]
 
 overview_image:
   src: "/images/projects/bot.png"
+related_projects:
+  - ai-tools
+  - scheduler
+  - breez-dental
 ---
 
 ## An In-House GPT Discord Bot

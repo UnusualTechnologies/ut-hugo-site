@@ -33,6 +33,10 @@ testimonial:
   person_title: "Owners"
   person_org: "Bosco Dental Studio"
   video_id: "KnDEyLdO9lk"
+related_projects:
+  - bosco-dental-studio
+  - ai-tools
+  - botsworth
 ---
 
 {{% carousel %}}

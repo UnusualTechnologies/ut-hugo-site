@@ -15,6 +15,10 @@ banner_image: "/images/projects/banners/visual-effects.webp"
 overview: "Digital art needs VFX to give it a more realistic look or make it 'pop'. Here are some examples of what we can do."
 
 technologies: ["VFX", "Lighting", "Shaders", "Particles"]
+related_projects:
+  - characters-animation
+  - aquamarina
+  - abstract-painters
 ---
 
 ## Lightning & Photorealism

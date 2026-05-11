@@ -23,6 +23,10 @@ client:
   website: "https://f-effect.com/"
 
 overview_video_id: "0D2-DVrCyUU"
+related_projects:
+  - abstract-painters
+  - lost-horizon
+  - the-tarot-experience
 ---
 
 ## Objective

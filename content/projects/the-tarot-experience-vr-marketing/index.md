@@ -24,6 +24,10 @@ client:
   logo: ''
   website: ''
 testimonial: null
+related_projects:
+  - the-tarot-experience
+  - the-tarot-experience-web-reading
+  - lost-horizon
 ---
 
 The initial strategy focused on the spiritual Tarot community. However, research revealed a critical bottleneck:

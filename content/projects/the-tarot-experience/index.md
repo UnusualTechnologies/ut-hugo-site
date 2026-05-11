@@ -52,6 +52,10 @@ testimonial:
   person_title: "Director"
   person_org: "Astrolabe Immersive"
   video_id: "aG8tGJbxQ6k"
+related_projects:
+  - lost-horizon
+  - abstract-painters
+  - the-tarot-experience-web-reading
 ---
 
 ## The Results

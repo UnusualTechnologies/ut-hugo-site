@@ -22,6 +22,10 @@ technologies: ["AR", "Lens Studio", "HTML", "JS", "CSS"]
 
 overview_video_id: "Y6GEYAIv9Ak"
 
+related_projects:
+  - popup-view
+  - seaweeds-scrambled-spell
+  - friendly-fox-adventures
 ---
 
 ## An In-House AR Business Card

@@ -26,6 +26,10 @@ try_it:
 technologies: ["AR", "WebGL", "Mobile", "Microphone", "Unity"]
 
 overview_video_id: "uYKctmvKTFE"
+related_projects:
+  - friendly-fox-adventures
+  - popup-view
+  - augmented-reality-business-card
 ---
 
 {{% carousel %}}

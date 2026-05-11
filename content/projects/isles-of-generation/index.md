@@ -23,6 +23,10 @@ try_it:
 technologies: ["Procedural generation", "WebGL", "2D"]
 
 overview_video_id: "Fe8Ajccx77c"
+related_projects:
+  - mere-mortals
+  - synergy
+  - aquamarina
 ---
 
 ## The Goal

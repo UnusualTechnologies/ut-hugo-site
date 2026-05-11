@@ -126,6 +126,30 @@
     </section>
     {{ end }}
 
+    <!-- Related Projects -->
+    {{ with .Params.related_projects }}
+    <section class="section related-projects">
+      <h2>Related Projects</h2>
+      <div class="related-projects-grid">
+        {{ range . }}
+          {{ $related := $.Site.GetPage (printf "/projects/%s" .) }}
+          {{ with $related }}
+          <a href="{{ .RelPermalink }}" class="project-card">
+            <div class="project-cover">
+              <img src="{{ .Params.featured_image | strings.TrimLeft "/" | relURL }}" alt="{{ .Title }}" class="project-cover-img" loading="lazy">
+              {{ with .Params.tags }}
+                <span class="project-label">{{ index . 0 | replaceRE "-" " " | title }}</span>
+              {{ end }}
+            </div>
+            <h3 class="project-name">{{ .Title }}</h3>
+            <p class="project-description">{{ .Description | default .Params.summary | default "" }}</p>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
     <!-- Back to projects -->
     <section class="section project-footer-nav">
       <a href="{{ "projects/" | strings.TrimLeft "/" | relURL }}" class="back-link">← Back to Work</a>

@@ -48,6 +48,10 @@ testimonial:
   person_title: "Research Fellow"
   person_org: "University of Surrey"
   video_id: "iWjS4tdVC3Q"
+related_projects:
+  - co-play
+  - tale-together
+  - bosco-dental-studio
 ---
 
 ## The Objective

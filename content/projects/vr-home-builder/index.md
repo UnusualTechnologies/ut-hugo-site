@@ -19,6 +19,10 @@ overview: "This project uses pass through to achieve AR on the Oculus which can 
 technologies: ["Unity", "VR", "Architecture", "NFT"]
 
 overview_video_id: "7NLbW35ZHxM"
+related_projects:
+  - the-tarot-experience
+  - blockchain-lottery
+  - lost-horizon
 ---
 
 The VR Home Builder is designed to be an application that integrates the immersive experience of virtual reality with the potential of augmented reality. With this innovative platform, users can not only envision their architectural plans in a more realistic manner, but also interact with them in a physical context.

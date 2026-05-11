@@ -20,6 +20,10 @@ try_it:
 technologies: ["Game Jam", "Game Maker Studio", "Platformer"]
 
 overview_video_id: "pAb_nt4TYrE"
+related_projects:
+  - mere-mortals
+  - the-north-pole-escape
+  - synergy
 ---
 
 ## Objectives
