@@ -7,6 +7,17 @@
         </a>
       </div>
 
+      <nav class="main-nav" aria-label="Primary Site Navigation">
+        <ul class="nav-menu">
+          {{ range .Site.Menus.main }}
+          {{ $isCurrent := or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}
+          <li class="menu-item{{ if $isCurrent }} current{{ end }}">
+            <a href="{{ .URL }}" class="menu-link"{{ if $isCurrent }} aria-current="page"{{ end }}>{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+
       <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Main Menu">
         <svg class="icon-menu" width="24" height="28" viewBox="0 0 24 28" fill="currentColor">
           <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
@@ -17,15 +28,4 @@
       </button>
     </div>
   </div>
-
-  <nav class="main-nav" aria-label="Primary Site Navigation">
-    <ul class="nav-menu">
-      {{ range .Site.Menus.main }}
-      {{ $isCurrent := or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}
-      <li class="menu-item{{ if $isCurrent }} current{{ end }}">
-        <a href="{{ .URL }}" class="menu-link"{{ if $isCurrent }} aria-current="page"{{ end }}>{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
 </header>

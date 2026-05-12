@@ -190,13 +190,8 @@ ul {
 /* --- Desktop Nav --- */
 
 .main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
   display: flex;
   align-items: center;
-  padding-right: var(--container-padding);
 }
 
 .nav-menu {
