@@ -511,8 +511,9 @@ ul {
 }
 
 .team-member-photo {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: 16px;
@@ -541,6 +542,7 @@ ul {
   color: var(--color-primary);
   font-size: var(--text-sm);
 }
+
 
 /* --- Client Logos --- */
 
@@ -1311,7 +1313,7 @@ ul {
 
 .project-description {
   color: var(--color-gray);
-  font-size: 1rem;
+  font-size: var(--text-body);
   line-height: 1.6;
   margin-top: 0;
   padding-top: 0.5rem;
@@ -1319,7 +1321,7 @@ ul {
   z-index: 1;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 640px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -1468,6 +1470,7 @@ ul {
     --text-h2: 1.3rem;
     --text-h3: 1.25rem;
     --text-body-lg: 1rem;
+    --text-body: 0.8rem;
   }
 
   .header-inner {
@@ -1481,8 +1484,44 @@ ul {
   }
 
   .team-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 0;
+    padding-left: 20px;
+  }
+
+  .team-member {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  .team-member .team-member-photo {
+    grid-row: 1 / -1;
+  }
+
+  .team-member-photo {
+    width: 80px;
+    max-width: 80px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .team-member-name {
+    font-size: var(--text-h3);
+    margin-bottom: 0;
+    align-self: end;
+    line-height: 1.2;
+  }
+
+  .team-member-role {
+    align-self: start;
+  }
+
+  .team-member-role {
+    font-size: var(--text-xs);
   }
 
   .testimonial-caption span {
@@ -2341,12 +2380,6 @@ ul {
   }
 }
 
-@media (max-width: 921px) {
-  .project-overview {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* --- Team Profile Page --- */
 
 .team-profile {
@@ -2565,13 +2598,11 @@ ul {
   color: var(--color-primary);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .careers-video-grid {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 600px) {
   .team-profile-header {
     flex-direction: column;
     align-items: flex-start;
