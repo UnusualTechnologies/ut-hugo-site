@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="page-gradient">
+<div class="page-content">
 
   <!-- Intro -->
   <section class="section about-intro">
@@ -10,7 +10,6 @@
 
   <!-- Leadership Team -->
   <section class="section about-section">
-    <h2 class="section-heading">Leadership Team</h2>
     <div class="team-grid">
       {{ range .Site.Data.team.items }}
       {{ if .url }}
@@ -34,19 +33,19 @@
     </div>
   </section>
 
-  <!-- Client Logos -->
+  <!-- Clients -->
   <section class="section about-section">
-    <h2 class="section-heading">Who We've Worked With</h2>
-    <div class="client-logos">
-      {{ range .Site.Data.clients.items }}
-      <img src="{{ .logo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
+    <h2 class="section-heading">Clients</h2>
+    <ul class="client-name-list">
+      {{ $items := .Site.Data.clients.items }}{{ $last := sub (len $items) 1 }}{{ range $i, $c := $items }}
+      <li>{{ $c.name }}{{ if ne $i $last }},{{ end }}</li>
       {{ end }}
-    </div>
+    </ul>
   </section>
 
-  <!-- Client Testimonials -->
+  <!-- Testimonials -->
   <section class="section about-section" id="ClientTestimonials">
-    <h2 class="section-heading">Client Testimonials</h2>
+    <h2 class="section-heading">Testimonials</h2>
     <div class="testimonial-grid">
       {{ range .Site.Data.testimonials.items }}
       {{ $videoID := replaceRE `.*youtu\.be/` "" .video }}

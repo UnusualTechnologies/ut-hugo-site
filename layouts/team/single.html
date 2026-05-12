@@ -1,9 +1,7 @@
 {{ define "main" }}
-<div class="page-gradient">
+<div class="page-content">
 
   <section class="section team-profile">
-    <a href="{{ "about/" | relURL }}" class="back-link">&larr; About Us</a>
-
     <div class="team-profile-header">
       <img src="{{ .Params.photo | strings.TrimLeft "/" | relURL }}" alt="{{ .Title }}" class="team-profile-photo">
       <div class="team-profile-meta">
@@ -48,6 +46,7 @@
     </div>
     {{ end }}
 
+    <a href="{{ "about/" | relURL }}" class="back-link">&larr; About Us</a>
   </section>
 
 </div>
