@@ -21,7 +21,7 @@ technologies:
 try_it:
   links:
     - label: Play it now
-      url: https://unusualtechnologies.com/prototypes-and-demos/mere-mortals/
+      url: https://web-apps.unusualtechnologies.com/mere-mortals/index.html
 overview_image:
   src: /images/projects/Character_1_Walk.gif
 testimonial:

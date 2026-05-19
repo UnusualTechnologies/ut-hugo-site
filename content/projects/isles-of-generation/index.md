@@ -17,7 +17,7 @@ overview: "Isles of Generation was a prototype project designed to explore techn
 try_it:
   links:
     - label: "Play it now"
-      url: "https://ellioteserin.github.io/Procedural-Generation-Build/"
+      url: "https://web-apps.unusualtechnologies.com/procedural-world-generator/index.html"
 
 technologies: ["Procedural generation", "WebGL", "2D"]
 
