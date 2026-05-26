@@ -6,7 +6,7 @@ tags:
   - "ai"
   - "aws"
   - "productivity"
-prominence: 0
+prominence: 15
 featured_image: "/images/projects/botsworth.webp"
 banner_image: "/images/projects/banners/botsworth.webp"
 

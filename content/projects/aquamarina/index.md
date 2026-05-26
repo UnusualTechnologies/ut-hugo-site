@@ -6,7 +6,7 @@ tags:
   - "game"
   - "unity"
   - "vfx"
-prominence: 12
+prominence: 25
 featured_image: "/images/projects/aquamarina.png"
 banner_image: "/images/projects/banners/aquamarina.png"
 

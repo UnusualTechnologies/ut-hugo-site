@@ -9,7 +9,7 @@ tags:
   - "ios"
   - "unity"
   - "webgl"
-prominence: 10
+prominence: 32
 featured_image: "/images/projects/seaweeds.png"
 banner_image: "/images/projects/banners/seeweeds-scrambled-spell.png"
 

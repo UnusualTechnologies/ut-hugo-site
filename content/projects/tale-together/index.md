@@ -7,7 +7,7 @@ tags:
   - "gamification"
   - "science-and-research"
   - "web"
-prominence: 10
+prominence: 35
 featured_image: "/images/projects/tale-together.webp"
 banner_image: "/images/projects/banners/tale-together.webp"
 

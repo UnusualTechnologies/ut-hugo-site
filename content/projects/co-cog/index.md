@@ -9,7 +9,7 @@ tags:
   - "ios"
   - "science-and-research"
   - "unity"
-prominence: 20
+prominence: 80
 featured_image: "/images/projects/co-cog.png"
 banner_image: "/images/projects/banners/co-cog.png"
 

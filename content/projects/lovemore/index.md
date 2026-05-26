@@ -6,7 +6,7 @@ tags:
   - "game"
   - "port"
   - "web"
-prominence: 10
+prominence: 22
 featured_image: "/images/projects/lovemore.webp"
 banner_image: "/images/projects/banners/lovemore.webp"
 

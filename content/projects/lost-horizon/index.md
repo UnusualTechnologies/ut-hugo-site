@@ -9,7 +9,7 @@ tags:
   - "music"
   - "unity"
   - "vr"
-prominence: 16
+prominence: 58
 featured_image: "/images/projects/lost-horizon.webp"
 banner_image: "/images/projects/banners/lost-horizon.webp"
 

@@ -6,7 +6,7 @@ tags:
   - "ai"
   - "health"
   - "windows"
-prominence: 40
+prominence: 70
 featured_image: "/images/projects/breez-dental.png"
 banner_image: "/images/projects/banners/breez-dental.webp"
 

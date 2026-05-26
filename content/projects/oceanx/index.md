@@ -6,7 +6,7 @@ tags:
   - "data-visualisation"
   - "science-and-research"
   - "unity"
-prominence: 50
+prominence: 95
 featured_image: "/images/projects/oceanx.webp"
 banner_image: "/images/projects/banners/oceanx.webp"
 

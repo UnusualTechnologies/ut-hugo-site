@@ -8,7 +8,7 @@ tags:
   - "steam"
   - "unity"
   - "vr"
-prominence: 20
+prominence: 65
 featured_image: "/images/projects/tarot-vr.webp"
 banner_image: "/images/projects/banners/the-tarot-experience.webp"
 

@@ -9,7 +9,7 @@ tags:
   - "music"
   - "unity"
   - "vr"
-prominence: 15
+prominence: 38
 featured_image: "/images/projects/f-effect.webp"
 banner_image: "/images/projects/banners/f-effect.webp"
 

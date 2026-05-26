@@ -3,7 +3,7 @@ title: "Scheduler"
 type: "projects"
 project_type: "In-house"
 tags: ["web", "ai", "real-time", "multi-tenant"]
-prominence: -5
+prominence: 3
 featured_image: "/images/projects/scheduler.jpg"
 banner_image: "/images/projects/banners/scheduler.jpg"
 

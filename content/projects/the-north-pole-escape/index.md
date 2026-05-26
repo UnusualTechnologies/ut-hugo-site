@@ -6,7 +6,7 @@ tags:
   - "game"
   - "unity"
   - "webgl"
-prominence: -3
+prominence: 5
 featured_image: "/images/projects/north-pole-escape.webp"
 banner_image: "/images/projects/banners/the-north-pole-escape.webp"
 

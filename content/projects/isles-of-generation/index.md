@@ -8,7 +8,7 @@ tags:
   - "procedural-generation"
   - "unity"
   - "webgl"
-prominence: 7
+prominence: 18
 featured_image: "/images/projects/isles-of-generation.webp"
 banner_image: "/images/projects/banners/isles-of-generation.webp"
 

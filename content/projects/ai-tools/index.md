@@ -5,7 +5,7 @@ project_type: "Prototype"
 tags:
   - "ai"
   - "productivity"
-prominence: 10
+prominence: 20
 featured_image: "/images/projects/ai-tools.webp"
 banner_image: "/images/projects/banners/ai-tools.webp"
 

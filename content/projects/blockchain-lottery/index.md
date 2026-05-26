@@ -4,7 +4,7 @@ type: "projects"
 project_type: "Prototype"
 tags:
   - "blockchain"
-prominence: -25
+prominence: 2
 featured_image: "/images/projects/blockchain-lottery.png"
 banner_image: "/images/projects/banners/blockchain-lottery.jpg"
 

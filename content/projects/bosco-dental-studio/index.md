@@ -5,7 +5,7 @@ project_type: "Client"
 tags:
   - "health"
   - "productivity"
-prominence: 15
+prominence: 42
 featured_image: "/images/projects/bosco-dental.webp"
 banner_image: "/images/projects/banners/bosco-dental-studio.webp"
 
