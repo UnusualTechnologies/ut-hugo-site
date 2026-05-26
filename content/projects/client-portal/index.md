@@ -3,7 +3,7 @@ title: "Client Portal"
 type: "projects"
 project_type: "In-house"
 tags: ["web", "multi-tenant", "real-time"]
-prominence: -4
+prominence: 4
 featured_image: "/images/projects/client-portal.jpg"
 banner_image: "/images/projects/client-portal.jpg"
 
