@@ -2,7 +2,7 @@
 title: James Alvarez
 role: Senior Developer
 photo: /images/team/james-alvarez.webp
-linkedin: https://www.linkedin.com/company/unusualtechnologies/
+linkedin: https://uk.linkedin.com/in/james-alvarez-974aaab4
 website: https://jamesalvarez.co.uk
 website_label: jamesalvarez.co.uk
 expertise:
