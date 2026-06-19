@@ -1,4 +1,4 @@
 ---
-title: "Guidea - Digital Health Product Design Experts"
-description: "Strategic product design for the most complex domains. We help companies innovate, launch, and lead with exceptional digital product design."
+title: "Digital Health Software"
+description: "We build research tools, clinical apps, and engagement experiences for universities, the NHS, and health organisations across the UK and Europe."
 ---
