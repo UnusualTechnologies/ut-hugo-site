@@ -1,6 +1,6 @@
 ---
 title: Privacy & Cookies Policy
-description: Privacy & Cookies Policy for Unusual Technologies.
+description: Privacy & Cookies Policy for Unusual Technologies
 ---
 
 ## **1. Our Privacy-First Commitment**
