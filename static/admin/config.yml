@@ -190,6 +190,25 @@ collections:
         field: { name: game, label: Game, widget: string }
       - { name: body, label: Bio, widget: markdown }
 
+  # ── Legal Pages ─────────────────────────────────────────────────
+  - name: legal-pages
+    label: Legal Pages
+    files:
+      - name: privacy-policy
+        label: Privacy Policy
+        file: content/privacy-policy/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+      - name: terms-and-conditions
+        label: Terms and Conditions
+        file: content/terms-and-conditions/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
   # ── Data files ───────────────────────────────────────────────────────
   - name: data
     label: Site Data

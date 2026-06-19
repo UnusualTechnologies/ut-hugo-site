@@ -1,9 +1,7 @@
 ---
-title: "Legal"
-description: "Terms of service, privacy policy, and legal information for Unusual Technologies."
+title: "Terms and Conditions"
+description: "Terms and conditions for Unusual Technologies."
 ---
-
-## Terms Of Service
 
 ### Disclaimer
 
@@ -50,11 +48,3 @@ By accessing and using this website, you agree that the laws of England and Wale
 - Unusual Technologies Ltd is a company registered in England and Wales
 - VAT Number 427902293
 - Company number 11237030
-
----
-
-## Privacy Policy
-
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-
-We use your Personal Data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.
