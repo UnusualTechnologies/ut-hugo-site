@@ -1,0 +1,1268 @@
+/* ==========================================================================
+   Guidea Homepage Recreation
+   ========================================================================== */
+
+/* Reset & Base */
+.guidea-page {
+  --navy: #050038;
+  --blue: #3F53D9;
+  --blue-hover: #4d5fe0;
+  --gray-bg: #F3F4F8;
+  --cream: #FAEBE3;
+  --white: #fff;
+  --dark-text: #1a1a2e;
+  --banner-purple: #160042;
+  --banner-accent: #6869AC;
+  font-family: 'Wix Madefor Display', Avenir, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--cream);
+  background: var(--gray-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.guidea-page *, .guidea-page *::before, .guidea-page *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.guidea-page img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.guidea-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container */
+.g-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.g-container-wide {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Announcement Banner ─────────────────────────────────────────── */
+.g-banner {
+  background: var(--banner-purple);
+  color: var(--white);
+  text-align: center;
+  padding: 16px 5%;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.g-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.g-banner-confetti {
+  width: 24px;
+  height: 24px;
+}
+
+.g-banner a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: border-color 0.2s;
+}
+
+.g-banner a:hover {
+  border-color: var(--white);
+}
+
+.g-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+/* ── Navigation ──────────────────────────────────────────────────── */
+.g-nav {
+  background: var(--blue);
+  padding: 0 48px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.g-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.g-nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.g-nav-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.g-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.g-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.g-nav-links a,
+.g-nav-links button {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.g-nav-cta {
+  background: var(--white) !important;
+  color: var(--blue) !important;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: opacity 0.2s;
+}
+
+.g-nav-cta:hover {
+  opacity: 0.9;
+}
+
+.g-nav-mobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/* ── Hero Section ────────────────────────────────────────────────── */
+.g-hero {
+  background: var(--navy);
+  padding: 96px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.g-hero-shape {
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 540px;
+  height: 540px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.g-hero-inner {
+  display: block;
+}
+
+.g-hero-text {
+  margin-bottom: 24px;
+}
+
+.g-hero h1 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  color: var(--white);
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.g-hero-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+
+.g-hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 96px;
+}
+
+.g-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.g-btn-primary:hover {
+  background: var(--blue-hover);
+}
+
+.g-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+
+.g-btn-outline:hover {
+  border-color: var(--white);
+}
+
+.g-hero-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+  position: relative;
+}
+
+.g-hero-img-main {
+  border-radius: 16px;
+  overflow: hidden;
+  grid-row: 1 / 3;
+  min-height: 500px;
+}
+
+.g-hero-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.g-hero-img-secondary {
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+.g-hero-img-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.g-hero-img-tertiary {
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.g-hero-img-tertiary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Stats Bar ───────────────────────────────────────────────────── */
+.g-stats {
+  background: var(--gray-bg);
+  padding: 96px 0 64px;
+  border-radius: 56px 56px 0 0;
+  margin-top: -56px;
+  position: relative;
+  z-index: 2;
+}
+
+.g-stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.g-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.g-stat-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+}
+
+.g-stat h3 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.g-stat h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.g-stat p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ── Fortune 100 / Client Logos ──────────────────────────────────── */
+.g-clients {
+  background: var(--navy);
+  padding: 120px 0;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 3;
+}
+
+.g-clients h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.g-clients > .g-container > p {
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  margin-bottom: 48px;
+}
+
+.g-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  align-items: center;
+  justify-items: center;
+  list-style: none;
+}
+
+.g-logo-grid li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.g-logo-grid img {
+  max-height: 48px;
+  max-width: 140px;
+  opacity: 0.7;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s;
+}
+
+.g-logo-grid img:hover {
+  opacity: 1;
+}
+
+/* ── Process Section ─────────────────────────────────────────────── */
+.g-process {
+  background: var(--blue);
+  padding: 128px 0 180px;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 4;
+}
+
+.g-process-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.g-process h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.g-process-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 32px;
+}
+
+.g-process-quote {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+  font-style: italic;
+}
+
+.g-process-quote p:first-child {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.g-process-quote .g-quote-author {
+  font-style: normal;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+.g-process-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.g-process-step {
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
+  transition: background 0.2s;
+}
+
+.g-process-step:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.g-process-step img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.g-process-step h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.g-process-step p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+
+/* ── Organizations Section ───────────────────────────────────────── */
+.g-orgs {
+  background: var(--gray-bg);
+  padding: 112px 0;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 5;
+}
+
+.g-orgs h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--dark-text);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.g-orgs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.g-org-card {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.g-org-card h3 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.g-org-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+}
+
+.g-org-awards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.g-org-awards img {
+  height: 64px;
+  width: auto;
+}
+
+/* ── Industries Section ──────────────────────────────────────────── */
+.g-industries {
+  background: var(--navy);
+  padding: 112px 0;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 6;
+}
+
+.g-industries-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.g-industries h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.g-industries-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+}
+
+.g-industry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.g-industry-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  color: var(--white);
+  transition: color 0.2s;
+}
+
+.g-industry-item:first-child {
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.g-industry-item:hover {
+  color: var(--blue);
+}
+
+.g-industry-item-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.g-industry-item img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+}
+
+.g-industry-item:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+.g-industry-item span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.g-industry-item .g-view {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blue);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.g-industry-item:hover .g-view {
+  opacity: 1;
+}
+
+/* ── Expert Designers (CTA with quote) ───────────────────────────── */
+.g-expert {
+  background: var(--gray-bg);
+  padding: 112px 0;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 7;
+}
+
+.g-expert-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.g-expert h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.g-expert-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.g-expert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.g-expert-link:hover {
+  text-decoration: underline;
+}
+
+.g-expert-quote-card {
+  position: relative;
+}
+
+.g-expert-photo {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.g-expert-quote {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.g-expert-author {
+  font-size: 14px;
+  color: #666;
+}
+
+.g-expert-author strong {
+  display: block;
+  color: var(--dark-text);
+  font-weight: 600;
+}
+
+/* ── Testimonials ────────────────────────────────────────────────── */
+.g-testimonials {
+  background: var(--gray-bg);
+  padding: 112px 0 40px;
+}
+
+.g-testimonials-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.g-testimonials-header h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+.g-testimonials-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.g-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.g-testimonial-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.g-testimonial-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.g-testimonial-stars img {
+  width: 16px;
+  height: 16px;
+}
+
+.g-testimonial-text {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  font-style: italic;
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.g-testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.g-testimonial-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.g-testimonial-info strong {
+  display: block;
+  font-size: 14px;
+  color: var(--dark-text);
+}
+
+.g-testimonial-info span {
+  font-size: 12px;
+  color: #888;
+}
+
+.g-testimonial-logo {
+  margin-left: auto;
+  max-height: 24px;
+  max-width: 100px;
+  opacity: 0.5;
+}
+
+.g-testimonials-link {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.g-testimonials-link a {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.g-testimonials-link a:hover {
+  text-decoration: underline;
+}
+
+/* ── Insights Section ────────────────────────────────────────────── */
+.g-insights {
+  background: var(--navy);
+  padding: 112px 0;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 8;
+}
+
+.g-insights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.g-insights-header h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.g-insights-header p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  max-width: 500px;
+}
+
+.g-insights-header a {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.g-insights-header a:hover {
+  border-color: var(--white);
+}
+
+.g-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.g-insight-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s;
+}
+
+.g-insight-card:hover {
+  transform: translateY(-4px);
+}
+
+.g-insight-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.g-insight-overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(5,0,56,0.2) 19%, rgba(5,0,56,1) 81%);
+  padding: 32px;
+}
+
+.g-insight-overlay h3 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+/* ── Contact / CTA Section ───────────────────────────────────────── */
+.g-contact {
+  background: var(--navy);
+  padding: 112px 0;
+  border-radius: 60px 60px 0 0;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 9;
+}
+
+.g-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.g-contact h2 {
+  font-family: 'cholla-wide', 'Wix Madefor Display', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.g-contact-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+}
+
+.g-contact-form {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.g-contact-form h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.g-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.g-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.g-form-group label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.g-form-group input,
+.g-form-group textarea {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.g-form-group input::placeholder,
+.g-form-group textarea::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.g-form-group input:focus,
+.g-form-group textarea:focus {
+  border-color: var(--blue);
+}
+
+.g-form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.g-form-group.full {
+  grid-column: 1 / -1;
+}
+
+.g-form-submit {
+  width: 100%;
+  background: var(--blue);
+  color: var(--white);
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.g-form-submit:hover {
+  background: var(--blue-hover);
+}
+
+.g-form-email {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+
+.g-form-email a {
+  color: var(--blue);
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.g-footer {
+  background: var(--navy);
+  padding: 60px 0 32px;
+  border-radius: 0;
+  margin: 0;
+}
+
+.g-footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.g-footer-brand p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 16px;
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.g-footer-badges {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.g-footer-badges img {
+  height: 48px;
+  width: auto;
+}
+
+.g-footer-logo {
+  height: 28px;
+  width: auto;
+}
+
+.g-footer-col h4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.g-footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.g-footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.2s;
+}
+
+.g-footer-col a:hover {
+  color: var(--white);
+}
+
+.g-footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.g-footer-copyright {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+
+.g-footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.g-footer-social a {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+
+.g-footer-social a:hover {
+  color: var(--white);
+}
+
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.g-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.g-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .g-hero h1 {
+    font-size: 52px;
+  }
+
+  .g-hero-inner,
+  .g-process-inner,
+  .g-industries-inner,
+  .g-expert-inner,
+  .g-contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .g-orgs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .g-footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .g-nav {
+    padding: 0 24px;
+  }
+
+  .g-nav-links {
+    display: none;
+  }
+
+  .g-nav-mobile {
+    display: block;
+  }
+
+  .g-hero {
+    padding: 48px 0 64px;
+  }
+
+  .g-hero h1 {
+    font-size: 36px;
+  }
+
+  .g-hero-img-main {
+    min-height: 300px;
+  }
+
+  .g-stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .g-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .g-process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .g-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .g-insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .g-insights-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .g-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .g-contact h2 {
+    font-size: 32px;
+  }
+
+  .g-footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .g-clients,
+  .g-process,
+  .g-orgs,
+  .g-industries,
+  .g-insights,
+  .g-contact {
+    border-radius: 32px 32px 0 0;
+    margin-top: -32px;
+  }
+
+  .g-stats {
+    border-radius: 32px 32px 0 0;
+    margin-top: -32px;
+  }
+}
