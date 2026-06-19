@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}"{{ if eq .Section "health-science" }} data-default-theme="light"{{ end }}>
 <head>
+  <script>
+    (function(){var t=localStorage.getItem('ut-theme');if(!t){t=document.documentElement.hasAttribute('data-default-theme')?document.documentElement.getAttribute('data-default-theme'):'dark';localStorage.setItem('ut-theme',t)}document.documentElement.setAttribute('data-theme',t)})();
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  {{ if eq .Section "health-science" }}
+  <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}">
+  {{ end }}
   {{ if not hugo.IsServer }}
   <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
   {{ end }}
@@ -32,5 +38,6 @@
   <script src="{{ "js/carousel.js" | relURL }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="{{ "js/shader-bg.js" | relURL }}"></script>
+  <script src="{{ "js/theme.js" | relURL }}"></script>
 </body>
 </html>

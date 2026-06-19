@@ -1,28 +1,31 @@
 <header class="site-header transparent">
-  <div class="header-inner">
-    <div class="site-branding">
-      <a href="{{ site.Home.RelPermalink }}" class="logo-link">
-        <img src="{{ "images/logo.png" | relURL }}" alt="{{ .Site.Title }}" class="site-logo">
-      </a>
+  <div class="header-strip">
+    <div class="header-inner">
+      <div class="site-branding">
+        <a href="{{ site.Home.RelPermalink }}" class="logo-link">
+          {{ partial "logo.html" . }}
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary Site Navigation">
+        <ul class="nav-menu">
+          {{ range .Site.Menus.main }}
+          {{ $isCurrent := or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}
+          <li class="menu-item{{ if $isCurrent }} current{{ end }}">
+            <a href="{{ .URL }}" class="menu-link"{{ if $isCurrent }} aria-current="page"{{ end }}>{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Main Menu">
+        <svg class="icon-menu" width="24" height="28" viewBox="0 0 24 28" fill="currentColor">
+          <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+        </svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+        </svg>
+      </button>
     </div>
-
-    <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Main Menu">
-      <svg class="icon-menu" width="24" height="28" viewBox="0 0 24 28" fill="currentColor">
-        <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
-      </svg>
-      <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
-      </svg>
-    </button>
-
-    <nav class="main-nav" aria-label="Primary Site Navigation">
-      <ul class="nav-menu">
-        {{ range .Site.Menus.main }}
-        <li class="menu-item{{ if $.IsMenuCurrent "main" . }} current{{ end }}">
-          <a href="{{ .URL }}" class="menu-link">{{ .Name }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
   </div>
 </header>

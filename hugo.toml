@@ -4,10 +4,6 @@ title = 'Unusual Technologies'
 
 [menus]
   [[menus.main]]
-    name = 'Home'
-    url = '/'
-    weight = 10
-  [[menus.main]]
     name = 'Projects'
     url = '/projects/'
     weight = 20
