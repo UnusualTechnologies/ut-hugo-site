@@ -334,7 +334,7 @@ ul {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,6 +462,7 @@ ul {
   position: relative;
   padding-top: 80px; /* account for fixed header */
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 .section {
